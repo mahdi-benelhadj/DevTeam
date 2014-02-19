@@ -13,7 +13,7 @@ import edu.esprit.entities.Categorie;
  * @author Karray
  */
 public class TestAddDepot {
-String nour;
+int nour;
 
     public static void main(String[] args) {
         Categorie cat = new Categorie();
