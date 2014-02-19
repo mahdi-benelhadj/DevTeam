@@ -12,13 +12,13 @@ import edu.esprit.entities.Categorie;
  *
  * @author Karray
  */
-public class TestAddDepot {
+public class TestAddCategorie {
 String nour;
 
     public static void main(String[] args) {
         Categorie cat = new Categorie();
-        CategorieDAO depotDAO = new CategorieDAO();
+        CategorieDAO catDAO = new CategorieDAO();
         cat.setCategorie("La Soukra");
-        depotDAO.insertCategorie(cat);
+        catDAO.insertCategorie(cat);
     }
 }
