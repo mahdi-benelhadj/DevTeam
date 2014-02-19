@@ -70,6 +70,27 @@ public class AdminDAO {
             return null;
         }
     }
+                    public Admin findAdminByLogin(String Login){
+    Admin admin = new Admin();
+     String requete = "select * from admin where id_admin=?";
+        try {
+            PreparedStatement ps = MyConnection.getInstance().prepareStatement(requete);
+            ps.setString(1, Login);
+            ResultSet resultat = ps.executeQuery();
+            while (resultat.next())
+            {
+                admin.setId_admin(resultat.getInt(1));
+                admin.setLogin(resultat.getString(2));
+                admin.setPassword(resultat.getString(3));
+            }
+            return admin;
+
+        } catch (SQLException ex) {
+           //Logger.getLogger(PersonneDao.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("erreur lors de la recherche du depot "+ex.getMessage());
+            return null;
+        }
+    }
          public List<Admin> DisplayAllAdmins (){
 
 

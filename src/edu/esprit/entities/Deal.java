@@ -14,8 +14,8 @@ import java.util.*;
  */
 public class Deal {
      private int id_deal;
-    private int id_vendeur;
-    private int id_categorie;
+    private Vendeur vendeur;
+    private Categorie categorie;
     private int nbr_min;
     private int nbr_max;
     private String titre;
@@ -84,20 +84,20 @@ public class Deal {
     public void setId_deal(int id_deal) {
         this.id_deal = id_deal;
     }
-     public int getId_vendeur() {
+    /* public int getId_vendeur() {
         return id_vendeur;
     }
 
     public void setId_vendeur(int id_vendeur) {
         this.id_vendeur = id_vendeur;
-    }
-     public int getId_categorie() {
+    }*/
+     /*public int getId_categorie() {
         return id_categorie;
     }
 
     public void setId_categorie(int id_categorie) {
         this.id_categorie = id_categorie;
-    }
+    }*/
      public int getNbr_min() {
         return nbr_min;
     }
@@ -111,6 +111,20 @@ public class Deal {
 
     public void setNbr_max(int nbr_max) {
         this.nbr_max = nbr_max;
+    }
+    public Vendeur getVendeur(){
+        return vendeur;
+    }
+    public void setVendeur(Vendeur vendeur){
+       this.vendeur=vendeur;
+    }
+    
+    public Categorie getCategorie(){
+        return categorie;
+    }
+    public void setCategorie(Categorie categorie){
+        this.categorie=categorie;
+        
     }
     
 

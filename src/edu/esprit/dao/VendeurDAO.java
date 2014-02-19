@@ -19,7 +19,7 @@ import java.util.List;
  * @author nour
  */
 public class VendeurDAO {
-    private Vendeur vendeur;
+    
      public void insertVendeur(Vendeur v){
 
         String requete = "insert into vendeur (nom,adresse,note) values (?,?,?)";
@@ -50,7 +50,7 @@ public class VendeurDAO {
         }
 
 }
-      public Vendeur findDealById(int id){
+      public Vendeur findVendeurById(int id){
     Vendeur vendeur = new Vendeur();
      String requete = "select * from deal where id_vendeur=?";
         try {
