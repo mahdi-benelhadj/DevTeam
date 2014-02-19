@@ -5,8 +5,8 @@
 
 package edu.esprit.tests;
 
-import edu.esprit.dao.DepotDAO;
-import edu.esprit.entities.Depot;
+import edu.esprit.dao.CategorieDAO;
+import edu.esprit.entities.Categorie;
 
 /**
  *
@@ -16,9 +16,9 @@ public class TestAddDepot {
 
 
     public static void main(String[] args) {
-        Depot depot = new Depot();
-        DepotDAO depotDAO = new DepotDAO();
-        depot.setAdresse_depot("La Soukra");
-        depotDAO.insertDepot(depot);
+        Categorie cat = new Categorie();
+        CategorieDAO depotDAO = new CategorieDAO();
+        cat.setCategorie("La Soukra");
+        depotDAO.insertCategorie(cat);
     }
 }
