@@ -18,7 +18,7 @@ import java.util.List;
  * @author nour
  */
 public class CategorieDAO {
-    private Categorie categorie;
+    
      public void insertCategorie(Categorie c){
 
         String requete = "insert into categorie(categorie) values (?)";
@@ -38,7 +38,7 @@ public class CategorieDAO {
     }
      
       
-       public Categorie findCategorielByIdCategorie(int id){
+       public Categorie findCategorieById(int id){
     Categorie categorie = new Categorie();
      String requete = "select * from categorie where id_categorie=?";
         try {

@@ -5,7 +5,6 @@
 
 package edu.esprit.dao;
 import edu.esprit.entities.Deal;
-import edu.esprit.entities.Categorie;
 import edu.esprit.util.MyConnection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -21,14 +20,14 @@ import java.util.List;
  * @author nour
  */
 public class DealDAO {
-    private Deal deal;
+    
      public void insertDeal(Deal d){
 
         String requete = "insert into deal (id_vendeur,id_categorie,nbr_min,nbr_max,titre,details,prix,prix_promo,date,duree) values (?,?,?,?,?,?,?,?,?,?)";
         try {
             PreparedStatement ps = MyConnection.getInstance().prepareStatement(requete);
-            ps.setInt(1, d.getId_vendeur());
-            ps.setInt(2, d.getId_categorie());
+            ps.setInt(1, d.getVendeur().getId_vendeur());
+            ps.setInt(2, d.getCategorie().getId_categorie());
             ps.setInt(3, d.getNbr_min());
             ps.setInt(4, d.getNbr_max());
             ps.setString(5, d.getDetails());
@@ -62,9 +61,9 @@ public class DealDAO {
         String requete = "update  set id_vendeur=?,id_categorie=?, nbr_min=?, nbr_max=?,prix=?,prix_promo=?,titre=?,details=?,date=?,duree=? where id_deal=?";
         try {
             PreparedStatement ps = MyConnection.getInstance().prepareStatement(requete);
-            ps.setInt(1, d.getId_vendeur());
+            ps.setInt(1, d.getVendeur().getId_vendeur());
 
-            ps.setInt(2, d.getId_categorie());
+            ps.setInt(2, d.getCategorie().getId_categorie());
             ps.setInt(3, d.getNbr_min());
             ps.setInt(4, d.getNbr_max());
             ps.setString(5, d.getDetails());
@@ -83,18 +82,21 @@ public class DealDAO {
 
     }
        public Deal findDealById(int id){
-    Deal deal = new Deal();
+    
      String requete = "select * from deal where id_deal=?";
         try {
             PreparedStatement ps = MyConnection.getInstance().prepareStatement(requete);
             ps.setInt(1, id);
             ResultSet resultat = ps.executeQuery();
+            Deal deal = new Deal();
+            VendeurDAO vendeurDAO=new VendeurDAO();
+            CategorieDAO categorieDAO=new CategorieDAO();
             while (resultat.next())
             {
                 deal.setId_deal(resultat.getInt(1));
                 
-                deal.setId_vendeur(resultat.getInt(2));
-                deal.setId_categorie(resultat.getInt(3));
+                deal.setVendeur(vendeurDAO.findVendeurById(resultat.getInt(2)));
+                deal.setCategorie(categorieDAO.findCategorieById(resultat.getInt(3)));
                 deal.setPrix(resultat.getInt(4));
                 deal.setPrix_promo(resultat.getInt(5));
                 deal.setNbr_min(resultat.getInt(6));
@@ -114,20 +116,23 @@ public class DealDAO {
         }
     }
       public Deal findDealByIdCategorie(int id){
-    Deal deal = new Deal();
+    
      String requete = "select * from depot where id_categorie = ?";
         try {
             PreparedStatement ps = MyConnection.getInstance().prepareStatement(requete);
             ps.setInt(1, id);
             ResultSet resultat = ps.executeQuery();
+            Deal deal = new Deal();
+            VendeurDAO vendeurDAO=new VendeurDAO();
+            CategorieDAO categorieDAO=new CategorieDAO();
             while (resultat.next())
             {
                 deal.setId_deal(resultat.getInt(1));
                 System.out.println("testttttttt"+deal.getId_deal());
-                 deal.setId_vendeur(resultat.getInt(2));
-                System.out.println("testttttttt"+deal.getId_vendeur());
-                 deal.setId_categorie(resultat.getInt(3));
-                System.out.println("testttttttt"+deal.getId_categorie());
+                 deal.setVendeur(vendeurDAO.findVendeurById(resultat.getInt(2)));
+                System.out.println("testttttttt"+deal.getVendeur().getId_vendeur());
+                 deal.setCategorie(categorieDAO.findCategorieById(resultat.getInt(3)));
+                System.out.println("testttttttt"+deal.getCategorie().getId_categorie());
                  deal.setNbr_min(resultat.getInt(4));
                 System.out.println("testttttttt"+deal.getNbr_min());
                 deal.setNbr_max(resultat.getInt(5));
@@ -167,13 +172,14 @@ public class DealDAO {
            Statement statement = MyConnection.getInstance()
                    .createStatement();
             ResultSet resultat = statement.executeQuery(requete);
-           // dealDAO dealDAO = new dealDAO();
+            VendeurDAO vendeurDAO=new VendeurDAO();
+            CategorieDAO categorieDAO=new CategorieDAO();
             while(resultat.next()){
                 Deal deal =new Deal();
                 deal.setId_deal(resultat.getInt(1));
 
-                deal.setId_vendeur(resultat.getInt(2));
-                deal.setId_categorie(resultat.getInt(3));
+                deal.setVendeur(vendeurDAO.findVendeurById(resultat.getInt(2)));
+                deal.setCategorie(categorieDAO.findCategorieById(resultat.getInt(3)));
                 deal.setPrix(resultat.getInt(4));
                 deal.setPrix_promo(resultat.getInt(5));
                 deal.setNbr_min(resultat.getInt(6));
