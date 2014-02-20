@@ -5,7 +5,6 @@
 
 package edu.esprit.dao;
 import edu.esprit.entities.Deal;
-import edu.esprit.entities.Categorie;
 import edu.esprit.util.MyConnection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
