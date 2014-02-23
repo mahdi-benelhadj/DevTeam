@@ -33,13 +33,13 @@
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="ajoutervendeur" alignment="0" min="-2" pref="167" max="-2" attributes="1"/>
-                          <Component id="supprimerclient" alignment="0" min="-2" pref="167" max="-2" attributes="1"/>
+                          <Component id="jButtonAjouterVendeur" alignment="0" min="-2" pref="167" max="-2" attributes="1"/>
+                          <Component id="jButtonSupprimerClient" alignment="0" min="-2" pref="167" max="-2" attributes="1"/>
                       </Group>
                       <EmptySpace min="263" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="genererrapport" max="32767" attributes="1"/>
-                          <Component id="genererstatistique" pref="167" max="32767" attributes="1"/>
+                          <Component id="jButtonGenererRapport" max="32767" attributes="1"/>
+                          <Component id="jButtonGenererStatistique" pref="167" max="32767" attributes="1"/>
                       </Group>
                   </Group>
               </Group>
@@ -47,7 +47,7 @@
           </Group>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
-              <Component id="envoyervoucher" min="-2" pref="125" max="-2" attributes="0"/>
+              <Component id="jButtonEnvoyerVoucher" min="-2" pref="125" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -61,19 +61,19 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="genererrapport" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                          <Component id="supprimerclient" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                          <Component id="jButtonGenererRapport" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                          <Component id="jButtonSupprimerClient" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                       <Component id="jSeparator1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="envoyervoucher" min="-2" pref="28" max="-2" attributes="0"/>
+                      <Component id="jButtonEnvoyerVoucher" min="-2" pref="28" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="ajoutervendeur" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                          <Component id="genererstatistique" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                          <Component id="jButtonAjouterVendeur" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                          <Component id="jButtonGenererStatistique" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -83,7 +83,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="genererstatistique">
+    <Component class="javax.swing.JButton" name="jButtonGenererStatistique">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="0"/>
@@ -91,7 +91,7 @@
         <Property name="text" type="java.lang.String" value="G&#xe9;n&#xe9;rer Statistique"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="genererrapport">
+    <Component class="javax.swing.JButton" name="jButtonGenererRapport">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="0"/>
@@ -99,7 +99,7 @@
         <Property name="text" type="java.lang.String" value="G&#xe9;n&#xe9;rer Rapport"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="envoyervoucher">
+    <Component class="javax.swing.JButton" name="jButtonEnvoyerVoucher">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="0"/>
@@ -130,9 +130,9 @@
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="supprimerdeal" alignment="0" max="32767" attributes="1"/>
-                      <Component id="ajoutercatégorie" alignment="1" pref="380" max="32767" attributes="1"/>
-                      <Component id="ajouterdeal" alignment="1" max="32767" attributes="1"/>
+                      <Component id="jButtonSupprimerDeal" alignment="0" max="32767" attributes="1"/>
+                      <Component id="jButtonAjouterCategorie" alignment="1" pref="380" max="32767" attributes="1"/>
+                      <Component id="jButtonAjouterDeal" alignment="1" max="32767" attributes="1"/>
                   </Group>
                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
               </Group>
@@ -142,18 +142,18 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="ajouterdeal" pref="40" max="32767" attributes="0"/>
+                  <Component id="jButtonAjouterDeal" pref="40" max="32767" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="ajoutercatégorie" min="-2" pref="36" max="-2" attributes="0"/>
+                  <Component id="jButtonAjouterCategorie" min="-2" pref="36" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="supprimerdeal" min="-2" pref="39" max="-2" attributes="0"/>
+                  <Component id="jButtonSupprimerDeal" min="-2" pref="39" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="ajouterdeal">
+        <Component class="javax.swing.JButton" name="jButtonAjouterDeal">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="0"/>
@@ -161,10 +161,10 @@
             <Property name="text" type="java.lang.String" value="Ajouter Deal"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ajouterdealActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonAjouterDealActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="ajoutercat&#xe9;gorie">
+        <Component class="javax.swing.JButton" name="jButtonAjouterCategorie">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="0"/>
@@ -172,7 +172,7 @@
             <Property name="text" type="java.lang.String" value="Ajouter Cat&#xe9;gorie"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="supprimerdeal">
+        <Component class="javax.swing.JButton" name="jButtonSupprimerDeal">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="0"/>
@@ -184,7 +184,7 @@
     </Container>
     <Component class="javax.swing.JSeparator" name="jSeparator1">
     </Component>
-    <Component class="javax.swing.JButton" name="supprimerclient">
+    <Component class="javax.swing.JButton" name="jButtonSupprimerClient">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="0"/>
@@ -192,7 +192,7 @@
         <Property name="text" type="java.lang.String" value="Supprimer Client"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="ajoutervendeur">
+    <Component class="javax.swing.JButton" name="jButtonAjouterVendeur">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="0"/>
