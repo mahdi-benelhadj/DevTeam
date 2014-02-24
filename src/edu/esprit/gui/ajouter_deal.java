@@ -11,8 +11,9 @@
 
 package edu.esprit.gui;
 
-import PIDEV.ENTITE.Deal;
-import pidev.dao.DealDao;
+import edu.esprit.entities.Deal;
+
+
 
 /**
  *
@@ -164,11 +165,11 @@ public class ajouter_deal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelAjoutDeal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panelAjoutDeal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelAjoutDeal, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(panelAjoutDeal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -192,10 +193,10 @@ DealDao dealdeao=new DealDao();
 
 Deal deal=new Deal();
 deal.setCategorie(txtcategorie.getText());
-deal.setDate_deal(txtdate.getText());
-deal.setDetail_deal(txtDetail_deal.getText());
+deal.setDate(txtdate.getText());
+deal.setDetails(txtDetail_deal.getText());
 deal.setPrix(Double.parseDouble(txtprix_deal.getText()));
-deal.setPrix_promotion(Double.parseDouble(txtprix_promotion.getText()));
+deal.setPrix_promo(Double.parseDouble(txtprix_promotion.getText()));
 deal.setDuree(Integer.parseInt(txtduree.getText()));
 deal.setTitre(txt_titreDeal.getText());
 

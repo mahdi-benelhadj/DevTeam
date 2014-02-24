@@ -53,9 +53,15 @@ public class InterfaceAccueil extends javax.swing.JFrame {
         envoyervoucher.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         envoyervoucher.setText("Envoyer Voucher");
         envoyervoucher.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        envoyervoucher.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                envoyervoucherActionPerformed(evt);
+            }
+        });
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Gestion des deals"));
         jPanel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         ajouterdeal.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         ajouterdeal.setText("Ajouter Deal");
@@ -64,36 +70,15 @@ public class InterfaceAccueil extends javax.swing.JFrame {
                 ajouterdealActionPerformed(evt);
             }
         });
+        jPanel1.add(ajouterdeal, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 380, 40));
 
         ajoutercatégorie.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         ajoutercatégorie.setText("Ajouter Catégorie");
+        jPanel1.add(ajoutercatégorie, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 78, 380, 36));
 
         supprimerdeal.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         supprimerdeal.setText("Supprimer Deal");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(supprimerdeal, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(ajoutercatégorie, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE)
-                    .addComponent(ajouterdeal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(26, 26, 26))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(ajouterdeal, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(ajoutercatégorie, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(supprimerdeal, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
+        jPanel1.add(supprimerdeal, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 120, 380, 39));
 
         supprimerclient.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         supprimerclient.setText("Supprimer Client");
@@ -146,7 +131,7 @@ public class InterfaceAccueil extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(ajoutervendeur, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(genererstatistique, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
 
         pack();
@@ -155,6 +140,10 @@ public class InterfaceAccueil extends javax.swing.JFrame {
     private void ajouterdealActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ajouterdealActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ajouterdealActionPerformed
+
+    private void envoyervoucherActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_envoyervoucherActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_envoyervoucherActionPerformed
 
     /**
     * @param args the command line arguments
