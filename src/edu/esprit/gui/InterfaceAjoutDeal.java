@@ -11,12 +11,26 @@
 
 package edu.esprit.gui;
 
+import edu.esprit.dao.DealDAO;
+import edu.esprit.entities.Categorie;
+import  edu.esprit.entities.Deal ;
+import edu.esprit.entities.Vendeur;
+import java.text.ParseException;
+
+import java.text.SimpleDateFormat;
+import java.util.Vector;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JComboBox;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author olfa
  */
 public class InterfaceAjoutDeal extends javax.swing.JFrame {
-
+    SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
+            
     /** Creates new form InterfaceAjClient */
     public InterfaceAjoutDeal() {
         initComponents();
@@ -30,175 +44,192 @@ public class InterfaceAjoutDeal extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
-        label1 = new java.awt.Label();
-        titre = new java.awt.TextField();
-        details = new java.awt.TextField();
-        prix = new java.awt.TextField();
-        prixpromotion = new java.awt.TextField();
-        categorie = new java.awt.Choice();
-        canvas1 = new java.awt.Canvas();
-        duree = new java.awt.TextField();
-        label2 = new java.awt.Label();
-        label3 = new java.awt.Label();
-        label4 = new java.awt.Label();
-        label5 = new java.awt.Label();
-        label6 = new java.awt.Label();
-        vendeur = new java.awt.Choice();
-        label7 = new java.awt.Label();
-        label8 = new java.awt.Label();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jEditorPane1 = new javax.swing.JEditorPane();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        txtTitredeal = new javax.swing.JTextField();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        txtdetaildeal = new javax.swing.JTextArea();
+        txtPrix_deal = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        txtPrix_promotiondeal = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        txtdatedeal = new javax.swing.JTextField();
+        txtduree_deal = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        annuler = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jXDatePicker1 = new org.jdesktop.swingx.JXDatePicker();
+        annuler_ajoutDealBoutton = new javax.swing.JButton();
+        valider_ajoutDeal = new javax.swing.JButton();
+        jcomboxvendeur = new javax.swing.JComboBox();
+        comboboxCategorie = new javax.swing.JComboBox();
+        jLabel4 = new javax.swing.JLabel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenu2 = new javax.swing.JMenu();
+
+        jScrollPane1.setViewportView(jEditorPane1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        label1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        label1.setText("Titre");
+        jLabel1.setText("Titre");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, -1, -1));
 
-        label2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        label2.setText("Détails");
+        jLabel2.setText("Detail_deal");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, -1, -1));
 
-        label3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        label3.setText("Prix");
+        jLabel3.setText("Prix_deal");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, -1));
+        getContentPane().add(txtTitredeal, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, 90, 30));
 
-        label4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        label4.setText("Prix Promotion");
+        txtdetaildeal.setColumns(20);
+        txtdetaildeal.setRows(5);
+        jScrollPane2.setViewportView(txtdetaildeal);
 
-        label5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        label5.setText("Catégorie");
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, -1, -1));
+        getContentPane().add(txtPrix_deal, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 230, 90, 30));
 
-        label6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        label6.setText("Date");
+        jLabel5.setText("Prix_promotion");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, -1, -1));
+        getContentPane().add(txtPrix_promotiondeal, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 280, 100, 30));
 
-        label7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        label7.setText("Durée");
+        jLabel6.setText("vendeur");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, -1, -1));
 
-        label8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        label8.setText("Vendeur");
+        jLabel7.setForeground(new java.awt.Color(51, 51, 255));
+        jLabel7.setText("Ajouter deal");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, 70, -1));
 
-        annuler.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        annuler.setText("Annuler");
-        annuler.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel8.setText("date :");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, -1, -1));
+        getContentPane().add(txtdatedeal, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 380, 110, 30));
+        getContentPane().add(txtduree_deal, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 80, 70, 30));
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButton1.setText("Ajouter");
-        jButton1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel9.setText("durée");
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 90, -1, -1));
+        getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 490, 650, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 685, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(87, 87, 87)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(50, 50, 50)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jXDatePicker1, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(categorie, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addGap(67, 67, 67))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(vendeur, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                                        .addComponent(label7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(29, 29, 29)
-                                        .addComponent(duree, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(9, 9, 9)))
-                                .addComponent(canvas1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(34, 34, 34)
-                                .addComponent(annuler, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(details, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 242, Short.MAX_VALUE)
-                                    .addComponent(prix, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(titre, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 150, Short.MAX_VALUE)))
-                        .addGap(36, 36, 36))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(prixpromotion, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(titre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(label1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(label2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(details, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(prix, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(label4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(30, 30, 30)
-                        .addComponent(label8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(28, 28, 28)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(label5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(20, 20, 20)
-                                .addComponent(canvas1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(categorie, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(32, 32, 32))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addComponent(prixpromotion, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(20, 20, 20)
-                                .addComponent(vendeur, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(duree, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(label7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(68, 68, 68)))))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(label6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(annuler, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addComponent(jXDatePicker1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(14, Short.MAX_VALUE))
-        );
+        annuler_ajoutDealBoutton.setText("Annuler");
+        annuler_ajoutDealBoutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                annuler_ajoutDealBouttonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(annuler_ajoutDealBoutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 530, -1, 30));
 
-        label7.getAccessibleContext().setAccessibleName("");
+        valider_ajoutDeal.setText("valider");
+        valider_ajoutDeal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                valider_ajoutDealActionPerformed(evt);
+            }
+        });
+        getContentPane().add(valider_ajoutDeal, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 530, -1, 30));
+
+        Vector<Vendeur>
+        model2 = new Vector();
+        model2.addElement( new Vendeur(1, "chelly" ) );
+        model2.addElement( new Vendeur(2, "amine" ) );
+        model2.addElement( new Vendeur(3, "mohamed" ) );
+        model2.addElement( new Vendeur(4, "salah" ) );
+        jcomboxvendeur = new JComboBox( model2 );
+        jcomboxvendeur.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcomboxvendeurActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jcomboxvendeur, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 330, 100, 30));
+
+        Vector<Categorie> model = new Vector();
+        model.addElement( new Categorie(1, "car" ) );
+        model.addElement( new Categorie(2, "plane" ) );
+        model.addElement( new Categorie(3, "train" ) );
+        model.addElement( new Categorie(4, "boat" ) );
+        comboboxCategorie = new JComboBox( model );
+
+        org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, comboboxCategorie, org.jdesktop.beansbinding.ObjectProperty.create(), comboboxCategorie, org.jdesktop.beansbinding.BeanProperty.create("elements"));
+        bindingGroup.addBinding(binding);
+
+        comboboxCategorie.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboboxCategorieActionPerformed(evt);
+            }
+        });
+        getContentPane().add(comboboxCategorie, new org.netbeans.lib.awtextra.AbsoluteConstraints(516, 20, 90, 30));
+
+        jLabel4.setText("Categorie");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 40, -1, -1));
+
+        jMenu1.setText("File");
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Edit");
+        jMenuBar1.add(jMenu2);
+
+        setJMenuBar(jMenuBar1);
+
+        bindingGroup.bind();
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+public  void vd ()
+{
+    txtPrix_deal.setText("");
+    txtTitredeal.setText("");
+    txtdetaildeal.setText("");
+    txtdatedeal.setText("");
+    txtPrix_promotiondeal.setText("");
+    txtPrix_promotiondeal.setText("");
+            
+    
+    
+    
+}
+    private void valider_ajoutDealActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valider_ajoutDealActionPerformed
+
+        // TODO add your handling code here:
+ 
+       /* creation objet deal */
+     Deal deal = new Deal();
+     
+     deal.setTitre(txtTitredeal.getText() );
+     deal.setDetails(txtdetaildeal.getText());
+     deal.setPrix(Double.parseDouble(txtPrix_deal.getText()));
+     deal.setCategorie((Categorie) comboboxCategorie.getSelectedItem());
+     deal.setPrix_promo(Double.parseDouble(txtPrix_promotiondeal.getText()));
+       deal.setVendeur((Vendeur) jcomboxvendeur.getSelectedItem());
+        try {
+      java.util.Date       d = sdf.parse(txtdatedeal.getText());
+        deal.setDate(d);
+     deal.setDuree(Integer.parseInt(txtduree_deal.getText()));
+        DealDAO dealao=new DealDAO();
+     
+        dealao.insertDeal(deal);
+            JOptionPane.showConfirmDialog(null, "deal "+ deal.getTitre()+" est ajouté avec succes", "success", JOptionPane.INFORMATION_MESSAGE);
+            vd();
+        } catch (ParseException ex) {
+            
+            Logger.getLogger(InterfaceAjoutDeal.class.getName()).log(Level.SEVERE, null, ex);
+        }
+   
+    }//GEN-LAST:event_valider_ajoutDealActionPerformed
+
+    private void comboboxCategorieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboboxCategorieActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboboxCategorieActionPerformed
+
+    private void jcomboxvendeurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcomboxvendeurActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jcomboxvendeurActionPerformed
+
+    private void annuler_ajoutDealBouttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_annuler_ajoutDealBouttonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_annuler_ajoutDealBouttonActionPerformed
 
     /**
     * @param args the command line arguments
@@ -212,26 +243,33 @@ public class InterfaceAjoutDeal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton annuler;
-    private java.awt.Canvas canvas1;
-    private java.awt.Choice categorie;
-    private java.awt.TextField details;
-    private java.awt.TextField duree;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton annuler_ajoutDealBoutton;
+    private javax.swing.JComboBox comboboxCategorie;
+    private javax.swing.JEditorPane jEditorPane1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
-    private org.jdesktop.swingx.JXDatePicker jXDatePicker1;
-    private java.awt.Label label1;
-    private java.awt.Label label2;
-    private java.awt.Label label3;
-    private java.awt.Label label4;
-    private java.awt.Label label5;
-    private java.awt.Label label6;
-    private java.awt.Label label7;
-    private java.awt.Label label8;
-    private java.awt.TextField prix;
-    private java.awt.TextField prixpromotion;
-    private java.awt.TextField titre;
-    private java.awt.Choice vendeur;
+    public javax.swing.JComboBox jcomboxvendeur;
+    private javax.swing.JTextField txtPrix_deal;
+    private javax.swing.JTextField txtPrix_promotiondeal;
+    private javax.swing.JTextField txtTitredeal;
+    private javax.swing.JTextField txtdatedeal;
+    private javax.swing.JTextArea txtdetaildeal;
+    private javax.swing.JTextField txtduree_deal;
+    private javax.swing.JButton valider_ajoutDeal;
+    private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 
 }
