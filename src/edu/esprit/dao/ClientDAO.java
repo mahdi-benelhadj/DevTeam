@@ -147,22 +147,8 @@ public class ClientDAO {
     public class InternauteDao
 {
 
- public void  inscription_Internaute( Client internaute )
-    {
-     
-      
- String req = "INSERT INTO `client`('id_client',`nom`,`prenom`,`age`,`email`,`mot_de_passe`,`num_tel`,'titre_selectionner') VALUES (null,'"+internaute.getNom()+"','"+internaute.getPrenom()+"','"+internaute.getAge()+"','"+internaute.getEmail()+"','"+internaute.getMot_de_passe()+"','" +"','"+internaute.getNum_tel()+"','"+internaute.getTitre_selectionner()+"')";
-
-        try {
-           System.out.println("******Inscription effectuer avec succes ******");
-            
-         Statement stmt=    MyCONNECTION.etablirconnexion().createStatement();
-         stmt.execute(req);
-         } 
-        catch (SQLException ex) 
-        {
-        }
-        
-        }}
+    
+    
+    }
 
 }

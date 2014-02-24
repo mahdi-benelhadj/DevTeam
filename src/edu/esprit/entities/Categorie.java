@@ -13,6 +13,17 @@ public class Categorie {
     private int id_categorie;
     private String categorie;
 
+    public Categorie(int id_categorie, String categorie) {
+        this.id_categorie = id_categorie;
+        this.categorie = categorie;
+    }
+
+    public Categorie() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+
+ 
      public int getId_categorie() {
         return id_categorie;
     }
@@ -26,6 +37,11 @@ public class Categorie {
 
     public void setCategorie(String categorie) {
         this.categorie = categorie;
+    }
+
+    @Override
+    public String toString() {
+        return ""+categorie;
     }
 
 }

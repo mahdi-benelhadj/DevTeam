@@ -6,6 +6,8 @@
 package edu.esprit.dao;
 import edu.esprit.entities.Deal;
 import edu.esprit.util.MyConnection;
+import java.sql.Date;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -15,11 +17,22 @@ import java.util.List;
 
 
 
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+
+    public class DealDAO   {
+
+
+
 /**
  *
  * @author nour
+     * @param deal
  */
-public class DealDAO {
+
+
     
      public void insertDeal(Deal d){
 
@@ -32,9 +45,9 @@ public class DealDAO {
             ps.setInt(4, d.getNbr_max());
             ps.setString(5, d.getDetails());
             ps.setString(6, d.getTitre());
-              ps.setInt(7, d.getPrix());
-              ps.setInt(8, d.getPrix_promo());
-                ps.setDate(9, (java.sql.Date) d.getDate());
+           ps.setDouble(7, d.getPrix());
+              ps.setDouble(8, d.getPrix_promo());
+                ps.setDate(9,  new Date( d.getDate().getTime()));
                  ps.setInt(10,d.getDuree());
             ps.executeUpdate();
             System.out.println("Ajout effectuée avec succès");
@@ -43,6 +56,29 @@ public class DealDAO {
             System.out.println("erreur lors de l'insertion "+ex.getMessage());
         }
     }
+
+
+
+  /* ajout_deal   ****/
+    
+        
+
+    
+    
+   
+    
+    
+   
+    
+    
+    
+    
+
+
+
+
+
+
 
       public void deleteDeal(int id){
         String requete = "delete from deal where id_deal=?";
@@ -68,8 +104,8 @@ public class DealDAO {
             ps.setInt(4, d.getNbr_max());
             ps.setString(5, d.getDetails());
             ps.setString(6, d.getTitre());
-              ps.setInt(7, d.getPrix());
-              ps.setInt(8, d.getPrix_promo());
+              ps.setDouble(7, d.getPrix());
+              ps.setDouble (8, d.getPrix_promo());
                 ps.setDate(9, (java.sql.Date) d.getDate());
                  ps.setInt(10,d.getDuree());
             ps.executeUpdate();
@@ -162,40 +198,5 @@ public class DealDAO {
             return null;
         }
     }
-        public List<Deal> DisplayAllDeals (){
-
-
-        List<Deal> listedeals = new ArrayList<Deal>();
-
-        String requete = "select * from deal";
-        try {
-           Statement statement = MyConnection.getInstance()
-                   .createStatement();
-            ResultSet resultat = statement.executeQuery(requete);
-            VendeurDAO vendeurDAO=new VendeurDAO();
-            CategorieDAO categorieDAO=new CategorieDAO();
-            while(resultat.next()){
-                Deal deal =new Deal();
-                deal.setId_deal(resultat.getInt(1));
-
-                deal.setVendeur(vendeurDAO.findVendeurById(resultat.getInt(2)));
-                deal.setCategorie(categorieDAO.findCategorieById(resultat.getInt(3)));
-                deal.setPrix(resultat.getInt(4));
-                deal.setPrix_promo(resultat.getInt(5));
-                deal.setNbr_min(resultat.getInt(6));
-                deal.setNbr_max(resultat.getInt(7));
-                deal.setTitre(resultat.getString(8));
-                deal.setDetails(resultat.getString(9));
-                deal.setDate(resultat.getDate(10));
-                deal.setDuree(resultat.getInt(11));
-
-                listedeals.add(deal);
-            }
-            return listedeals;
-        } catch (SQLException ex) {
-           //Logger.getLogger(PersonneDao.class.getName()).log(Level.SEVERE, null, ex);
-            System.out.println("erreur lors du chargement des deals "+ex.getMessage());
-            return null;
-        }
-}
+       
 }
