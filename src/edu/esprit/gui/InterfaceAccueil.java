@@ -31,45 +31,45 @@ public class InterfaceAccueil extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        genererstatistique = new javax.swing.JButton();
-        genererrapport = new javax.swing.JButton();
-        envoyervoucher = new javax.swing.JButton();
+        jButtonGenererStatistique = new javax.swing.JButton();
+        jButtonGenererRapport = new javax.swing.JButton();
+        jButtonEnvoyerVoucher = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        ajouterdeal = new javax.swing.JButton();
-        ajoutercatégorie = new javax.swing.JButton();
-        supprimerdeal = new javax.swing.JButton();
+        jButtonAjouterDeal = new javax.swing.JButton();
+        jButtonAjouterCategorie = new javax.swing.JButton();
+        jButtonSupprimerDeal = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
-        supprimerclient = new javax.swing.JButton();
-        ajoutervendeur = new javax.swing.JButton();
+        jButtonSupprimerClient = new javax.swing.JButton();
+        jButtonAjouterVendeur = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        genererstatistique.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        genererstatistique.setText("Générer Statistique");
+        jButtonGenererStatistique.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButtonGenererStatistique.setText("Générer Statistique");
 
-        genererrapport.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        genererrapport.setText("Générer Rapport");
+        jButtonGenererRapport.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButtonGenererRapport.setText("Générer Rapport");
 
-        envoyervoucher.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        envoyervoucher.setText("Envoyer Voucher");
-        envoyervoucher.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButtonEnvoyerVoucher.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButtonEnvoyerVoucher.setText("Envoyer Voucher");
+        jButtonEnvoyerVoucher.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Gestion des deals"));
         jPanel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
-        ajouterdeal.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        ajouterdeal.setText("Ajouter Deal");
-        ajouterdeal.addActionListener(new java.awt.event.ActionListener() {
+        jButtonAjouterDeal.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButtonAjouterDeal.setText("Ajouter Deal");
+        jButtonAjouterDeal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ajouterdealActionPerformed(evt);
+                jButtonAjouterDealActionPerformed(evt);
             }
         });
 
-        ajoutercatégorie.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        ajoutercatégorie.setText("Ajouter Catégorie");
+        jButtonAjouterCategorie.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButtonAjouterCategorie.setText("Ajouter Catégorie");
 
-        supprimerdeal.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        supprimerdeal.setText("Supprimer Deal");
+        jButtonSupprimerDeal.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButtonSupprimerDeal.setText("Supprimer Deal");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -78,28 +78,28 @@ public class InterfaceAccueil extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(23, 23, 23)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(supprimerdeal, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(ajoutercatégorie, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE)
-                    .addComponent(ajouterdeal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButtonSupprimerDeal, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonAjouterCategorie, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE)
+                    .addComponent(jButtonAjouterDeal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(26, 26, 26))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(ajouterdeal, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+                .addComponent(jButtonAjouterDeal, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(ajoutercatégorie, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButtonAjouterCategorie, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(supprimerdeal, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButtonSupprimerDeal, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
-        supprimerclient.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        supprimerclient.setText("Supprimer Client");
+        jButtonSupprimerClient.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButtonSupprimerClient.setText("Supprimer Client");
 
-        ajoutervendeur.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        ajoutervendeur.setText("Ajouter Vendeur");
+        jButtonAjouterVendeur.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButtonAjouterVendeur.setText("Ajouter Vendeur");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -114,16 +114,16 @@ public class InterfaceAccueil extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(94, 94, 94)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ajoutervendeur, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(supprimerclient, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jButtonAjouterVendeur, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonSupprimerClient, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(genererrapport, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(genererstatistique, javax.swing.GroupLayout.DEFAULT_SIZE, 167, Short.MAX_VALUE))))
+                            .addComponent(jButtonGenererRapport, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButtonGenererStatistique, javax.swing.GroupLayout.DEFAULT_SIZE, 167, Short.MAX_VALUE))))
                 .addGap(127, 127, 127))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(envoyervoucher, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButtonEnvoyerVoucher, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(23, 23, 23))
         );
         layout.setVerticalGroup(
@@ -135,26 +135,26 @@ public class InterfaceAccueil extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(112, 112, 112)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(genererrapport, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(supprimerclient, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jButtonGenererRapport, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonSupprimerClient, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(48, 48, 48)
                         .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(envoyervoucher, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jButtonEnvoyerVoucher, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(30, 30, 30)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(ajoutervendeur, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(genererstatistique, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jButtonAjouterVendeur, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonGenererStatistique, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(26, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void ajouterdealActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ajouterdealActionPerformed
+    private void jButtonAjouterDealActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAjouterDealActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ajouterdealActionPerformed
+    }//GEN-LAST:event_jButtonAjouterDealActionPerformed
 
     /**
     * @param args the command line arguments
@@ -168,16 +168,16 @@ public class InterfaceAccueil extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton ajoutercatégorie;
-    private javax.swing.JButton ajouterdeal;
-    private javax.swing.JButton ajoutervendeur;
-    private javax.swing.JButton envoyervoucher;
-    private javax.swing.JButton genererrapport;
-    private javax.swing.JButton genererstatistique;
+    private javax.swing.JButton jButtonAjouterCategorie;
+    private javax.swing.JButton jButtonAjouterDeal;
+    private javax.swing.JButton jButtonAjouterVendeur;
+    private javax.swing.JButton jButtonEnvoyerVoucher;
+    private javax.swing.JButton jButtonGenererRapport;
+    private javax.swing.JButton jButtonGenererStatistique;
+    private javax.swing.JButton jButtonSupprimerClient;
+    private javax.swing.JButton jButtonSupprimerDeal;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JButton supprimerclient;
-    private javax.swing.JButton supprimerdeal;
     // End of variables declaration//GEN-END:variables
 
 }

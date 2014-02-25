@@ -32,10 +32,11 @@ public class InterfaceSupprimerClient extends javax.swing.JFrame {
         jTable1 = new javax.swing.JTable();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTable3 = new javax.swing.JTable();
-        annuler = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jButtonSupprimer = new javax.swing.JButton();
+        jButtonAnnuler = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
-        table = new javax.swing.JTable();
+        jTableClient = new javax.swing.JTable();
         jSeparator1 = new javax.swing.JSeparator();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -64,24 +65,26 @@ public class InterfaceSupprimerClient extends javax.swing.JFrame {
         ));
         jScrollPane3.setViewportView(jTable3);
 
+        jButton1.setText("jButton1");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        annuler.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        annuler.setText("Supprimer");
-        annuler.setActionCommand("an");
-        annuler.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        annuler.addActionListener(new java.awt.event.ActionListener() {
+        jButtonSupprimer.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButtonSupprimer.setText("Supprimer");
+        jButtonSupprimer.setActionCommand("an");
+        jButtonSupprimer.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButtonSupprimer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                annulerActionPerformed(evt);
+                jButtonSupprimerActionPerformed(evt);
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButton2.setText("Annuler");
-        jButton2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton2.setMaximumSize(new java.awt.Dimension(79, 25));
+        jButtonAnnuler.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButtonAnnuler.setText("Annuler");
+        jButtonAnnuler.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButtonAnnuler.setMaximumSize(new java.awt.Dimension(79, 25));
 
-        table.setModel(new javax.swing.table.DefaultTableModel(
+        jTableClient.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -100,7 +103,7 @@ public class InterfaceSupprimerClient extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jScrollPane2.setViewportView(table);
+        jScrollPane2.setViewportView(jTableClient);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -113,9 +116,9 @@ public class InterfaceSupprimerClient extends javax.swing.JFrame {
                 .addContainerGap(102, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(annuler, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButtonSupprimer, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButtonAnnuler, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34))
         );
         layout.setVerticalGroup(
@@ -127,17 +130,17 @@ public class InterfaceSupprimerClient extends javax.swing.JFrame {
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(4, 4, 4)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(annuler, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButtonSupprimer, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonAnnuler, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void annulerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_annulerActionPerformed
+    private void jButtonSupprimerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSupprimerActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_annulerActionPerformed
+    }//GEN-LAST:event_jButtonSupprimerActionPerformed
 
     /**
      * @param args the command line arguments
@@ -175,14 +178,15 @@ public class InterfaceSupprimerClient extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton annuler;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButtonAnnuler;
+    private javax.swing.JButton jButtonSupprimer;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable3;
-    private javax.swing.JTable table;
+    private javax.swing.JTable jTableClient;
     // End of variables declaration//GEN-END:variables
 }
