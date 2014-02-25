@@ -83,6 +83,31 @@ public class ClientDAO {
             return null;
         }
     }
+    public Client findClientByNom(String nom){
+    Client client = new Client();
+     String requete = "select * from client where nom=?";
+        try {
+            PreparedStatement ps = MyConnection.getInstance().prepareStatement(requete);
+            ps.setString(1, nom);
+            ResultSet resultat = ps.executeQuery();
+            while (resultat.next())
+            {
+                client.setId_client(resultat.getInt(1));
+               client.setNom(resultat.getString(2));
+                client.setPrenom(resultat.getString(3));
+                client.setAge(resultat.getInt(4));
+                client.setPassowrd(resultat.getString(5));
+                client.setEmail(resultat.getString(6));
+                client.setGenre(resultat.getString(7));
+            }
+            return client;
+
+        } catch (SQLException ex) {
+           //Logger.getLogger(PersonneDao.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("erreur lors de la recherche du client "+ex.getMessage());
+            return null;
+        }
+    }
      public void updateClient(Client c){
         String requete = "update client set NumTel=? , set email=? ,set password=? where id_client=?";
         try {

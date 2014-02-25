@@ -11,6 +11,11 @@
 
 package edu.esprit.gui;
 
+import edu.esprit.entities.Categorie;
+import edu.esprit.metier.CategorieMetier;
+import edu.esprit.dao.CategorieDAO;
+
+
 /**
  *
  * @author olfa
@@ -47,6 +52,11 @@ public class InterfaceAjoutCatégorie extends javax.swing.JFrame {
         jButtonValider.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonValider.setText("Valider");
         jButtonValider.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButtonValider.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonValiderActionPerformed(evt);
+            }
+        });
 
         jButtonAnnuler.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonAnnuler.setText("Annuler");
@@ -106,6 +116,14 @@ public class InterfaceAjoutCatégorie extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonValiderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonValiderActionPerformed
+        // TODO add your handling code here:
+         Categorie c = new Categorie();
+        c.setCategorie(jTextFieldCategorie.getText());
+        
+        CategorieMetier.ajouterCategorie(c);
+    }//GEN-LAST:event_jButtonValiderActionPerformed
 
     /**
     * @param args the command line arguments
