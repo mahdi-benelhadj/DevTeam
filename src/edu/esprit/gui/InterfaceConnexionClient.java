@@ -33,6 +33,7 @@ public class InterfaceConnexionClient extends javax.swing.JFrame {
         jTextFieldPasswd = new javax.swing.JTextField();
         jTextFieldEmail1 = new javax.swing.JTextField();
         jButtonConnect = new javax.swing.JButton();
+        jButtoninscription = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -47,6 +48,13 @@ public class InterfaceConnexionClient extends javax.swing.JFrame {
         jTextFieldEmail1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         jButtonConnect.setText("Connexion");
+
+        jButtoninscription.setText("Inscription");
+        jButtoninscription.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtoninscriptionActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -63,6 +71,8 @@ public class InterfaceConnexionClient extends javax.swing.JFrame {
                 .addContainerGap(115, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButtoninscription)
+                .addGap(35, 35, 35)
                 .addComponent(jButtonConnect)
                 .addGap(69, 69, 69))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -81,7 +91,9 @@ public class InterfaceConnexionClient extends javax.swing.JFrame {
                     .addComponent(jLabel1)
                     .addComponent(jTextFieldPasswd, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
-                .addComponent(jButtonConnect)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonConnect)
+                    .addComponent(jButtoninscription))
                 .addGap(39, 39, 39))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
@@ -92,6 +104,13 @@ public class InterfaceConnexionClient extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtoninscriptionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtoninscriptionActionPerformed
+        // TODO add your handling code here:
+        InterfaceInscription inscriptionframe= new InterfaceInscription();
+        inscriptionframe.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButtoninscriptionActionPerformed
 
     /**
      * @param args the command line arguments
@@ -130,6 +149,7 @@ public class InterfaceConnexionClient extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonConnect;
+    private javax.swing.JButton jButtoninscription;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JTextField jTextFieldEmail1;
