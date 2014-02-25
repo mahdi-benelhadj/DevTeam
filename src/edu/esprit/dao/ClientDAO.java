@@ -148,11 +148,12 @@ public class ClientDAO {
                 client.setId_client(resultat.getInt(1));
                client.setNom(resultat.getString(2));
                 client.setPrenom(resultat.getString(3));
-                client.setAge(resultat.getInt(4));
-                client.setPassowrd(resultat.getString(5));
-                client.setEmail(resultat.getString(6));
+                client.setEmail(resultat.getString(4));
+                client.setAge(resultat.getInt(5));
+                client.setPassowrd(resultat.getString(6));
+                
                 client.setGenre(resultat.getString(7));
-
+                client.setNumTel(resultat.getInt(8));
                 listeclients.add(client);
             }
             return listeclients;
