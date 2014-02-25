@@ -11,6 +11,10 @@
 
 package edu.esprit.gui;
 
+import edu.esprit.dao.AdminDAO;
+import edu.esprit.entities.Admin;
+import edu.esprit.metier.ConnexionMetier;
+
 /**
  *
  * @author olfa
@@ -42,6 +46,8 @@ public class InterfaceConnexion extends javax.swing.JFrame {
         label1 = new java.awt.Label();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(51, 102, 255));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setText("Login");
@@ -53,6 +59,11 @@ public class InterfaceConnexion extends javax.swing.JFrame {
         connect.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         connect.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         connect.setLabel("Connect");
+        connect.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                connectActionPerformed(evt);
+            }
+        });
 
         jPasswordField1.setText("passwd");
 
@@ -120,6 +131,17 @@ public class InterfaceConnexion extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void connectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_connectActionPerformed
+        // TODO add your handling code here:
+        
+        Admin admin = new Admin();
+        admin.setLogin(login.getText());
+        admin.setPassword(passwd.getText());
+        ConnexionMetier.ConnexionVerif(admin);
+         
+        
+    }//GEN-LAST:event_connectActionPerformed
 
     /**
     * @param args the command line arguments
