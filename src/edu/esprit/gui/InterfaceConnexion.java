@@ -129,8 +129,8 @@ public class InterfaceConnexion extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         Admin admin = new Admin();
-        admin.setLogin(login.getText());
-        admin.setPassword(passwd.getText());
+        admin.setLogin(jTextfieldLogin.getText());
+        admin.setPassword(jTextFieldMotDePasse.getText());
         ConnexionMetier.ConnexionVerif(admin);
          
         
