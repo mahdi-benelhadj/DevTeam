@@ -61,10 +61,10 @@ public class ReservationDAO {
             while (resultat.next())
             {
                 reserv.setId_reservation(resultat.getInt(1));
-                reserv.setTotal(resultat.getInt(2));
-                reserv.setClient(clientDAO.findClientById(resultat.getInt(3)));
-                reserv.setDeal(dealDAO.findDealById(resultat.getInt(4)));
-                reserv.setQte(resultat.getInt(5));
+                reserv.setClient(clientDAO.findClientById(resultat.getInt(2)));
+                reserv.setDeal(dealDAO.findDealById(resultat.getInt(3)));
+                reserv.setQte(resultat.getInt(4));
+                reserv.setTotal(resultat.getInt(5));
                 reserv.setValide(resultat.getInt(6));
 
             }
@@ -91,11 +91,10 @@ public class ReservationDAO {
             while(resultat.next()){
                 Reservation reserv =new Reservation();
                 reserv.setId_reservation(resultat.getInt(1));
-                reserv.setTotal(resultat.getInt(2));
-                reserv.setClient(clientDAO.findClientById(resultat.getInt(3)));
-                reserv.setDeal(dealDAO.findDealById(resultat.getInt(4)));
-                reserv.setQte(resultat.getInt(5));
-
+                reserv.setClient(clientDAO.findClientById(resultat.getInt(2)));
+                reserv.setDeal(dealDAO.findDealById(resultat.getInt(3)));
+                reserv.setQte(resultat.getInt(4));
+                    reserv.setTotal(resultat.getInt(5));
                 reserv.setValide(resultat.getInt(6));
                 
 
