@@ -5,6 +5,14 @@
  */
 
 package edu.esprit.gui;
+import edu.esprit.metier.DealMetier;
+import edu.esprit.metier.ListDeal;
+import edu.esprit.dao.DealDAO;
+import edu.esprit.metier.DealMetier;
+import edu.esprit.metier.ListDeal;
+
+
+import edu.esprit.metier.ListClientchercher;
 
 /**
  *
@@ -46,12 +54,23 @@ public class InterfaceListeDeal extends javax.swing.JFrame {
 
         jButtonRechercherDeal.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonRechercherDeal.setText("Rechercher");
+        jButtonRechercherDeal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRechercherDealActionPerformed(evt);
+            }
+        });
 
+        jListDeal.setModel(new ListDeal());
         jScrollPane1.setViewportView(jListDeal);
 
         jButtonSupprimer.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonSupprimer.setText("Supprimer");
         jButtonSupprimer.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButtonSupprimer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSupprimerActionPerformed(evt);
+            }
+        });
 
         jButtonAfficherDetail.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonAfficherDetail.setText("Afficher Détail");
@@ -131,6 +150,17 @@ public class InterfaceListeDeal extends javax.swing.JFrame {
         InterfaceDetailDeal f1 = new InterfaceDetailDeal();
         f1.setVisible(true); //afficher l'interface
     }//GEN-LAST:event_jButtonAfficherDetailActionPerformed
+
+    private void jButtonRechercherDealActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRechercherDealActionPerformed
+        // TODO add your handling code here:
+        jListDeal.setModel(new ListClientchercher(jTextFieldRechercherDeal.getText()));
+    }//GEN-LAST:event_jButtonRechercherDealActionPerformed
+
+    private void jButtonSupprimerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSupprimerActionPerformed
+        // TODO add your handling code here:
+        DealMetier.SupprimerDeal(jListDeal.getSelectedIndex());
+        jListDeal.setModel(new ListDeal());
+    }//GEN-LAST:event_jButtonSupprimerActionPerformed
 
     /**
      * @param args the command line arguments
