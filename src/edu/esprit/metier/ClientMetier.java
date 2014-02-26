@@ -7,6 +7,9 @@
 package edu.esprit.metier;
 import edu.esprit.dao.ClientDAO;
 import edu.esprit.entities.Client;
+import java.util.ArrayList;
+import java.util.List;
+
 
 /**
  *
@@ -17,5 +20,10 @@ public class ClientMetier {
       ClientDAO cldao = new  ClientDAO();
       cldao.findClientByNom(cl);
     }
-    
+     public static void SupprimerClient(int c){
+           List<Client> clients = new ArrayList<Client>();
+           ClientDAO cldao = new  ClientDAO();
+           cldao.deleteClient(clients.get(c).getId_client());
+        
+}
 }

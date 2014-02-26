@@ -10,6 +10,7 @@ import edu.esprit.entities.Client;
 import edu.esprit.metier.ListClient;
 import edu.esprit.metier.ListClientchercher;
 import edu.esprit.dao.ClientDAO;
+import edu.esprit.metier.ClientMetier;
 
 /**
  *
@@ -118,8 +119,8 @@ public class InterfaceGestionClients extends javax.swing.JFrame {
 
     private void jButtonSupClActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSupClActionPerformed
         // TODO add your handling code here:
-        
-        System.out.println();
+        ClientMetier.SupprimerClient(jList1.getSelectedIndex());
+       
     }//GEN-LAST:event_jButtonSupClActionPerformed
 
     /**
