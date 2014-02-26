@@ -56,6 +56,11 @@ public class InterfaceAjouterRéservation extends javax.swing.JFrame {
         jButtonValider.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonValider.setText("Valider");
         jButtonValider.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButtonValider.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonValiderActionPerformed(evt);
+            }
+        });
 
         jTextFieldClient.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -151,6 +156,11 @@ public class InterfaceAjouterRéservation extends javax.swing.JFrame {
     private void jTextFieldClientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldClientActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldClientActionPerformed
+
+    private void jButtonValiderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonValiderActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jButtonValiderActionPerformed
 
     /**
      * @param args the command line arguments

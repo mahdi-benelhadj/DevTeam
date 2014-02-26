@@ -7,7 +7,7 @@
 package edu.esprit.gui;
 import edu.esprit.metier.MyTableReservation;
 import javax.swing.table.TableModel;
-
+import edu.esprit.metier.ReservationMetier;
 /**
  *
  * @author olfa
@@ -113,6 +113,8 @@ public class InterfaceGestionReservation extends javax.swing.JFrame {
 
     private void jButtonSupprimerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSupprimerActionPerformed
         // TODO add your handling code here:
+        ReservationMetier.SupprimerReservation(Integer.parseInt(jTableReservation.getValueAt(jTableReservation.getSelectedRow(),0).toString()));
+        
     }//GEN-LAST:event_jButtonSupprimerActionPerformed
 
     /**

@@ -128,6 +128,8 @@ public class InterfaceListeDeal extends javax.swing.JFrame {
 
     private void jButtonAfficherDetailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAfficherDetailActionPerformed
         // TODO add your handling code here:
+        InterfaceDetailDeal f1 = new InterfaceDetailDeal();
+        f1.setVisible(true); //afficher l'interface
     }//GEN-LAST:event_jButtonAfficherDetailActionPerformed
 
     /**
