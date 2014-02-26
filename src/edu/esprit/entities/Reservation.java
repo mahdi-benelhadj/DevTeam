@@ -10,19 +10,19 @@ package edu.esprit.entities;
  * @author GHADA
  */
 public class Reservation {
-     private int id_client;
+     private Client client;
       private int id_reservation;
-       private int id_deal;
+       private Deal deal;
         private int qte;
         private int Total;
         private int valide;
 
-         public int getId_client() {
-        return id_client;
+         public Client getClient() {
+        return client;
     }
 
-    public void setId_client(int id_client) {
-        this.id_client = id_client;
+    public void setClient(Client client) {
+        this.client = client;
     }
     public int getId_reservation() {
         return id_reservation;
@@ -31,12 +31,12 @@ public class Reservation {
     public void setId_reservation(int id_reservation) {
         this.id_reservation = id_reservation;
     }
-    public int getId_deal() {
-        return id_deal;
+    public Deal getDeal() {
+        return deal;
     }
 
-    public void setId_deal(int id_deal) {
-        this.id_deal = id_deal;
+    public void setDeal(Deal deal) {
+        this.deal = deal;
     }
     public int getQte() {
         return qte;

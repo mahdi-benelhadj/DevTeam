@@ -23,7 +23,7 @@ import java.util.List;
 public class AdminDAO {
      public void insertAdmin(Admin a){
 
-        String requete = "insert into admin (Login,password) values (?,?)";
+        String requete = "insert into administrateur (Login,password) values (?,?)";
         try {
             PreparedStatement ps = MyConnection.getInstance().prepareStatement(requete);
             ps.setString(1, a.getLogin());
@@ -72,7 +72,7 @@ public class AdminDAO {
     }
                     public Admin findAdminByLogin(String Login){
     Admin admin = new Admin();
-     String requete = "select * from admin where id_admin=?";
+     String requete = "select * from administrateur where Login=?";
         try {
             PreparedStatement ps = MyConnection.getInstance().prepareStatement(requete);
             ps.setString(1, Login);

@@ -23,8 +23,8 @@ public class ReservationDAO {
         String requete = "insert into reservation (id_client,id_deal,qte,Total,valide) values (?,?,?,?,?)";
         try {
             PreparedStatement ps = MyConnection.getInstance().prepareStatement(requete);
-            ps.setInt(1, r.getId_client());
-            ps.setInt(2, r.getId_deal());
+           ps.setInt(1, r.getClient().getId_client());
+            ps.setInt(1, r.getDeal().getId_deal());
              ps.setInt(3, r.getQte());
             ps.setInt(4, r.getTotal());
             ps.setInt(5, r.getValide());
@@ -56,13 +56,15 @@ public class ReservationDAO {
             PreparedStatement ps = MyConnection.getInstance().prepareStatement(requete);
             ps.setInt(1, id);
             ResultSet resultat = ps.executeQuery();
+            ClientDAO clientDAO=new ClientDAO();
+            DealDAO dealDAO=new DealDAO();
             while (resultat.next())
             {
                 reserv.setId_reservation(resultat.getInt(1));
-                reserv.setTotal(resultat.getInt(2));
-                reserv.setId_client(resultat.getInt(3));
-                reserv.setId_deal(resultat.getInt(4));
-                reserv.setQte(resultat.getInt(5));
+                reserv.setClient(clientDAO.findClientById(resultat.getInt(2)));
+                reserv.setDeal(dealDAO.findDealById(resultat.getInt(3)));
+                reserv.setQte(resultat.getInt(4));
+                reserv.setTotal(resultat.getInt(5));
                 reserv.setValide(resultat.getInt(6));
 
             }
@@ -84,15 +86,15 @@ public class ReservationDAO {
            Statement statement = MyConnection.getInstance()
                    .createStatement();
             ResultSet resultat = statement.executeQuery(requete);
-
+            ClientDAO clientDAO=new ClientDAO();
+            DealDAO dealDAO=new DealDAO();
             while(resultat.next()){
                 Reservation reserv =new Reservation();
                 reserv.setId_reservation(resultat.getInt(1));
-                reserv.setTotal(resultat.getInt(2));
-                reserv.setId_client(resultat.getInt(3));
-                reserv.setId_deal(resultat.getInt(4));
-                reserv.setQte(resultat.getInt(5));
-
+                reserv.setClient(clientDAO.findClientById(resultat.getInt(2)));
+                reserv.setDeal(dealDAO.findDealById(resultat.getInt(3)));
+                reserv.setQte(resultat.getInt(4));
+                    reserv.setTotal(resultat.getInt(5));
                 reserv.setValide(resultat.getInt(6));
                 
 
