@@ -5,6 +5,9 @@
  */
 
 package edu.esprit.gui;
+import edu.esprit.dao.ReservationDAO;
+import edu.esprit.metier.ReservationMetier;
+import edu.esprit.entities.Reservation;
 
 /**
  *
@@ -36,7 +39,7 @@ public class InterfaceAjouterRéservation extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
-        jButtonValider = new javax.swing.JButton();
+        jButtonAjouterReservation = new javax.swing.JButton();
         jTextFieldClient = new javax.swing.JTextField();
         jTextFieldDeal = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
@@ -53,12 +56,12 @@ public class InterfaceAjouterRéservation extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel3.setText("Deal");
 
-        jButtonValider.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButtonValider.setText("Valider");
-        jButtonValider.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButtonValider.addActionListener(new java.awt.event.ActionListener() {
+        jButtonAjouterReservation.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButtonAjouterReservation.setText("Ajouter");
+        jButtonAjouterReservation.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButtonAjouterReservation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonValiderActionPerformed(evt);
+                jButtonAjouterReservationActionPerformed(evt);
             }
         });
 
@@ -97,7 +100,7 @@ public class InterfaceAjouterRéservation extends javax.swing.JFrame {
             .addComponent(jSeparator2)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButtonValider, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButtonAjouterReservation, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(42, 42, 42))
         );
         jPanel1Layout.setVerticalGroup(
@@ -122,8 +125,8 @@ public class InterfaceAjouterRéservation extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButtonValider, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(11, 11, 11))
+                .addComponent(jButtonAjouterReservation, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -157,10 +160,14 @@ public class InterfaceAjouterRéservation extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldClientActionPerformed
 
-    private void jButtonValiderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonValiderActionPerformed
+    private void jButtonAjouterReservationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAjouterReservationActionPerformed
         // TODO add your handling code here:
+        Reservation r = new Reservation();
+        ReservationDAO res =new ReservationDAO();
         
-    }//GEN-LAST:event_jButtonValiderActionPerformed
+        r.set(""+jTextFieldClient.getText());
+        res.insertReservation(r);
+    }//GEN-LAST:event_jButtonAjouterReservationActionPerformed
 
     /**
      * @param args the command line arguments
@@ -199,7 +206,7 @@ public class InterfaceAjouterRéservation extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JButton jButtonValider;
+    private javax.swing.JButton jButtonAjouterReservation;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
