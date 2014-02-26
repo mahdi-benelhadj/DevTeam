@@ -119,7 +119,9 @@ public class InterfaceGestionClients extends javax.swing.JFrame {
 
     private void jButtonSupClActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSupClActionPerformed
         // TODO add your handling code here:
+       
         ClientMetier.SupprimerClient(jList1.getSelectedIndex());
+        jList1.setModel(new ListClient());
        
     }//GEN-LAST:event_jButtonSupClActionPerformed
 

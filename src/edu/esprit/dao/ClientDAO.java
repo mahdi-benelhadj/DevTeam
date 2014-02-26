@@ -46,7 +46,7 @@ public class ClientDAO {
    
 
     public void deleteClient(int id){
-        String requete = "delete from client where id=?";
+        String requete = "delete from client where id_client=?";
         try {
             PreparedStatement ps = MyConnection.getInstance().prepareStatement(requete);
             ps.setInt(1, id);
