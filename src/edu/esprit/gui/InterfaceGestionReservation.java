@@ -46,6 +46,11 @@ public class InterfaceGestionReservation extends javax.swing.JFrame {
 
         jButtonSupprimer.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonSupprimer.setText("Supprimer");
+        jButtonSupprimer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSupprimerActionPerformed(evt);
+            }
+        });
 
         jButtonValider.setText("Valider");
 
@@ -105,6 +110,10 @@ public class InterfaceGestionReservation extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonSupprimerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSupprimerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonSupprimerActionPerformed
 
     /**
      * @param args the command line arguments
