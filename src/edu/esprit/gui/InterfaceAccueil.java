@@ -37,7 +37,7 @@ public class InterfaceAccueil extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jButtonAjouterDeal = new javax.swing.JButton();
         jButtonAjouterCategorie = new javax.swing.JButton();
-        jButtonSupprimerDeal = new javax.swing.JButton();
+        jButtonAfficherDeal = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         jButtonSupprimerClient = new javax.swing.JButton();
         jButtonAjouterVendeur = new javax.swing.JButton();
@@ -69,8 +69,8 @@ public class InterfaceAccueil extends javax.swing.JFrame {
         jButtonAjouterCategorie.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonAjouterCategorie.setText("Ajouter Catégorie");
 
-        jButtonSupprimerDeal.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButtonSupprimerDeal.setText("Supprimer Deal");
+        jButtonAfficherDeal.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButtonAfficherDeal.setText("Afficher Deal");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -79,7 +79,7 @@ public class InterfaceAccueil extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(23, 23, 23)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButtonSupprimerDeal, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonAfficherDeal, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButtonAjouterCategorie, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE)
                     .addComponent(jButtonAjouterDeal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(26, 26, 26))
@@ -92,7 +92,7 @@ public class InterfaceAccueil extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButtonAjouterCategorie, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButtonSupprimerDeal, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButtonAfficherDeal, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -188,6 +188,7 @@ public class InterfaceAccueil extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonAfficherDeal;
     private javax.swing.JButton jButtonAfficherReservation;
     private javax.swing.JButton jButtonAjouterCategorie;
     private javax.swing.JButton jButtonAjouterDeal;
@@ -196,7 +197,6 @@ public class InterfaceAccueil extends javax.swing.JFrame {
     private javax.swing.JButton jButtonGenererRapport;
     private javax.swing.JButton jButtonGenererStatistique;
     private javax.swing.JButton jButtonSupprimerClient;
-    private javax.swing.JButton jButtonSupprimerDeal;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
