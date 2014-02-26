@@ -26,13 +26,14 @@ public class ClientDAO {
         String requete = "insert into client(Nom,Prenom,email,age,genre,NumTel,password) values (?,?,?,?,?,?,?)";
         try {
             PreparedStatement ps = MyConnection.getInstance().prepareStatement(requete);
-            ps.setString(1, c.getNom());
-             ps.setString(2, c.getPrenom());
-            ps.setString(3, c.getEmail());
-             ps.setInt(4, c.getAge());
-             ps.setString(5, c.getGenre());
-            ps.setInt(6, c.getNumTel());
-            ps.setString(7, c.getPassowrd());
+            ps.setInt(1, c.getId_client());
+            ps.setString(2, c.getNom());
+            ps.setString(3, c.getPrenom());
+            ps.setString(4, c.getEmail());
+            ps.setInt(5, c.getAge());
+            ps.setString(6, c.getPassowrd());
+            ps.setString(7, c.getGenre());
+            ps.setInt(8, c.getNumTel());
             ps.executeUpdate();
             System.out.println("Ajout effectuée avec succès");
         } catch (SQLException ex) {
@@ -70,10 +71,12 @@ public class ClientDAO {
                 client.setId_client(resultat.getInt(1));
                client.setNom(resultat.getString(2));
                 client.setPrenom(resultat.getString(3));
-                client.setAge(resultat.getInt(4));
-                client.setPassowrd(resultat.getString(5));
-                client.setEmail(resultat.getString(6));
+                client.setEmail(resultat.getString(4));
+                client.setAge(resultat.getInt(5));
+                client.setPassowrd(resultat.getString(6));
+                
                 client.setGenre(resultat.getString(7));
+                client.setNumTel(resultat.getInt(8));
             }
             return client;
 
@@ -95,10 +98,12 @@ public class ClientDAO {
                 client.setId_client(resultat.getInt(1));
                client.setNom(resultat.getString(2));
                 client.setPrenom(resultat.getString(3));
-                client.setAge(resultat.getInt(4));
-                client.setPassowrd(resultat.getString(5));
-                client.setEmail(resultat.getString(6));
+                client.setEmail(resultat.getString(4));
+                client.setAge(resultat.getInt(5));
+                client.setPassowrd(resultat.getString(6));
+                
                 client.setGenre(resultat.getString(7));
+                client.setNumTel(resultat.getInt(8));
             }
             return client;
 
@@ -112,14 +117,18 @@ public class ClientDAO {
         String requete = "update client set NumTel=? , set email=? ,set password=? where id_client=?";
         try {
             PreparedStatement ps = MyConnection.getInstance().prepareStatement(requete);
-            ps.setString(1, c.getNom());
-            ps.setString(2, c.getPrenom());
-            ps.setInt(3, c.getId_client());
-            ps.setInt(4, c.getNumTel());
-            ps.setString(5, c.getEmail());
+           
+            ps.setInt(1, c.getId_client());
+            ps.setString(2, c.getNom());
+            ps.setString(3, c.getPrenom());
+            ps.setString(4, c.getEmail());
+            ps.setInt(5, c.getAge());
             ps.setString(6, c.getPassowrd());
             ps.setString(7, c.getGenre());
-             ps.setInt(8, c.getAge());
+            ps.setInt(8, c.getNumTel());
+            
+            
+             
             ps.executeUpdate();
             System.out.println("Mise à jour effectuée avec succès");
         } catch (SQLException ex) {

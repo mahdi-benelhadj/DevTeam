@@ -8,6 +8,7 @@ package edu.esprit.gui;
 
 import edu.esprit.entities.Client;
 import edu.esprit.metier.ListClient;
+import edu.esprit.metier.ListClientchercher;
 import edu.esprit.dao.ClientDAO;
 
 /**
@@ -47,6 +48,11 @@ public class InterfaceGestionClients extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jList1);
 
         jButtonSupCl.setText("Supprimer");
+        jButtonSupCl.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSupClActionPerformed(evt);
+            }
+        });
 
         jButtonRechCl.setText("Recherche");
         jButtonRechCl.addActionListener(new java.awt.event.ActionListener() {
@@ -107,8 +113,14 @@ public class InterfaceGestionClients extends javax.swing.JFrame {
 
     private void jButtonRechClActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRechClActionPerformed
         // TODO add your handling code here:
-       
+       jList1.setModel(new ListClientchercher(jTextFieldRechCl.getText()));
     }//GEN-LAST:event_jButtonRechClActionPerformed
+
+    private void jButtonSupClActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSupClActionPerformed
+        // TODO add your handling code here:
+        
+        System.out.println();
+    }//GEN-LAST:event_jButtonSupClActionPerformed
 
     /**
      * @param args the command line arguments
