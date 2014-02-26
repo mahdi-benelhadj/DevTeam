@@ -31,7 +31,7 @@ public class MyTableReservation extends AbstractTableModel
    //remplissage de la liste des Réservations
     public MyTableReservation() { 
         ReservationDAO reservationDAO = new  ReservationDAO();
-        listReservation=reservationDAO.DisplayAllReservation();
+        listReservation=reservationDAO.DisplayAllReservations();
     }
     
     //Nombre de lignes de la table
