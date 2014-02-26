@@ -11,6 +11,17 @@
 
 package edu.esprit.gui;
 
+import edu.esprit.dao.CategorieDAO;
+import edu.esprit.dao.DealDAO;
+import edu.esprit.dao.VendeurDAO;
+import edu.esprit.entities.Categorie;
+import edu.esprit.entities.Deal;
+import edu.esprit.entities.Vendeur;
+import edu.esprit.metier.ClientMetier;
+import edu.esprit.metier.DealMetier;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author olfa
@@ -20,6 +31,29 @@ public class InterfaceAjoutDeal extends javax.swing.JFrame {
     /** Creates new form InterfaceAjClient */
     public InterfaceAjoutDeal() {
         initComponents();
+        remplirCategorie();
+        remplirVendeur();
+    }
+    public void remplirCategorie(){
+        List <Categorie> categories=new ArrayList<Categorie>();
+
+        CategorieDAO depotdao=new CategorieDAO();
+        categories=depotdao.DisplayAllCategorie();
+        for(Categorie d:categories){
+            jComboBoxCategorie.addItem(d.getCategorie());
+        
+        }
+    }
+    
+    public void remplirVendeur(){
+        List <Vendeur> vendeurs=new ArrayList<Vendeur>();
+
+        VendeurDAO vendeurDAO=new VendeurDAO();
+        vendeurs=vendeurDAO.DisplayAllVendeur();
+        for(Vendeur d:vendeurs){
+            jComboBoxVendeur.addItem(d.getNom());
+            
+        }
     }
 
     /** This method is called from within the constructor to
@@ -93,6 +127,11 @@ public class InterfaceAjoutDeal extends javax.swing.JFrame {
         jButtonAjouter.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonAjouter.setText("Ajouter");
         jButtonAjouter.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButtonAjouter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAjouterActionPerformed(evt);
+            }
+        });
 
         jTextAreaDetails.setColumns(20);
         jTextAreaDetails.setRows(5);
@@ -234,7 +273,6 @@ public class InterfaceAjoutDeal extends javax.swing.JFrame {
                         .addComponent(jLabel2)
                         .addGap(13, 13, 13))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextFieldNombreMin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(21, 21, 21)))
                 .addGap(0, 1, Short.MAX_VALUE)
@@ -257,6 +295,29 @@ public class InterfaceAjoutDeal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonAjouterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAjouterActionPerformed
+        // TODO add your handling code here:
+        // TODO add your handling code here:
+
+       /* creation objet deal */
+     Deal deal = new Deal();
+        CategorieDAO categorieDAO=new CategorieDAO();
+        Categorie c=categorieDAO.findCategorieByCategorie(jComboBoxCategorie.getSelectedItem().toString());
+        VendeurDAO vendeurDAO=new VendeurDAO();
+        Vendeur v=vendeurDAO.findVendeurByVendeur(jComboBoxVendeur.getSelectedItem().toString());
+     deal.setTitre(jTextFieldTitreDeal.getText() );
+     deal.setDetails(jTextAreaDetails.getText());
+     deal.setPrix(Integer.parseInt(jTextFieldPrix.getText()));
+     deal.setCategorie(c);
+     deal.setPrix_promo(Integer.parseInt(jTextFieldPrixPromotion.getText()));
+       deal.setVendeur(v);
+         deal.setDuree(Integer.parseInt(jTextFieldDuree.getText()));
+          deal.setDate(jXDatePickerDate.getDate());   
+          deal.setNbr_min(Integer.parseInt(jTextFieldNombreMin.getText()));
+          deal.setNbr_max(Integer.parseInt(jTextFieldNombreMax.getText()));
+     DealMetier.AjouterDeal(deal);
+    }//GEN-LAST:event_jButtonAjouterActionPerformed
 
     /**
     * @param args the command line arguments

@@ -165,7 +165,7 @@ public class InterfaceAjouterRéservation extends javax.swing.JFrame {
         Reservation r = new Reservation();
         ReservationDAO res =new ReservationDAO();
         
-        r.set(""+jTextFieldClient.getText());
+        
         res.insertReservation(r);
     }//GEN-LAST:event_jButtonAjouterReservationActionPerformed
 
