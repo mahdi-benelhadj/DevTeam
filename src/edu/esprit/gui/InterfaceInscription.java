@@ -6,6 +6,10 @@
 
 package edu.esprit.gui;
 
+import edu.esprit.entities.Client;
+import edu.esprit.metier.ClientMetier;
+import facebook.GraphReaderExample;
+
 /**
  *
  * @author olfa
@@ -17,8 +21,11 @@ public class InterfaceInscription extends javax.swing.JFrame {
      */
     public InterfaceInscription() {
         initComponents();
+        
+        
     
     }
+     
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -172,7 +179,17 @@ public class InterfaceInscription extends javax.swing.JFrame {
 
     private void jButtonValiderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonValiderActionPerformed
         // TODO add your handling code here:
+         Client client = new Client() ;
         
+        //importation des champs saisie dans la jframe ;
+        client.setNom(jTextFieldNom.getText());
+        client.setPrenom(jTextFieldPrenom.getText());
+        client.setAge(Integer.parseInt(jTextFieldAge.getText()));
+        client.setGenre(jComboBoxType.getSelectedItem().toString());
+        client.setEmail(jTextFieldEmail.getText());
+        client.setPassowrd(jTextFieldMotDePasse.getText());
+        client.setNumTel(Integer.parseInt(jTextFieldNumtel.getText()));
+        ClientMetier.AjouterClient(client);
     }//GEN-LAST:event_jButtonValiderActionPerformed
 
     /**

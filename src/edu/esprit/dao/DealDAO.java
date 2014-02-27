@@ -24,7 +24,7 @@ public class DealDAO {
     
      public void insertDeal(Deal d){
 
-        String requete = "insert into deal (titre,details,prix,prix_promo,id_categorie,date,duree,nbr_min,nbr_max,id_vendeur) values (?,?,?,?,?,?,?,?,?,?)";
+        String requete = "insert into deal (id_deal,titre,details,prix,prix_promo,id_categorie,date,duree,nbr_min,nbr_max,id_vendeur) values (?,?,?,?,?,?,?,?,?,?)";
         try {
             System.out.println("2");
             PreparedStatement ps = MyConnection.getInstance().prepareStatement(requete);

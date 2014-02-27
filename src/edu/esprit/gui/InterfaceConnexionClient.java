@@ -6,6 +6,9 @@
 
 package edu.esprit.gui;
 
+import edu.esprit.entities.Client;
+import edu.esprit.metier.ConnexionMetier;
+import facebook.*;
 /**
  *
  * @author Mahdi
@@ -17,7 +20,9 @@ public class InterfaceConnexionClient extends javax.swing.JFrame {
      */
     public InterfaceConnexionClient() {
         initComponents();
+        
     }
+   
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -34,6 +39,7 @@ public class InterfaceConnexionClient extends javax.swing.JFrame {
         jTextFieldEmail1 = new javax.swing.JTextField();
         jButtonConnect = new javax.swing.JButton();
         jButtoninscription = new javax.swing.JButton();
+        jButtonFb = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -48,11 +54,23 @@ public class InterfaceConnexionClient extends javax.swing.JFrame {
         jTextFieldEmail1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         jButtonConnect.setText("Connexion");
+        jButtonConnect.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonConnectActionPerformed(evt);
+            }
+        });
 
         jButtoninscription.setText("Inscription");
         jButtoninscription.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtoninscriptionActionPerformed(evt);
+            }
+        });
+
+        jButtonFb.setText("Inscription FB");
+        jButtonFb.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonFbActionPerformed(evt);
             }
         });
 
@@ -71,6 +89,8 @@ public class InterfaceConnexionClient extends javax.swing.JFrame {
                 .addContainerGap(115, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButtonFb)
+                .addGap(59, 59, 59)
                 .addComponent(jButtoninscription)
                 .addGap(35, 35, 35)
                 .addComponent(jButtonConnect)
@@ -93,7 +113,8 @@ public class InterfaceConnexionClient extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonConnect)
-                    .addComponent(jButtoninscription))
+                    .addComponent(jButtoninscription)
+                    .addComponent(jButtonFb))
                 .addGap(39, 39, 39))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
@@ -111,6 +132,18 @@ public class InterfaceConnexionClient extends javax.swing.JFrame {
         inscriptionframe.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButtoninscriptionActionPerformed
+
+    private void jButtonConnectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConnectActionPerformed
+        // TODO add your handling code here:
+        Client client=new Client();
+        client.setEmail(jTextFieldEmail1.getText());
+        client.setPassowrd(jTextFieldPasswd.getText());
+        ConnexionMetier.ConnexionClientMetier(client);
+    }//GEN-LAST:event_jButtonConnectActionPerformed
+
+    private void jButtonFbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFbActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonFbActionPerformed
 
     /**
      * @param args the command line arguments
@@ -149,6 +182,7 @@ public class InterfaceConnexionClient extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonConnect;
+    private javax.swing.JButton jButtonFb;
     private javax.swing.JButton jButtoninscription;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
