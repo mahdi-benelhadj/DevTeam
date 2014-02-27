@@ -27,15 +27,15 @@ public class ClientDAO {
         try {
             PreparedStatement ps = MyConnection.getInstance().prepareStatement(requete);
             
-            ps.setString(0, c.getNom());
-            ps.setString(1, c.getPrenom());
-            ps.setString(2, c.getEmail());
+            ps.setString(1, c.getNom());
+            ps.setString(2, c.getPrenom());
+            ps.setString(3, c.getEmail());
             
-            ps.setInt(3, c.getAge());
-            ps.setString(4, c.getPassowrd());
-            ps.setString(5, c.getGenre());
+            ps.setInt(4, c.getAge());
+            ps.setString(5, c.getPassowrd());
+            ps.setString(6, c.getGenre());
            
-            ps.setInt(6, c.getNumTel());
+            ps.setInt(7, c.getNumTel());
             ps.executeUpdate();
             System.out.println("Ajout effectuée avec succès");
         } catch (SQLException ex) {
