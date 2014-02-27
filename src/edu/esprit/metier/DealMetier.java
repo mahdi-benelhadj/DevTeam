@@ -5,22 +5,30 @@
  */
 
 package edu.esprit.metier;
-
 import edu.esprit.dao.ClientDAO;
 import edu.esprit.dao.DealDAO;
-import edu.esprit.entities.Client;
+
 import edu.esprit.entities.Deal;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
- * @author Mahdi
+ * @author nour
  */
-public class DealMetier {
-    
-    public static void AjouterDeal(Deal d){
-        DealDAO dealDAO=new DealDAO();
-        dealDAO.insertDeal(d);
-        
+public class DealMetier  {
+   
+      public static void SupprimerDeal (int d)
+      {
+          List<Deal> deals = new ArrayList<Deal>();
+          DealDAO dldao = new DealDAO();
+          deals=dldao.DisplayAllDeals();
+          dldao.deleteDeal(deals.get(d).getId_deal());
+          
+          
+      }
+
     }
     
-}
+
+

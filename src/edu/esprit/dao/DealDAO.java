@@ -124,6 +124,40 @@ public class DealDAO {
             return null;
         }
     }
+        public Deal findDealByTitre(String titre){
+    
+     String requete = "select * from deal where titre=?";
+        try {
+            PreparedStatement ps = MyConnection.getInstance().prepareStatement(requete);
+            ps.setString(1, titre);
+            ResultSet resultat = ps.executeQuery();
+            Deal deal = new Deal();
+            VendeurDAO vendeurDAO=new VendeurDAO();
+            CategorieDAO categorieDAO=new CategorieDAO();
+            while (resultat.next())
+            {
+                deal.setId_deal(resultat.getInt(1));
+                
+                deal.setVendeur(vendeurDAO.findVendeurById(resultat.getInt(2)));
+                deal.setCategorie(categorieDAO.findCategorieById(resultat.getInt(3)));
+                deal.setPrix(resultat.getInt(4));
+                deal.setPrix_promo(resultat.getInt(5));
+                deal.setNbr_min(resultat.getInt(6));
+                deal.setNbr_max(resultat.getInt(7));
+                deal.setTitre(resultat.getString(8));
+                deal.setDetails(resultat.getString(9));
+                deal.setDate(resultat.getDate(10));
+                deal.setDuree(resultat.getInt(11));
+
+            }
+            return deal;
+
+        } catch (SQLException ex) {
+           //Logger.getLogger(PersonneDao.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("erreur lors de la recherche du deal "+ex.getMessage());
+            return null;
+        }
+    }
       public Deal findDealByIdCategorie(int id){
     
      String requete = "select * from depot where id_categorie = ?";
