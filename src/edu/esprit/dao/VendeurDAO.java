@@ -52,10 +52,37 @@ public class VendeurDAO {
 }
       public Vendeur findVendeurById(int id){
     Vendeur vendeur = new Vendeur();
-     String requete = "select * from deal where id_vendeur=?";
+     String requete = "select * from vendeur where id_vendeur=?";
         try {
             PreparedStatement ps = MyConnection.getInstance().prepareStatement(requete);
             ps.setInt(1, id);
+            ResultSet resultat = ps.executeQuery();
+            while (resultat.next())
+            {
+                vendeur.setId_vendeur(resultat.getInt(1));
+                vendeur.setNom(resultat.getString(2));
+                vendeur.setAdresse(resultat.getString(3));
+                vendeur.setNote(resultat.getInt(4));
+
+
+
+
+            }
+            return vendeur;
+
+        } catch (SQLException ex) {
+           //Logger.getLogger(PersonneDao.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("erreur lors de la recherche du vendeur "+ex.getMessage());
+            return null;
+        }
+    }
+      
+      public Vendeur findVendeurByVendeur(String nom){
+    Vendeur vendeur = new Vendeur();
+     String requete = "select * from vendeur where nom=?";
+        try {
+            PreparedStatement ps = MyConnection.getInstance().prepareStatement(requete);
+            ps.setString(1, nom);
             ResultSet resultat = ps.executeQuery();
             while (resultat.next())
             {

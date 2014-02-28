@@ -18,6 +18,12 @@ import java.util.List;
  */
 public class DealMetier  {
    
+        public static void AjouterDeal(Deal d){
+            DealDAO dealDAO = new DealDAO();
+            dealDAO.insertDeal(d);
+        }
+    
+    
       public static void SupprimerDeal (int d)
       {
           List<Deal> deals = new ArrayList<Deal>();

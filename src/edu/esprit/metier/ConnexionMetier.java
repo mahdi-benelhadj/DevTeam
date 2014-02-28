@@ -9,6 +9,9 @@ package edu.esprit.metier;
 import edu.esprit.dao.AdminDAO;
 import edu.esprit.entities.Admin;
 import edu.esprit.gui.InterfaceAccueil;
+import edu.esprit.dao.ClientDAO;
+import edu.esprit.entities.Client;
+import edu.esprit.gui.InterfaceListeDeal;
 /**
  *
  * @author Mahdi
@@ -26,5 +29,13 @@ public class ConnexionMetier {
         }
         else
             System.out.println("erreur");
+    }
+    public static void ConnexionClientMetier(Client c){
+        
+        InterfaceListeDeal interfaceListeDeal=new InterfaceListeDeal();
+        ClientDAO clientDAO=new ClientDAO();
+        if(clientDAO.findClientByEmail(c.getEmail()).getPassowrd().equals(c.getPassowrd())){
+            interfaceListeDeal.setVisible(true);
+        }
     }
 }

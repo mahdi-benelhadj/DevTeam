@@ -6,6 +6,7 @@
 package edu.esprit.dao;
 import edu.esprit.entities.Deal;
 import edu.esprit.util.MyConnection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -23,19 +24,27 @@ public class DealDAO {
     
      public void insertDeal(Deal d){
 
-        String requete = "insert into deal (id_vendeur,id_categorie,nbr_min,nbr_max,titre,details,prix,prix_promo,date,duree) values (?,?,?,?,?,?,?,?,?,?)";
+        String requete = "insert into deal (id_deal,titre,details,prix,prix_promo,id_categorie,date,duree,nbr_min,nbr_max,id_vendeur) values (?,?,?,?,?,?,?,?,?,?)";
         try {
+            System.out.println("2");
             PreparedStatement ps = MyConnection.getInstance().prepareStatement(requete);
-            ps.setInt(1, d.getVendeur().getId_vendeur());
-            ps.setInt(2, d.getCategorie().getId_categorie());
-            ps.setInt(3, d.getNbr_min());
-            ps.setInt(4, d.getNbr_max());
-            ps.setString(5, d.getDetails());
-            ps.setString(6, d.getTitre());
-              ps.setInt(7, d.getPrix());
-              ps.setInt(8, d.getPrix_promo());
-                ps.setDate(9, (java.sql.Date) d.getDate());
-                 ps.setInt(10,d.getDuree());
+                  ps.setString(1, d.getTitre());
+                        ps.setString(2, d.getDetails());
+                        ps.setInt(3, d.getPrix());
+              ps.setInt(4, d.getPrix_promo());
+              ps.setInt(5, d.getCategorie().getId_categorie());
+      
+                ps.setDate(6, (Date) d.getDate());
+            
+                 ps.setInt(7,d.getDuree());
+                  ps.setInt(8, d.getNbr_min());
+            ps.setInt(9, d.getNbr_max());
+            ps.setInt(10, d.getVendeur().getId_vendeur());
+            
+           
+
+            
+              
             ps.executeUpdate();
             System.out.println("Ajout effectuée avec succès");
         } catch (SQLException ex) {

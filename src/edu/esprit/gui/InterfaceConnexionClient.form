@@ -37,6 +37,8 @@
           </Group>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
+              <Component id="jButtonFb" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
               <Component id="jButtoninscription" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
               <Component id="jButtonConnect" min="-2" max="-2" attributes="0"/>
@@ -65,6 +67,7 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jButtonConnect" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jButtoninscription" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButtonFb" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
           </Group>
@@ -113,6 +116,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Connexion"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonConnectActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButtoninscription">
       <Properties>
@@ -120,6 +126,14 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtoninscriptionActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonFb">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Inscription FB"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonFbActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

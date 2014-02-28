@@ -23,17 +23,19 @@ public class ClientDAO {
     public void insertClient(Client c){
 
 
-        String requete = "insert into client(Nom,Prenom,email,age,genre,NumTel,password) values (?,?,?,?,?,?,?)";
+        String requete = "insert into client(Nom,Prenom,email,age,password,genre,NumTEl) values (?,?,?,?,?,?,?)";
         try {
             PreparedStatement ps = MyConnection.getInstance().prepareStatement(requete);
-            ps.setInt(1, c.getId_client());
-            ps.setString(2, c.getNom());
-            ps.setString(3, c.getPrenom());
-            ps.setString(4, c.getEmail());
-            ps.setInt(5, c.getAge());
-            ps.setString(6, c.getPassowrd());
-            ps.setString(7, c.getGenre());
-            ps.setInt(8, c.getNumTel());
+            
+            ps.setString(1, c.getNom());
+            ps.setString(2, c.getPrenom());
+            ps.setString(3, c.getEmail());
+            
+            ps.setInt(4, c.getAge());
+            ps.setString(5, c.getPassowrd());
+            ps.setString(6, c.getGenre());
+           
+            ps.setInt(7, c.getNumTel());
             ps.executeUpdate();
             System.out.println("Ajout effectuée avec succès");
         } catch (SQLException ex) {
@@ -92,6 +94,33 @@ public class ClientDAO {
         try {
             PreparedStatement ps = MyConnection.getInstance().prepareStatement(requete);
             ps.setString(1, nom);
+            ResultSet resultat = ps.executeQuery();
+            while (resultat.next())
+            {
+                client.setId_client(resultat.getInt(1));
+               client.setNom(resultat.getString(2));
+                client.setPrenom(resultat.getString(3));
+                client.setEmail(resultat.getString(4));
+                client.setAge(resultat.getInt(5));
+                client.setPassowrd(resultat.getString(6));
+                
+                client.setGenre(resultat.getString(7));
+                client.setNumTel(resultat.getInt(8));
+            }
+            return client;
+
+        } catch (SQLException ex) {
+           //Logger.getLogger(PersonneDao.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("erreur lors de la recherche du client "+ex.getMessage());
+            return null;
+        }
+    }
+    public Client findClientByEmail(String email){
+    Client client = new Client();
+     String requete = "select * from client where email=?";
+        try {
+            PreparedStatement ps = MyConnection.getInstance().prepareStatement(requete);
+            ps.setString(1, email);
             ResultSet resultat = ps.executeQuery();
             while (resultat.next())
             {
