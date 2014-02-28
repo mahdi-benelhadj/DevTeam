@@ -6,6 +6,11 @@
 
 package edu.esprit.gui;
 import edu.esprit.dao.ReservationDAO;
+import edu.esprit.dao.ClientDAO;
+import edu.esprit.dao.DealDAO;
+import edu.esprit.entities.Client ;
+import edu.esprit.dao.ReservationDAO;
+import edu.esprit.entities.Deal;
 import edu.esprit.metier.ReservationMetier;
 import edu.esprit.entities.Reservation;
 
@@ -40,10 +45,10 @@ public class InterfaceAjouterRéservation extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
         jButtonAjouterReservation = new javax.swing.JButton();
-        jTextFieldClient = new javax.swing.JTextField();
-        jTextFieldDeal = new javax.swing.JTextField();
+        txtclient = new javax.swing.JTextField();
+        txtdeal = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jTextFieldQuantite = new javax.swing.JTextField();
+        txtquantite = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -65,9 +70,9 @@ public class InterfaceAjouterRéservation extends javax.swing.JFrame {
             }
         });
 
-        jTextFieldClient.addActionListener(new java.awt.event.ActionListener() {
+        txtclient.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldClientActionPerformed(evt);
+                txtclientActionPerformed(evt);
             }
         });
 
@@ -93,9 +98,9 @@ public class InterfaceAjouterRéservation extends javax.swing.JFrame {
                             .addComponent(jLabel4))
                         .addGap(56, 56, 56)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextFieldClient)
-                            .addComponent(jTextFieldDeal, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                            .addComponent(jTextFieldQuantite))))
+                            .addComponent(txtclient)
+                            .addComponent(txtdeal, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                            .addComponent(txtquantite))))
                 .addContainerGap(114, Short.MAX_VALUE))
             .addComponent(jSeparator2)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
@@ -113,14 +118,14 @@ public class InterfaceAjouterRéservation extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jTextFieldClient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtclient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jTextFieldDeal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtdeal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldQuantite, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtquantite, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -156,17 +161,33 @@ public class InterfaceAjouterRéservation extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextFieldClientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldClientActionPerformed
+    private void txtclientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtclientActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldClientActionPerformed
+    }//GEN-LAST:event_txtclientActionPerformed
 
     private void jButtonAjouterReservationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAjouterReservationActionPerformed
         // TODO add your handling code here:
-        Reservation r = new Reservation();
-        ReservationDAO res =new ReservationDAO();
+//creation nouveau objet ://
+        DealDAO dealDAO=new DealDAO();
+        ReservationDAO re = new ReservationDAO();
+        ClientDAO clientdao= new ClientDAO();
+        Reservation reservation = new  Reservation() ;
         
-        r.set(""+jTextFieldClient.getText());
-        res.insertReservation(r);
+        
+        reservation.setClient((clientdao.findClientByNom( txtclient.getText())));
+        
+       reservation.setQte(Integer.parseInt(txtquantite.getText()));
+        reservation.setDeal(dealDAO.findDealByTitre(txtdeal.getText()));
+        
+        
+        reservation.insertReservation() ;
+       
+         
+        
+        
+        
+        
+        
     }//GEN-LAST:event_jButtonAjouterReservationActionPerformed
 
     /**
@@ -215,8 +236,8 @@ public class InterfaceAjouterRéservation extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JTextField jTextFieldClient;
-    private javax.swing.JTextField jTextFieldDeal;
-    private javax.swing.JTextField jTextFieldQuantite;
+    private javax.swing.JTextField txtclient;
+    private javax.swing.JTextField txtdeal;
+    private javax.swing.JTextField txtquantite;
     // End of variables declaration//GEN-END:variables
 }

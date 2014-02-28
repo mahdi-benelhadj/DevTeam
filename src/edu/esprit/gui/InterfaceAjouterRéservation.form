@@ -78,9 +78,9 @@
                               </Group>
                               <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jTextFieldClient" max="32767" attributes="0"/>
-                                  <Component id="jTextFieldDeal" pref="115" max="32767" attributes="0"/>
-                                  <Component id="jTextFieldQuantite" max="32767" attributes="0"/>
+                                  <Component id="txtclient" max="32767" attributes="0"/>
+                                  <Component id="txtdeal" pref="115" max="32767" attributes="0"/>
+                                  <Component id="txtquantite" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -104,16 +104,16 @@
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextFieldClient" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtclient" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextFieldDeal" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtdeal" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jTextFieldQuantite" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtquantite" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="34" max="32767" attributes="0"/>
@@ -170,12 +170,12 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonAjouterReservationActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextFieldClient">
+            <Component class="javax.swing.JTextField" name="txtclient">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldClientActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtclientActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextFieldDeal">
+            <Component class="javax.swing.JTextField" name="txtdeal">
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel4">
               <Properties>
@@ -185,7 +185,7 @@
                 <Property name="text" type="java.lang.String" value="Quantit&#xe9;"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextFieldQuantite">
+            <Component class="javax.swing.JTextField" name="txtquantite">
             </Component>
           </SubComponents>
         </Container>

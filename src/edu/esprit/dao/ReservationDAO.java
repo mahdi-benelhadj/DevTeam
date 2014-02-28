@@ -18,9 +18,10 @@ import java.util.List;
  * @author GHADA
  */
 public class ReservationDAO {
+    
      public void insertReservation(Reservation  r){
 
-        String requete = "insert into reservation (id_client,id_deal,qte,Total,valide) values (?,?,?,?,?)";
+        String requete = "insert into reservation (id_client,id_deal,qte,Total,valide) values (,?,?,?,?)";
         try {
             PreparedStatement ps = MyConnection.getInstance().prepareStatement(requete);
            ps.setInt(1, r.getClient().getId_client());

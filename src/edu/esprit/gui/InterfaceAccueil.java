@@ -71,6 +71,11 @@ public class InterfaceAccueil extends javax.swing.JFrame {
 
         jButtonAfficherDeal.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonAfficherDeal.setText("Afficher Deal");
+        jButtonAfficherDeal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAfficherDealActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -175,6 +180,10 @@ public class InterfaceAccueil extends javax.swing.JFrame {
         InterfaceGestionReservation f1 = new InterfaceGestionReservation();
         f1.setVisible(true); //afficher l'interface
     }//GEN-LAST:event_jButtonAfficherReservationActionPerformed
+
+    private void jButtonAfficherDealActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAfficherDealActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonAfficherDealActionPerformed
 
     /**
     * @param args the command line arguments
