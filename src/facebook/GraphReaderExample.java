@@ -36,11 +36,11 @@ public class GraphReaderExample {
         this.facebookClient = null;
     }
 
-  GraphReaderExample(String accessToken) {
+  public GraphReaderExample(String accessToken) {
     facebookClient = new DefaultFacebookClient(accessToken);
   }
 
-  void runEverything() {
+  public  void runEverything() {
       fetchObject();
 //    fetchObjects();
 //    fetchObjectsAsJsonObject();

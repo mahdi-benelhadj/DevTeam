@@ -12,10 +12,8 @@ package edu.esprit.metier;
  */
 import edu.esprit.dao.ReservationDAO;
 import edu.esprit.entities.Reservation;
-import edu.esprit.gui.InterfaceGestionReservation;
 import java.util.ArrayList;
 import java.util.List;
-import javax.swing.table.AbstractMyTableReservation;
 import javax.swing.table.AbstractTableModel;
 
 /**
@@ -53,10 +51,10 @@ public class MyTableReservation extends AbstractTableModel
                 return listReservation.get(rowIndex).getId_reservation();
            //colonne id_client
             case 1:
-                return listReservation.get(rowIndex).getClient();
+                return listReservation.get(rowIndex).getClient().getPrenom();
           //colonne id_deal
             case 2:
-                return listReservation.get(rowIndex).getDeal();
+                return listReservation.get(rowIndex).getDeal().getTitre();
           //colonne quantité
             case 3:
                 return listReservation.get(rowIndex).getQte();

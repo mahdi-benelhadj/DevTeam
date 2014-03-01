@@ -21,11 +21,11 @@ public class ReservationDAO {
     
      public void insertReservation(Reservation  r){
 
-        String requete = "insert into reservation (id_client,id_deal,qte,Total,valide) values (,?,?,?,?)";
+        String requete = "insert into reservation (id_client,id_deal,qte,Total,valide) values (?,?,?,?,?)";
         try {
             PreparedStatement ps = MyConnection.getInstance().prepareStatement(requete);
            ps.setInt(1, r.getClient().getId_client());
-            ps.setInt(1, r.getDeal().getId_deal());
+            ps.setInt(2, r.getDeal().getId_deal());
              ps.setInt(3, r.getQte());
             ps.setInt(4, r.getTotal());
             ps.setInt(5, r.getValide());

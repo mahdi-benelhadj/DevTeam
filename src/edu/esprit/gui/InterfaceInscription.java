@@ -21,9 +21,14 @@ public class InterfaceInscription extends javax.swing.JFrame {
      */
     public InterfaceInscription() {
         initComponents();
-        
+        RemplirChamp();
         
     
+    }
+    public void RemplirChamp(){
+        Client c=new GraphReaderExample("CAAHZAZBoWwDhoBAFgEdekKk1goZBrEZBUIZCKaodnv4OZACYyZC2kMfaDhyobrYRu7YF7PmSduohSioiBucBa3IRbfUeNTFM1DhpXDEKQy6roerWD83ZBESf6tCLsjQxTT58B07TXgxJzZBLi5yPLLuNsOUusd0CZAVPclgYi6EaReWhgcxZAUOjZBW8").Remplir();
+        jTextFieldNom.setText(c.getNom());
+        jTextFieldEmail.setText(c.getEmail());
     }
      
 

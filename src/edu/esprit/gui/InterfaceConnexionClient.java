@@ -143,6 +143,9 @@ public class InterfaceConnexionClient extends javax.swing.JFrame {
 
     private void jButtonFbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFbActionPerformed
         // TODO add your handling code here:
+        
+        
+        
     }//GEN-LAST:event_jButtonFbActionPerformed
 
     /**

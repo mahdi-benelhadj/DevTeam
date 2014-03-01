@@ -24,7 +24,7 @@ public class DealDAO {
     
      public void insertDeal(Deal d){
 
-        String requete = "insert into deal (id_deal,titre,details,prix,prix_promo,id_categorie,date,duree,nbr_min,nbr_max,id_vendeur) values (?,?,?,?,?,?,?,?,?,?)";
+        String requete = "insert into deal (titre,details,prix,prix_promo,id_categorie,date,duree,nbr_min,nbr_max,id_vendeur) values (?,?,?,?,?,?,?,?,?,?)";
         try {
             System.out.println("2");
             PreparedStatement ps = MyConnection.getInstance().prepareStatement(requete);
@@ -33,8 +33,8 @@ public class DealDAO {
                         ps.setInt(3, d.getPrix());
               ps.setInt(4, d.getPrix_promo());
               ps.setInt(5, d.getCategorie().getId_categorie());
-      
-                ps.setDate(6, (Date) d.getDate());
+              ps.setDate(6,  new Date( d.getDate().getTime()));
+                //ps.setDate(6, (Date) d.getDate());
             
                  ps.setInt(7,d.getDuree());
                   ps.setInt(8, d.getNbr_min());
@@ -103,17 +103,17 @@ public class DealDAO {
             while (resultat.next())
             {
                 deal.setId_deal(resultat.getInt(1));
-                
-                deal.setVendeur(vendeurDAO.findVendeurById(resultat.getInt(2)));
-                deal.setCategorie(categorieDAO.findCategorieById(resultat.getInt(3)));
+                deal.setTitre(resultat.getString(2));
+                deal.setDetails(resultat.getString(3));
                 deal.setPrix(resultat.getInt(4));
                 deal.setPrix_promo(resultat.getInt(5));
-                deal.setNbr_min(resultat.getInt(6));
-                deal.setNbr_max(resultat.getInt(7));
-                deal.setTitre(resultat.getString(8));
-                deal.setDetails(resultat.getString(9));
-                deal.setDate(resultat.getDate(10));
-                deal.setDuree(resultat.getInt(11));
+                deal.setCategorie(categorieDAO.findCategorieById(resultat.getInt(6)));
+                deal.setDate(resultat.getDate(7));
+                deal.setDuree(resultat.getInt(8));
+                deal.setNbr_min(resultat.getInt(9));
+                deal.setNbr_max(resultat.getInt(10));
+                
+                deal.setVendeur(vendeurDAO.findVendeurById(resultat.getInt(11)));
 
             }
             return deal;
@@ -136,18 +136,19 @@ public class DealDAO {
             CategorieDAO categorieDAO=new CategorieDAO();
             while (resultat.next())
             {
-                deal.setId_deal(resultat.getInt(1));
                 
-                deal.setVendeur(vendeurDAO.findVendeurById(resultat.getInt(2)));
-                deal.setCategorie(categorieDAO.findCategorieById(resultat.getInt(3)));
+                deal.setId_deal(resultat.getInt(1));
+                deal.setTitre(resultat.getString(2));
+                deal.setDetails(resultat.getString(3));
                 deal.setPrix(resultat.getInt(4));
                 deal.setPrix_promo(resultat.getInt(5));
-                deal.setNbr_min(resultat.getInt(6));
-                deal.setNbr_max(resultat.getInt(7));
-                deal.setTitre(resultat.getString(8));
-                deal.setDetails(resultat.getString(9));
-                deal.setDate(resultat.getDate(10));
-                deal.setDuree(resultat.getInt(11));
+                deal.setCategorie(categorieDAO.findCategorieById(resultat.getInt(6)));
+                deal.setDate(resultat.getDate(7));
+                deal.setDuree(resultat.getInt(8));
+                deal.setNbr_min(resultat.getInt(9));
+                deal.setNbr_max(resultat.getInt(10));
+                
+                deal.setVendeur(vendeurDAO.findVendeurById(resultat.getInt(11)));
 
             }
             return deal;
@@ -220,17 +221,22 @@ public class DealDAO {
             while(resultat.next()){
                 Deal deal =new Deal();
                 deal.setId_deal(resultat.getInt(1));
-
-                deal.setVendeur(vendeurDAO.findVendeurById(resultat.getInt(2)));
-                deal.setCategorie(categorieDAO.findCategorieById(resultat.getInt(3)));
+                deal.setTitre(resultat.getString(2));
+                deal.setDetails(resultat.getString(3));
                 deal.setPrix(resultat.getInt(4));
                 deal.setPrix_promo(resultat.getInt(5));
-                deal.setNbr_min(resultat.getInt(6));
-                deal.setNbr_max(resultat.getInt(7));
-                deal.setTitre(resultat.getString(8));
-                deal.setDetails(resultat.getString(9));
-                deal.setDate(resultat.getDate(10));
-                deal.setDuree(resultat.getInt(11));
+                deal.setCategorie(categorieDAO.findCategorieById(resultat.getInt(6)));
+                deal.setDate(resultat.getDate(7));
+                deal.setDuree(resultat.getInt(8));
+                deal.setNbr_min(resultat.getInt(9));
+                deal.setNbr_max(resultat.getInt(10));
+                
+                deal.setVendeur(vendeurDAO.findVendeurById(resultat.getInt(11)));
+                
+                
+                
+                
+               
 
                 listedeals.add(deal);
             }

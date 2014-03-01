@@ -316,6 +316,7 @@ public class InterfaceAjoutDeal extends javax.swing.JFrame {
           deal.setDate(jXDatePickerDate.getDate());   
           deal.setNbr_min(Integer.parseInt(jTextFieldNombreMin.getText()));
           deal.setNbr_max(Integer.parseInt(jTextFieldNombreMax.getText()));
+          System.out.println(deal.getDate());
      DealMetier.AjouterDeal(deal);
     }//GEN-LAST:event_jButtonAjouterActionPerformed
 

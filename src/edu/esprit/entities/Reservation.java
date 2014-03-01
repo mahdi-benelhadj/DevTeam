@@ -59,8 +59,4 @@ public class Reservation {
     public void setValide(int valide) {
         this.valide = valide;
     }
-
-    public void insertReservation() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }

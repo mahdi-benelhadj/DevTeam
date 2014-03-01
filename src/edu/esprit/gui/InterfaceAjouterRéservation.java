@@ -13,6 +13,8 @@ import edu.esprit.dao.ReservationDAO;
 import edu.esprit.entities.Deal;
 import edu.esprit.metier.ReservationMetier;
 import edu.esprit.entities.Reservation;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -25,7 +27,28 @@ public class InterfaceAjouterRéservation extends javax.swing.JFrame {
      */
     public InterfaceAjouterRéservation() {
         initComponents();
+        remplirClient();
+        remplirDeal();
     }
+    public void remplirClient(){
+        List <Client> clients=new ArrayList<Client>();
+        ClientDAO clientDAO = new ClientDAO();
+        clients=clientDAO.DisplayAllClients();
+        for(Client c:clients)
+            jComboBoxClient.addItem(c.getNom());
+        
+        
+        }
+    public void remplirDeal(){
+        List <Deal> deals=new ArrayList<Deal>();
+        DealDAO dealDAO = new DealDAO();
+        deals=dealDAO.DisplayAllDeals();
+        for(Deal d:deals)
+            jComboBoxDeal.addItem(d.getTitre());
+        
+        
+        }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -45,10 +68,10 @@ public class InterfaceAjouterRéservation extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
         jButtonAjouterReservation = new javax.swing.JButton();
-        txtclient = new javax.swing.JTextField();
-        txtdeal = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         txtquantite = new javax.swing.JTextField();
+        jComboBoxClient = new javax.swing.JComboBox();
+        jComboBoxDeal = new javax.swing.JComboBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -70,14 +93,12 @@ public class InterfaceAjouterRéservation extends javax.swing.JFrame {
             }
         });
 
-        txtclient.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtclientActionPerformed(evt);
-            }
-        });
-
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel4.setText("Quantité");
+
+        jComboBoxClient.setModel(new javax.swing.DefaultComboBoxModel(new String[] {  }));
+
+        jComboBoxDeal.setModel(new javax.swing.DefaultComboBoxModel(new String[] { }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -98,9 +119,9 @@ public class InterfaceAjouterRéservation extends javax.swing.JFrame {
                             .addComponent(jLabel4))
                         .addGap(56, 56, 56)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtclient)
-                            .addComponent(txtdeal, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                            .addComponent(txtquantite))))
+                            .addComponent(txtquantite, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                            .addComponent(jComboBoxClient, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jComboBoxDeal, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(114, Short.MAX_VALUE))
             .addComponent(jSeparator2)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
@@ -116,18 +137,18 @@ public class InterfaceAjouterRéservation extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
-                    .addComponent(txtclient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jComboBoxClient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(txtdeal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jComboBoxDeal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtquantite, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButtonAjouterReservation, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -161,10 +182,6 @@ public class InterfaceAjouterRéservation extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtclientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtclientActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtclientActionPerformed
-
     private void jButtonAjouterReservationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAjouterReservationActionPerformed
         // TODO add your handling code here:
 //creation nouveau objet ://
@@ -174,13 +191,13 @@ public class InterfaceAjouterRéservation extends javax.swing.JFrame {
         Reservation reservation = new  Reservation() ;
         
         
-        reservation.setClient((clientdao.findClientByNom( txtclient.getText())));
+        reservation.setClient((clientdao.findClientByNom( jComboBoxClient.getSelectedItem().toString())));
         
        reservation.setQte(Integer.parseInt(txtquantite.getText()));
-        reservation.setDeal(dealDAO.findDealByTitre(txtdeal.getText()));
+        reservation.setDeal(dealDAO.findDealByTitre(jComboBoxDeal.getSelectedItem().toString()));
+        reservation.getDeal().getId_deal();
         
-        
-        reservation.insertReservation() ;
+        re.insertReservation(reservation);
        
          
         
@@ -228,6 +245,8 @@ public class InterfaceAjouterRéservation extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButtonAjouterReservation;
+    private javax.swing.JComboBox jComboBoxClient;
+    private javax.swing.JComboBox jComboBoxDeal;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -236,8 +255,6 @@ public class InterfaceAjouterRéservation extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JTextField txtclient;
-    private javax.swing.JTextField txtdeal;
     private javax.swing.JTextField txtquantite;
     // End of variables declaration//GEN-END:variables
 }
