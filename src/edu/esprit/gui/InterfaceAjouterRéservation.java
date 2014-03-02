@@ -197,8 +197,11 @@ public class InterfaceAjouterRéservation extends javax.swing.JFrame {
         reservation.setDeal(dealDAO.findDealByTitre(jComboBoxDeal.getSelectedItem().toString()));
         reservation.getDeal().getId_deal();
         
-        re.insertReservation(reservation);
+       //re.insertReservation(reservation);
+        
+       ReservationMetier.ajout_reservation(reservation);
        
+    
          
         
         

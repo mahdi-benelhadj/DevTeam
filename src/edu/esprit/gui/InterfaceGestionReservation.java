@@ -126,11 +126,11 @@ public class InterfaceGestionReservation extends javax.swing.JFrame {
     private void jButtonSupprimerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSupprimerActionPerformed
         // TODO add your handling code here:
        // ReservationMetier.SupprimerReservation(Integer.parseInt(jTableReservation.getValueAt(jTableReservation.getSelectedRow(),0).toString()));
-        int ResSelected = jTableReservation.getSelectedRow();
+        //int ResSelected = jTableReservation.getSelectedRow();
         
-           ReservationDAO resDao = new ReservationDAO();
-           int idres =resDao.findReservationById(ResSelected).getId_reservation();
-        System.out.println(idres);
+           //ReservationDAO resDao = new ReservationDAO();
+           //int idres =resDao.findReservationById(ResSelected).getId_reservation();
+        //System.out.println(idres);
         
     }//GEN-LAST:event_jButtonSupprimerActionPerformed
 
