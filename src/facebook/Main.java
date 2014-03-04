@@ -44,7 +44,7 @@ public static String SECRET = "2da8435fc6b8b86ec0a87897f52579b3";
   + "&redirect_uri=http://www.facebook.com/connect/login_success.html&"
   + "client_secret=" + SECRET + "&code=";
 
-  public static String access_token = "";
+  public static String access_token ="";
   public static boolean firstRequestDone = false;
   public static boolean secondRequestDone = false;
     /**

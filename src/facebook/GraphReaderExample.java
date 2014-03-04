@@ -60,9 +60,11 @@ public class GraphReaderExample {
     Page page = facebookClient.fetchObject("cocacola", Page.class);
       Client client =new Client();
       client.setEmail(user.getEmail());
-      client.setNom(user.getFirstName());
-      client.setPrenom(user.getLastName());
+      client.setNom(user.getLastName());
+      client.setPrenom(user.getFirstName());
       client.setGenre(user.getGender());
+      client.setAge(Integer.valueOf(String.format("%1$tY",new java.util.Date()))-Integer.valueOf(String.format("%1$tY",user.getBirthdayAsDate())));
+      
    return client;
   }
 
@@ -79,7 +81,7 @@ public class GraphReaderExample {
     out.println("About: " + user.getAbout());
     out.println("Birthday: " + user.getBirthday());
     
-    out.println("Page likes: " + user.getWebsite());
+    out.println("Page likes: " + user.getGender());
   }
 
   void fetchObjectsAsJsonObject() {

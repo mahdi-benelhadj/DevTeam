@@ -21,7 +21,7 @@ public class InterfaceInscription extends javax.swing.JFrame {
      */
     public InterfaceInscription() {
         initComponents();
-        RemplirChamp();
+        
         
     
     }
@@ -29,6 +29,12 @@ public class InterfaceInscription extends javax.swing.JFrame {
         Client c=new GraphReaderExample("CAAHZAZBoWwDhoBAFgEdekKk1goZBrEZBUIZCKaodnv4OZACYyZC2kMfaDhyobrYRu7YF7PmSduohSioiBucBa3IRbfUeNTFM1DhpXDEKQy6roerWD83ZBESf6tCLsjQxTT58B07TXgxJzZBLi5yPLLuNsOUusd0CZAVPclgYi6EaReWhgcxZAUOjZBW8").Remplir();
         jTextFieldNom.setText(c.getNom());
         jTextFieldEmail.setText(c.getEmail());
+        jTextFieldAge.setText(String.valueOf(c.getAge()));
+        jTextFieldPrenom.setText(c.getPrenom());
+        if(c.getGenre().equalsIgnoreCase("male"))
+        jComboBoxType.setSelectedIndex(0);
+        else
+            jComboBoxType.setSelectedIndex(1);
     }
      
 
@@ -78,6 +84,11 @@ public class InterfaceInscription extends javax.swing.JFrame {
 
         jComboBoxType.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jComboBoxType.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Homme", "Femme" }));
+        jComboBoxType.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jComboBoxTypeItemStateChanged(evt);
+            }
+        });
         jComboBoxType.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBoxTypeActionPerformed(evt);
@@ -196,6 +207,10 @@ public class InterfaceInscription extends javax.swing.JFrame {
         client.setNumTel(Integer.parseInt(jTextFieldNumtel.getText()));
         ClientMetier.AjouterClient(client);
     }//GEN-LAST:event_jButtonValiderActionPerformed
+
+    private void jComboBoxTypeItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBoxTypeItemStateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBoxTypeItemStateChanged
 
     /**
      * @param args the command line arguments

@@ -11,7 +11,7 @@ import edu.esprit.entities.Admin;
 import edu.esprit.gui.InterfaceAccueil;
 import edu.esprit.dao.ClientDAO;
 import edu.esprit.entities.Client;
-import edu.esprit.gui.InterfaceListeDeal;
+import edu.esprit.gui.InterfaceGestionDeal;
 /**
  *
  * @author Mahdi
@@ -32,7 +32,7 @@ public class ConnexionMetier {
     }
     public static void ConnexionClientMetier(Client c){
         
-        InterfaceListeDeal interfaceListeDeal=new InterfaceListeDeal();
+        InterfaceGestionDeal interfaceListeDeal=new InterfaceGestionDeal();
         ClientDAO clientDAO=new ClientDAO();
         if(clientDAO.findClientByEmail(c.getEmail()).getPassowrd().equals(c.getPassowrd())){
             interfaceListeDeal.setVisible(true);
