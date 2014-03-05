@@ -114,8 +114,9 @@ public class InterfaceGestionClients extends javax.swing.JFrame {
 
     private void jButtonRechClActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRechClActionPerformed
         // TODO add your handling code here:
-        if(jTextFieldRechCl.getText()!="")
-       jList1.setModel(new ListClientchercher(jTextFieldRechCl.getText()));
+        if(!jTextFieldRechCl.getText().equals(""))
+        {jList1.setModel(new ListClientchercher(jTextFieldRechCl.getText()));
+        System.out.println("test");}
         else
             jList1.setModel(new ListClient());
     }//GEN-LAST:event_jButtonRechClActionPerformed

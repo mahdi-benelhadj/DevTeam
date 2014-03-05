@@ -68,6 +68,11 @@ public class InterfaceAccueil extends javax.swing.JFrame {
 
         jButtonAjouterCategorie.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonAjouterCategorie.setText("Ajouter Catégorie");
+        jButtonAjouterCategorie.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAjouterCategorieActionPerformed(evt);
+            }
+        });
 
         jButtonAfficherDeal.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonAfficherDeal.setText("Afficher Deal");
@@ -173,6 +178,8 @@ public class InterfaceAccueil extends javax.swing.JFrame {
 
     private void jButtonAjouterDealActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAjouterDealActionPerformed
         // TODO add your handling code here:
+        InterfaceAjoutDeal ajoutDeal=new InterfaceAjoutDeal();
+        ajoutDeal.setVisible(true);
     }//GEN-LAST:event_jButtonAjouterDealActionPerformed
 
     private void jButtonAfficherReservationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAfficherReservationActionPerformed
@@ -184,6 +191,12 @@ public class InterfaceAccueil extends javax.swing.JFrame {
     private void jButtonAfficherDealActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAfficherDealActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonAfficherDealActionPerformed
+
+    private void jButtonAjouterCategorieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAjouterCategorieActionPerformed
+        // TODO add your handling code here:
+        InterfaceAjoutCatégorie ajoutCatégorie=new InterfaceAjoutCatégorie();
+        ajoutCatégorie.setVisible(true);
+    }//GEN-LAST:event_jButtonAjouterCategorieActionPerformed
 
     /**
     * @param args the command line arguments
