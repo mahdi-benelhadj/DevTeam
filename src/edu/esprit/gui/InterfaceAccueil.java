@@ -37,9 +37,9 @@ public class InterfaceAccueil extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jButtonAjouterDeal = new javax.swing.JButton();
         jButtonAjouterCategorie = new javax.swing.JButton();
-        jButtonAfficherDeal = new javax.swing.JButton();
+        jButtonAGestionDeals = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
-        jButtonSupprimerClient = new javax.swing.JButton();
+        jButtonGestionClient = new javax.swing.JButton();
         jButtonAjouterVendeur = new javax.swing.JButton();
         jButtonAfficherReservation = new javax.swing.JButton();
 
@@ -74,11 +74,11 @@ public class InterfaceAccueil extends javax.swing.JFrame {
             }
         });
 
-        jButtonAfficherDeal.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButtonAfficherDeal.setText("Afficher Deal");
-        jButtonAfficherDeal.addActionListener(new java.awt.event.ActionListener() {
+        jButtonAGestionDeals.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButtonAGestionDeals.setText("gestion des deals");
+        jButtonAGestionDeals.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonAfficherDealActionPerformed(evt);
+                jButtonAGestionDealsActionPerformed(evt);
             }
         });
 
@@ -89,7 +89,7 @@ public class InterfaceAccueil extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(23, 23, 23)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButtonAfficherDeal, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonAGestionDeals, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButtonAjouterCategorie, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE)
                     .addComponent(jButtonAjouterDeal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(26, 26, 26))
@@ -102,12 +102,17 @@ public class InterfaceAccueil extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButtonAjouterCategorie, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButtonAfficherDeal, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButtonAGestionDeals, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
-        jButtonSupprimerClient.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButtonSupprimerClient.setText("Supprimer Client");
+        jButtonGestionClient.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButtonGestionClient.setText("gestion des clients");
+        jButtonGestionClient.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonGestionClientActionPerformed(evt);
+            }
+        });
 
         jButtonAjouterVendeur.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonAjouterVendeur.setText("Ajouter Vendeur");
@@ -135,7 +140,7 @@ public class InterfaceAccueil extends javax.swing.JFrame {
                         .addGap(94, 94, 94)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButtonAjouterVendeur, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButtonSupprimerClient, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jButtonGestionClient, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jButtonGenererRapport, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -158,7 +163,7 @@ public class InterfaceAccueil extends javax.swing.JFrame {
                         .addGap(112, 112, 112)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButtonGenererRapport, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButtonSupprimerClient, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jButtonGestionClient, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(30, 30, 30)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -188,15 +193,24 @@ public class InterfaceAccueil extends javax.swing.JFrame {
         f1.setVisible(true); //afficher l'interface
     }//GEN-LAST:event_jButtonAfficherReservationActionPerformed
 
-    private void jButtonAfficherDealActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAfficherDealActionPerformed
+    private void jButtonAGestionDealsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAGestionDealsActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonAfficherDealActionPerformed
+        InterfaceGestionDeal gestionDeal=new InterfaceGestionDeal();
+        gestionDeal.setVisible(true);
+    }//GEN-LAST:event_jButtonAGestionDealsActionPerformed
 
     private void jButtonAjouterCategorieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAjouterCategorieActionPerformed
         // TODO add your handling code here:
         InterfaceAjoutCatégorie ajoutCatégorie=new InterfaceAjoutCatégorie();
         ajoutCatégorie.setVisible(true);
     }//GEN-LAST:event_jButtonAjouterCategorieActionPerformed
+
+    private void jButtonGestionClientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGestionClientActionPerformed
+        // TODO add your handling code here:
+        InterfaceGestionClients gestionClient=new InterfaceGestionClients();
+        gestionClient.setVisible(true);
+        
+    }//GEN-LAST:event_jButtonGestionClientActionPerformed
 
     /**
     * @param args the command line arguments
@@ -210,7 +224,7 @@ public class InterfaceAccueil extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonAfficherDeal;
+    private javax.swing.JButton jButtonAGestionDeals;
     private javax.swing.JButton jButtonAfficherReservation;
     private javax.swing.JButton jButtonAjouterCategorie;
     private javax.swing.JButton jButtonAjouterDeal;
@@ -218,7 +232,7 @@ public class InterfaceAccueil extends javax.swing.JFrame {
     private javax.swing.JButton jButtonEnvoyerVoucher;
     private javax.swing.JButton jButtonGenererRapport;
     private javax.swing.JButton jButtonGenererStatistique;
-    private javax.swing.JButton jButtonSupprimerClient;
+    private javax.swing.JButton jButtonGestionClient;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
