@@ -162,6 +162,7 @@ public class InterfaceGestionDeal extends javax.swing.JFrame {
         // TODO add your handling code here:
         DealMetier.SupprimerDeal(jListDeal.getSelectedIndex());
         jListDeal.setModel(new ListDeal());
+        
     }//GEN-LAST:event_jButtonSupprimerActionPerformed
 
     /**

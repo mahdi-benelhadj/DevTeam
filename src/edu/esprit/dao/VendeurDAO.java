@@ -42,7 +42,7 @@ public class VendeurDAO {
         }
     }
       public void deleteVendeur(int id){
-        String requete = "delete from deal where id_vendeur=?";
+        String requete = "delete from vendeur where id_vendeur=?";
         try {
             PreparedStatement ps = MyConnection.getInstance().prepareStatement(requete);
             ps.setInt(1, id);

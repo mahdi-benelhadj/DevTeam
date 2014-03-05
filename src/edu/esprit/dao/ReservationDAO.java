@@ -44,7 +44,7 @@ public class ReservationDAO {
             PreparedStatement ps = MyConnection.getInstance().prepareStatement(requete);
             ps.setInt(1, id);
             ps.executeUpdate();
-            System.out.println("Reservation supprimé");
+            System.out.println("Reservation supprimée");
         } catch (SQLException ex) {
            //Logger.getLogger(PersonneDao.class.getName()).log(Level.SEVERE, null, ex);
             System.out.println("erreur lors de la suppression "+ex.getMessage());
