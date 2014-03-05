@@ -6,16 +6,26 @@
 
 package edu.esprit.gui;
 
+
+import edu.esprit.metier.Mail;
+import edu.esprit.metier.MailConstruction;
+import edu.esprit.dao.ClientDAO;
+import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URL;
+import javax.swing.JFileChooser;
 /**
  *
  * @author olfa
  */
 public class InterfaceEnvoyerVoucher extends javax.swing.JFrame {
-
+ URL url;
+    Mail mail = new Mail();
     /**
      * Creates new form InterfaceSupprimerClient
      */
     public InterfaceEnvoyerVoucher() {
+        
         initComponents();
     }
 
@@ -37,6 +47,8 @@ public class InterfaceEnvoyerVoucher extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jLabelPiecteJointe = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -47,26 +59,54 @@ public class InterfaceEnvoyerVoucher extends javax.swing.JFrame {
         deal1.setText("Deal");
 
         jComboBoxClient.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Client 1", "Client 2", "Client 3", "Client 4" }));
+        jComboBoxClient.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxClientActionPerformed(evt);
+            }
+        });
 
         iComboBoxDeal.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Deal1", "Deal 2", "Deal 3", "Deal 4" }));
 
         jButtonAnnuler.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonAnnuler.setText("Annuler");
         jButtonAnnuler.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButtonAnnuler.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAnnulerActionPerformed(evt);
+            }
+        });
 
         jButtonValider.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButtonValider.setText("Valider");
+        jButtonValider.setText("Envoyer");
         jButtonValider.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButtonValider.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonValiderActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("Envoyer Voucher");
+
+        jButton1.setText("Choose File");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jLabelPiecteJointe.setText("piece jointe");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(91, 91, 91)
+                .addComponent(jButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabelPiecteJointe, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
                 .addComponent(jButtonValider, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
                 .addComponent(jButtonAnnuler, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -87,11 +127,11 @@ public class InterfaceEnvoyerVoucher extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jComboBoxClient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(iComboBoxDeal, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(304, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -108,14 +148,89 @@ public class InterfaceEnvoyerVoucher extends javax.swing.JFrame {
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabelPiecteJointe, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
                     .addComponent(jButtonAnnuler, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-                    .addComponent(jButtonValider, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButtonValider)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButtonValiderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonValiderActionPerformed
+        // TODO add your handling code here:
+        ClientDAO clientDAO =new ClientDAO();
+        mail.setMailAddressRecipient("mahdi.benelhadj@gmail.com");
+        // mail.setMailAddressRecipient(clientDAO.findClientByNom(jComboBoxClient.getSelectedItem().toString()).getEmail());
+        
+        mail.getPwd();
+        mail.getMailAddressSender();
+        mail.getMailObject();
+        
+        
+        //System.out.println(jTextArearObject.getToolTipText());
+        
+        MailConstruction mc = new MailConstruction();
+        mc.getMailProperties();
+        
+        String s = this.cleanUrl(url);
+        mc.getMailMessage(s, mail);
+        mc.SendMessage();
+        
+        
+       
+        
+        
+    }
+        public String cleanUrl(URL url){
+        
+        String s = url.toString();
+        System.out.println("Before Clean");
+        System.out.println(s);
+        String delims = "/";
+        String[] tokens = s.split(delims);
+        System.out.println("After Clean");
+        String mailPart="";
+        for (int i=1;i<tokens.length;i++){
+            mailPart+=tokens[i]+"\\\\";
+        }
+        System.out.println(mailPart);
+        return mailPart;
+    
+        
+    }//GEN-LAST:event_jButtonValiderActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        JFileChooser chooser = new JFileChooser();
+        int option = chooser.showOpenDialog(null);
+        //String s= "C:\\logo-170x80.jpg";
+        if(option == JFileChooser.APPROVE_OPTION){
+            try{
+                chooser.setSelectedFile(new File("C:\\user.js"));
+                url = chooser.getSelectedFile().toURL();
+                System.out.println(url);
+                jLabelPiecteJointe.setText(url.toString());
+
+            }
+            catch(MalformedURLException exception){
+                System.out.println("The URL was malformed ... ");
+
+            }
+        }
+
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButtonAnnulerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAnnulerActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_jButtonAnnulerActionPerformed
+
+    private void jComboBoxClientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxClientActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBoxClientActionPerformed
     /**
      * @param args the command line arguments
      */
@@ -155,10 +270,12 @@ public class InterfaceEnvoyerVoucher extends javax.swing.JFrame {
     private javax.swing.JLabel client1;
     private javax.swing.JLabel deal1;
     private javax.swing.JComboBox iComboBoxDeal;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonAnnuler;
     private javax.swing.JButton jButtonValider;
     private javax.swing.JComboBox jComboBoxClient;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabelPiecteJointe;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     // End of variables declaration//GEN-END:variables
