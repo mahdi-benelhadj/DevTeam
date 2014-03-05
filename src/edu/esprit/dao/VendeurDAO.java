@@ -108,13 +108,14 @@ public class VendeurDAO {
         }
     }
        public void updateVendeur(Vendeur v){
-        String requete = "update  set nom=?,adresse=?, note=?";
+        String requete = "update vendeur  set nom=?,adresse=?, note=? where id_vendeur=?";
         try {
             PreparedStatement ps = MyConnection.getInstance().prepareStatement(requete);
             ps.setString(1, v.getNom());
 
             ps.setString(2, v.getAdresse());
             ps.setInt(3, v.getNote());
+            ps.setInt(4, v.getId_vendeur());
             
             ps.executeUpdate();
             System.out.println("Mise à jour effectuée avec succès");
