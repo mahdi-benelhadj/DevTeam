@@ -54,6 +54,11 @@ public class InterfaceAccueil extends javax.swing.JFrame {
         jButtonEnvoyerVoucher.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonEnvoyerVoucher.setText("Envoyer Voucher");
         jButtonEnvoyerVoucher.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButtonEnvoyerVoucher.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonEnvoyerVoucherActionPerformed(evt);
+            }
+        });
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Gestion des deals"));
         jPanel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -115,10 +120,15 @@ public class InterfaceAccueil extends javax.swing.JFrame {
         });
 
         jButtonAjouterVendeur.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButtonAjouterVendeur.setText("Ajouter Vendeur");
+        jButtonAjouterVendeur.setText("gestion des Vendeurs");
+        jButtonAjouterVendeur.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAjouterVendeurActionPerformed(evt);
+            }
+        });
 
         jButtonAfficherReservation.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButtonAfficherReservation.setText("Afficher Réservation");
+        jButtonAfficherReservation.setText(" reservations");
         jButtonAfficherReservation.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButtonAfficherReservation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -211,6 +221,19 @@ public class InterfaceAccueil extends javax.swing.JFrame {
         gestionClient.setVisible(true);
         
     }//GEN-LAST:event_jButtonGestionClientActionPerformed
+
+    private void jButtonEnvoyerVoucherActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEnvoyerVoucherActionPerformed
+        // TODO add your handling code here:
+         InterfaceEnvoyerVoucher envoyervoucher=new InterfaceEnvoyerVoucher();
+        envoyervoucher.setVisible(true);
+        
+    }//GEN-LAST:event_jButtonEnvoyerVoucherActionPerformed
+
+    private void jButtonAjouterVendeurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAjouterVendeurActionPerformed
+        // TODO add your handling code here:
+        InterfaceGestionVendeurs gestionvendeur=new InterfaceGestionVendeurs();
+        gestionvendeur.setVisible(true);
+    }//GEN-LAST:event_jButtonAjouterVendeurActionPerformed
 
     /**
     * @param args the command line arguments
