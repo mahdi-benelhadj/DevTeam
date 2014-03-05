@@ -93,11 +93,12 @@ public class DealDAO {
        public Deal findDealById(int id){
     
      String requete = "select * from deal where id_deal=?";
+     Deal deal = new Deal();
         try {
             PreparedStatement ps = MyConnection.getInstance().prepareStatement(requete);
             ps.setInt(1, id);
             ResultSet resultat = ps.executeQuery();
-            Deal deal = new Deal();
+            
             VendeurDAO vendeurDAO=new VendeurDAO();
             CategorieDAO categorieDAO=new CategorieDAO();
             while (resultat.next())
@@ -127,11 +128,12 @@ public class DealDAO {
         public Deal findDealByTitre(String titre){
     
      String requete = "select * from deal where titre=?";
+     Deal deal = new Deal();
         try {
             PreparedStatement ps = MyConnection.getInstance().prepareStatement(requete);
             ps.setString(1, titre);
             ResultSet resultat = ps.executeQuery();
-            Deal deal = new Deal();
+            
             VendeurDAO vendeurDAO=new VendeurDAO();
             CategorieDAO categorieDAO=new CategorieDAO();
             while (resultat.next())
@@ -149,7 +151,7 @@ public class DealDAO {
                 deal.setNbr_max(resultat.getInt(10));
                 
                 deal.setVendeur(vendeurDAO.findVendeurById(resultat.getInt(11)));
-
+                System.out.println("test");
             }
             return deal;
 
@@ -161,7 +163,7 @@ public class DealDAO {
     }
       public Deal findDealByIdCategorie(int id){
     
-     String requete = "select * from depot where id_categorie = ?";
+     String requete = "select * from deal where id_categorie = ?";
         try {
             PreparedStatement ps = MyConnection.getInstance().prepareStatement(requete);
             ps.setInt(1, id);

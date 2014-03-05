@@ -13,6 +13,7 @@ import edu.esprit.metier.ListDeal;
 
 
 import edu.esprit.metier.ListClientchercher;
+import edu.esprit.metier.ListDealRechercher;
 
 /**
  *
@@ -153,7 +154,8 @@ public class InterfaceGestionDeal extends javax.swing.JFrame {
 
     private void jButtonRechercherDealActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRechercherDealActionPerformed
         // TODO add your handling code here:
-        jListDeal.setModel(new ListClientchercher(jTextFieldRechercherDeal.getText()));
+        jListDeal.setModel(new ListDealRechercher(jTextFieldRechercherDeal.getText()));
+        System.out.println(jTextFieldRechercherDeal.getText());
     }//GEN-LAST:event_jButtonRechercherDealActionPerformed
 
     private void jButtonSupprimerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSupprimerActionPerformed

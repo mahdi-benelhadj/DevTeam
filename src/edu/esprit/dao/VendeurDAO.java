@@ -12,6 +12,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import static javax.swing.JOptionPane.showMessageDialog;
+
 
 
 /**
@@ -32,6 +34,8 @@ public class VendeurDAO {
 
             ps.executeUpdate();
             System.out.println("Ajout effectuée avec succès");
+            showMessageDialog(null, "Ajout effectuée avec succès!");
+            
         } catch (SQLException ex) {
            //Logger.getLogger(PersonneDao.class.getName()).log(Level.SEVERE, null, ex);
             System.out.println("erreur lors de l'insertion "+ex.getMessage());
