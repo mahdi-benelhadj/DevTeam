@@ -8,7 +8,7 @@ package edu.esprit.gui;
 
 import edu.esprit.entities.Vendeur;
 import edu.esprit.metier.VendeurMetier;
-import edu.esprit.metier.ListDeal;
+
 import edu.esprit.metier.ListVendeur;
 import edu.esprit.metier.ListVendeurRechercher;
 
