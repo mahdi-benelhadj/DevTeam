@@ -42,6 +42,7 @@ public class InterfaceAccueil extends javax.swing.JFrame {
         jButtonGestionClient = new javax.swing.JButton();
         jButtonAjouterVendeur = new javax.swing.JButton();
         jButtonAfficherReservation = new javax.swing.JButton();
+        jToggleButtonRetour = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -136,6 +137,13 @@ public class InterfaceAccueil extends javax.swing.JFrame {
             }
         });
 
+        jToggleButtonRetour.setText("retour");
+        jToggleButtonRetour.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButtonRetourActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -157,9 +165,11 @@ public class InterfaceAccueil extends javax.swing.JFrame {
                             .addComponent(jButtonGenererStatistique, javax.swing.GroupLayout.DEFAULT_SIZE, 167, Short.MAX_VALUE))))
                 .addGap(127, 127, 127))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(jButtonAfficherReservation, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(110, 110, 110)
+                .addComponent(jToggleButtonRetour, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButtonAfficherReservation, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(184, 184, 184)
                 .addComponent(jButtonEnvoyerVoucher, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(37, 37, 37))
         );
@@ -179,12 +189,13 @@ public class InterfaceAccueil extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButtonAjouterVendeur, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButtonGenererStatistique, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonEnvoyerVoucher, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonAfficherReservation, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButtonAfficherReservation, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jToggleButtonRetour, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE))
                 .addGap(22, 22, 22))
         );
 
@@ -235,6 +246,12 @@ public class InterfaceAccueil extends javax.swing.JFrame {
         gestionvendeur.setVisible(true);
     }//GEN-LAST:event_jButtonAjouterVendeurActionPerformed
 
+    private void jToggleButtonRetourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButtonRetourActionPerformed
+        // TODO add your handling code here:
+         InterfaceAccueil acceuil=new InterfaceAccueil();
+        acceuil.setVisible(true);
+    }//GEN-LAST:event_jToggleButtonRetourActionPerformed
+
     /**
     * @param args the command line arguments
     */
@@ -258,6 +275,7 @@ public class InterfaceAccueil extends javax.swing.JFrame {
     private javax.swing.JButton jButtonGestionClient;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JToggleButton jToggleButtonRetour;
     // End of variables declaration//GEN-END:variables
 
 }

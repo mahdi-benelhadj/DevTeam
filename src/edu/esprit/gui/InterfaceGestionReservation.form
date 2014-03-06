@@ -40,6 +40,8 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Component id="jSeparator1" alignment="1" max="32767" attributes="0"/>
               <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                  <Component id="jToggleButtonRetour" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
                   <Component id="jButtonSupprimer" min="-2" pref="85" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -81,7 +83,10 @@
                   <Component id="jSeparator2" min="-2" pref="10" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jButtonSupprimer" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jButtonSupprimer" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jToggleButtonRetour" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                       <Component id="jButtonValider" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -157,6 +162,14 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Liste des R&#xe9;servations"/>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JToggleButton" name="jToggleButtonRetour">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="retour"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jToggleButtonRetourActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

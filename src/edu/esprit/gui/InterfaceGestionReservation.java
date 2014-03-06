@@ -40,6 +40,7 @@ public class InterfaceGestionReservation extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
         jLabel2 = new javax.swing.JLabel();
+        jToggleButtonRetour = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -64,13 +65,22 @@ public class InterfaceGestionReservation extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setText("Liste des Réservations");
 
+        jToggleButtonRetour.setText("retour");
+        jToggleButtonRetour.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButtonRetourActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(43, 43, 43)
+                .addComponent(jToggleButtonRetour)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButtonSupprimer, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButtonValider, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -104,7 +114,9 @@ public class InterfaceGestionReservation extends javax.swing.JFrame {
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButtonSupprimer)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jButtonSupprimer)
+                        .addComponent(jToggleButtonRetour))
                     .addComponent(jButtonValider))
                 .addContainerGap())
         );
@@ -133,6 +145,12 @@ public class InterfaceGestionReservation extends javax.swing.JFrame {
         //System.out.println(idres);
         
     }//GEN-LAST:event_jButtonSupprimerActionPerformed
+
+    private void jToggleButtonRetourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButtonRetourActionPerformed
+        // TODO add your handling code here:
+         InterfaceAccueil acceuil=new InterfaceAccueil();
+        acceuil.setVisible(true);
+    }//GEN-LAST:event_jToggleButtonRetourActionPerformed
 
     /**
      * @param args the command line arguments
@@ -179,5 +197,6 @@ public class InterfaceGestionReservation extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JTable jTableReservation;
+    private javax.swing.JToggleButton jToggleButtonRetour;
     // End of variables declaration//GEN-END:variables
 }

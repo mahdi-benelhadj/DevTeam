@@ -43,6 +43,7 @@ public class InterfaceAjoutCatégorie extends javax.swing.JFrame {
         jButtonAnnuler = new javax.swing.JButton();
         jSeparator2 = new javax.swing.JSeparator();
         label2 = new java.awt.Label();
+        jToggleButtonRetour = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -65,6 +66,13 @@ public class InterfaceAjoutCatégorie extends javax.swing.JFrame {
         label2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         label2.setText("Ajouter Catégorie");
 
+        jToggleButtonRetour.setText("retour");
+        jToggleButtonRetour.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButtonRetourActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -79,17 +87,18 @@ public class InterfaceAjoutCatégorie extends javax.swing.JFrame {
                         .addContainerGap(226, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jButtonValider, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButtonAnnuler, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(23, 23, 23))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(34, 34, 34)
-                                .addComponent(jTextFieldCategorie, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(90, 90, 90))))))
+                        .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(34, 34, 34)
+                        .addComponent(jTextFieldCategorie, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(90, 90, 90))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addComponent(jToggleButtonRetour, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButtonValider, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButtonAnnuler, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(23, 23, 23))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -101,7 +110,7 @@ public class InterfaceAjoutCatégorie extends javax.swing.JFrame {
                 .addGap(91, 91, 91)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jTextFieldCategorie, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
+                        .addComponent(jTextFieldCategorie, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)
                         .addGap(94, 94, 94))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -110,7 +119,9 @@ public class InterfaceAjoutCatégorie extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButtonAnnuler)
-                    .addComponent(jButtonValider, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jButtonValider, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jToggleButtonRetour)))
                 .addContainerGap())
         );
 
@@ -124,6 +135,12 @@ public class InterfaceAjoutCatégorie extends javax.swing.JFrame {
         
         CategorieMetier.ajouterCategorie(c);
     }//GEN-LAST:event_jButtonValiderActionPerformed
+
+    private void jToggleButtonRetourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButtonRetourActionPerformed
+        // TODO add your handling code here:
+        InterfaceAccueil acceuil=new InterfaceAccueil();
+        acceuil.setVisible(true);
+    }//GEN-LAST:event_jToggleButtonRetourActionPerformed
 
     /**
     * @param args the command line arguments
@@ -142,6 +159,7 @@ public class InterfaceAjoutCatégorie extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private java.awt.TextField jTextFieldCategorie;
+    private javax.swing.JToggleButton jToggleButtonRetour;
     private java.awt.Label label1;
     private java.awt.Label label2;
     // End of variables declaration//GEN-END:variables

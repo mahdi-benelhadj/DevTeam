@@ -38,6 +38,7 @@ public class InterfaceAjouterVendeur extends javax.swing.JFrame {
         jButtonValider = new javax.swing.JButton();
         jTextNom = new javax.swing.JTextField();
         jTextVendeur = new javax.swing.JTextField();
+        jToggleButtonRetour = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -63,6 +64,13 @@ public class InterfaceAjouterVendeur extends javax.swing.JFrame {
             }
         });
 
+        jToggleButtonRetour.setText("retour");
+        jToggleButtonRetour.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButtonRetourActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -71,7 +79,9 @@ public class InterfaceAjouterVendeur extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGap(24, 24, 24)
+                        .addComponent(jToggleButtonRetour)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButtonValider)
                         .addGap(18, 18, 18)
                         .addComponent(jButtonAnnuler)
@@ -100,7 +110,8 @@ public class InterfaceAjouterVendeur extends javax.swing.JFrame {
                 .addGap(39, 39, 39)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonAnnuler)
-                    .addComponent(jButtonValider))
+                    .addComponent(jButtonValider)
+                    .addComponent(jToggleButtonRetour))
                 .addGap(27, 27, 27))
         );
 
@@ -137,6 +148,12 @@ public class InterfaceAjouterVendeur extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.setVisible(false);
     }//GEN-LAST:event_jButtonAnnulerActionPerformed
+
+    private void jToggleButtonRetourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButtonRetourActionPerformed
+        // TODO add your handling code here:
+         InterfaceGestionVendeurs gestionvendeur=new InterfaceGestionVendeurs();
+        gestionvendeur.setVisible(true);
+    }//GEN-LAST:event_jToggleButtonRetourActionPerformed
 
     /**
      * @param args the command line arguments
@@ -181,5 +198,6 @@ public class InterfaceAjouterVendeur extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextNom;
     private javax.swing.JTextField jTextVendeur;
+    private javax.swing.JToggleButton jToggleButtonRetour;
     // End of variables declaration//GEN-END:variables
 }
