@@ -40,6 +40,7 @@ public class InterfaceConnexionClient extends javax.swing.JFrame {
         jButtonConnect = new javax.swing.JButton();
         jButtoninscription = new javax.swing.JButton();
         jButtonFb = new javax.swing.JButton();
+        jToggleButtonRetour = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -74,10 +75,27 @@ public class InterfaceConnexionClient extends javax.swing.JFrame {
             }
         });
 
+        jToggleButtonRetour.setText("retour");
+        jToggleButtonRetour.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButtonRetourActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addComponent(jToggleButtonRetour, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                .addComponent(jButtonFb)
+                .addGap(36, 36, 36)
+                .addComponent(jButtoninscription)
+                .addGap(27, 27, 27)
+                .addComponent(jButtonConnect)
+                .addGap(40, 40, 40))
             .addGroup(layout.createSequentialGroup()
                 .addGap(42, 42, 42)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -86,15 +104,7 @@ public class InterfaceConnexionClient extends javax.swing.JFrame {
                         .addGap(67, 67, 67)
                         .addComponent(jTextFieldPasswd, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel3))
-                .addContainerGap(115, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButtonFb)
-                .addGap(59, 59, 59)
-                .addComponent(jButtoninscription)
-                .addGap(35, 35, 35)
-                .addComponent(jButtonConnect)
-                .addGap(69, 69, 69))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                     .addContainerGap(220, Short.MAX_VALUE)
@@ -114,7 +124,8 @@ public class InterfaceConnexionClient extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonConnect)
                     .addComponent(jButtoninscription)
-                    .addComponent(jButtonFb))
+                    .addComponent(jButtonFb)
+                    .addComponent(jToggleButtonRetour))
                 .addGap(39, 39, 39))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
@@ -150,6 +161,12 @@ public class InterfaceConnexionClient extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_jButtonFbActionPerformed
+
+    private void jToggleButtonRetourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButtonRetourActionPerformed
+        // TODO add your handling code here:
+         InterfaceChoixDeConnexion choixCon=new InterfaceChoixDeConnexion();
+        choixCon.setVisible(true);
+    }//GEN-LAST:event_jToggleButtonRetourActionPerformed
 
     /**
      * @param args the command line arguments
@@ -194,5 +211,6 @@ public class InterfaceConnexionClient extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JTextField jTextFieldEmail1;
     private javax.swing.JTextField jTextFieldPasswd;
+    private javax.swing.JToggleButton jToggleButtonRetour;
     // End of variables declaration//GEN-END:variables
 }
