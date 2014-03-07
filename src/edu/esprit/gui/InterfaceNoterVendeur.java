@@ -6,6 +6,9 @@
 
 package edu.esprit.gui;
 
+import edu.esprit.entities.Vendeur;
+import edu.esprit.metier.VendeurMetier;
+
 /**
  *
  * @author nour
@@ -30,6 +33,7 @@ public class InterfaceNoterVendeur extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jToggleButtonNoter = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -37,13 +41,22 @@ public class InterfaceNoterVendeur extends javax.swing.JFrame {
 
         jLabel1.setText("Veuillez noter notre vendeur");
 
+        jToggleButtonNoter.setText("noter");
+        jToggleButtonNoter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButtonNoterActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(88, 88, 88)
-                .addComponent(jLabel1)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel1)
+                    .addComponent(jToggleButtonNoter, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(144, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -51,7 +64,9 @@ public class InterfaceNoterVendeur extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addComponent(jLabel1)
-                .addContainerGap(211, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 133, Short.MAX_VALUE)
+                .addComponent(jToggleButtonNoter, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -73,6 +88,11 @@ public class InterfaceNoterVendeur extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jToggleButtonNoterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButtonNoterActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jToggleButtonNoterActionPerformed
 
     /**
      * @param args the command line arguments
@@ -112,5 +132,6 @@ public class InterfaceNoterVendeur extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JToggleButton jToggleButtonNoter;
     // End of variables declaration//GEN-END:variables
 }

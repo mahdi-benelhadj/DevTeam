@@ -100,6 +100,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="G&#xe9;n&#xe9;rer Statistique"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonGenererStatistiqueActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButtonGenererRapport">
       <Properties>

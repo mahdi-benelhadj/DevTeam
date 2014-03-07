@@ -177,6 +177,7 @@ public class InterfaceGestionDeal extends javax.swing.JFrame {
         // TODO add your handling code here:
         InterfaceDetailDeal f1 = new InterfaceDetailDeal();
         f1.setVisible(true); //afficher l'interface
+        this.setVisible(false);
     }//GEN-LAST:event_jButtonAfficherDetailActionPerformed
 
     private void jButtonRechercherDealActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRechercherDealActionPerformed

@@ -48,6 +48,11 @@ public class InterfaceAccueil extends javax.swing.JFrame {
 
         jButtonGenererStatistique.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonGenererStatistique.setText("Générer Statistique");
+        jButtonGenererStatistique.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonGenererStatistiqueActionPerformed(evt);
+            }
+        });
 
         jButtonGenererRapport.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonGenererRapport.setText("Générer Rapport");
@@ -208,30 +213,35 @@ public class InterfaceAccueil extends javax.swing.JFrame {
         // TODO add your handling code here:
         InterfaceAjoutDeal ajoutDeal=new InterfaceAjoutDeal();
         ajoutDeal.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jButtonAjouterDealActionPerformed
 
     private void jButtonAfficherReservationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAfficherReservationActionPerformed
         // TODO add your handling code here:
         InterfaceGestionReservation f1 = new InterfaceGestionReservation();
         f1.setVisible(true); //afficher l'interface
+        this.setVisible(false);
     }//GEN-LAST:event_jButtonAfficherReservationActionPerformed
 
     private void jButtonAGestionDealsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAGestionDealsActionPerformed
         // TODO add your handling code here:
         InterfaceGestionDeal gestionDeal=new InterfaceGestionDeal();
         gestionDeal.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jButtonAGestionDealsActionPerformed
 
     private void jButtonAjouterCategorieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAjouterCategorieActionPerformed
         // TODO add your handling code here:
         InterfaceAjoutCatégorie ajoutCatégorie=new InterfaceAjoutCatégorie();
         ajoutCatégorie.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jButtonAjouterCategorieActionPerformed
 
     private void jButtonGestionClientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGestionClientActionPerformed
         // TODO add your handling code here:
         InterfaceGestionClients gestionClient=new InterfaceGestionClients();
         gestionClient.setVisible(true);
+        this.setVisible(false);
         
     }//GEN-LAST:event_jButtonGestionClientActionPerformed
 
@@ -239,6 +249,7 @@ public class InterfaceAccueil extends javax.swing.JFrame {
         // TODO add your handling code here:
          InterfaceEnvoyerVoucher envoyervoucher=new InterfaceEnvoyerVoucher();
         envoyervoucher.setVisible(true);
+        this.setVisible(false);
         
     }//GEN-LAST:event_jButtonEnvoyerVoucherActionPerformed
 
@@ -246,6 +257,7 @@ public class InterfaceAccueil extends javax.swing.JFrame {
         // TODO add your handling code here:
         InterfaceGestionVendeurs gestionvendeur=new InterfaceGestionVendeurs();
         gestionvendeur.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jButtonAjouterVendeurActionPerformed
 
     private void jToggleButtonRetourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButtonRetourActionPerformed
@@ -254,6 +266,13 @@ public class InterfaceAccueil extends javax.swing.JFrame {
         acceuil.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jToggleButtonRetourActionPerformed
+
+    private void jButtonGenererStatistiqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGenererStatistiqueActionPerformed
+        // TODO add your handling code here:
+        InterfaceStatistiques stat = new InterfaceStatistiques();
+        stat.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButtonGenererStatistiqueActionPerformed
 
     /**
     * @param args the command line arguments
