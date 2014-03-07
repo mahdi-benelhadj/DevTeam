@@ -41,6 +41,8 @@ public class InterfaceConnexionClient extends javax.swing.JFrame {
         jButtoninscription = new javax.swing.JButton();
         jButtonFb = new javax.swing.JButton();
         jToggleButtonRetour = new javax.swing.JToggleButton();
+        label1 = new java.awt.Label();
+        jSeparator2 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -82,11 +84,14 @@ public class InterfaceConnexionClient extends javax.swing.JFrame {
             }
         });
 
+        label1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        label1.setText("Best Deal");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addGap(33, 33, 33)
                 .addComponent(jToggleButtonRetour, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
@@ -96,42 +101,45 @@ public class InterfaceConnexionClient extends javax.swing.JFrame {
                 .addGap(27, 27, 27)
                 .addComponent(jButtonConnect)
                 .addGap(40, 40, 40))
+            .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(42, 42, 42)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
+                        .addGap(42, 42, 42)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel3))
                         .addGap(67, 67, 67)
-                        .addComponent(jTextFieldPasswd, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel3))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextFieldEmail1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldPasswd, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(220, Short.MAX_VALUE)
-                    .addComponent(jTextFieldEmail1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(115, 115, 115)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(85, 85, 85)
-                .addComponent(jLabel3)
-                .addGap(59, 59, 59)
+                .addContainerGap()
+                .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(3, 3, 3)
+                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(36, 36, 36)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jTextFieldEmail1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(58, 58, 58)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jTextFieldPasswd, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
+                    .addComponent(jTextFieldPasswd, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonConnect)
                     .addComponent(jButtoninscription)
                     .addComponent(jButtonFb)
                     .addComponent(jToggleButtonRetour))
                 .addGap(39, 39, 39))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(96, 96, 96)
-                    .addComponent(jTextFieldEmail1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(199, Short.MAX_VALUE)))
         );
 
         pack();
@@ -166,6 +174,7 @@ public class InterfaceConnexionClient extends javax.swing.JFrame {
         // TODO add your handling code here:
          InterfaceChoixDeConnexion choixCon=new InterfaceChoixDeConnexion();
         choixCon.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jToggleButtonRetourActionPerformed
 
     /**
@@ -209,8 +218,10 @@ public class InterfaceConnexionClient extends javax.swing.JFrame {
     private javax.swing.JButton jButtoninscription;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JTextField jTextFieldEmail1;
     private javax.swing.JTextField jTextFieldPasswd;
     private javax.swing.JToggleButton jToggleButtonRetour;
+    private java.awt.Label label1;
     // End of variables declaration//GEN-END:variables
 }

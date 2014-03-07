@@ -33,6 +33,8 @@ public class InterfaceAjoutDeal extends javax.swing.JFrame {
         initComponents();
         remplirCategorie();
         remplirVendeur();
+        
+        
     }
     public void remplirCategorie(){
         List <Categorie> categories=new ArrayList<Categorie>();
@@ -41,8 +43,10 @@ public class InterfaceAjoutDeal extends javax.swing.JFrame {
         categories=depotdao.DisplayAllCategorie();
         for(Categorie d:categories){
             jComboBoxCategorie.addItem(d.getCategorie());
+            
         
         }
+        jComboBoxCategorie.addItem("autre");
     }
     
     public void remplirVendeur(){
@@ -99,6 +103,17 @@ public class InterfaceAjoutDeal extends javax.swing.JFrame {
         label1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         label1.setText("Titre");
 
+        jComboBoxCategorie.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jComboBoxCategorieMouseClicked(evt);
+            }
+        });
+        jComboBoxCategorie.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jComboBoxCategorieItemStateChanged(evt);
+            }
+        });
+
         label2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         label2.setText("Détails");
 
@@ -123,6 +138,11 @@ public class InterfaceAjoutDeal extends javax.swing.JFrame {
         jButtonAnnuler.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonAnnuler.setText("Annuler");
         jButtonAnnuler.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButtonAnnuler.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAnnulerActionPerformed(evt);
+            }
+        });
 
         jButtonAjouter.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonAjouter.setText("Ajouter");
@@ -194,15 +214,14 @@ public class InterfaceAjoutDeal extends javax.swing.JFrame {
                                                 .addComponent(jXDatePickerDate, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                         .addGap(30, 30, 30))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                .addComponent(jTextFieldTitreDeal, javax.swing.GroupLayout.DEFAULT_SIZE, 242, Short.MAX_VALUE)
-                                                .addComponent(jScrollPane1)
-                                                .addComponent(jTextFieldPrix, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jTextFieldPrixPromotion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(jTextFieldTitreDeal, javax.swing.GroupLayout.DEFAULT_SIZE, 242, Short.MAX_VALUE)
+                                            .addComponent(jScrollPane1)
+                                            .addComponent(jTextFieldPrix, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jTextFieldPrixPromotion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                                 .addComponent(jTextFieldNombreMax, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jTextFieldNombreMin, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addComponent(jTextFieldNombreMin, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -229,10 +248,15 @@ public class InterfaceAjoutDeal extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(1, 1, 1)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                        .addGap(34, 34, 34)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jTextFieldDuree, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(label7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(29, 29, 29))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(label3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextFieldPrix, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -259,27 +283,17 @@ public class InterfaceAjoutDeal extends javax.swing.JFrame {
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(jXDatePickerDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(label6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(40, 40, 40)
+                                .addGap(58, 58, 58)
                                 .addComponent(jLabel1)))
-                        .addGap(19, 19, 19))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextFieldDuree, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(label7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(7, 7, 7)
-                        .addComponent(jLabel2)
-                        .addGap(13, 13, 13))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jTextFieldNombreMin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(21, 21, 21)))
-                .addGap(0, 1, Short.MAX_VALUE)
+                        .addGap(30, 30, 30)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jTextFieldNombreMin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 22, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(jTextFieldNombreMax, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(33, 33, 33)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -318,7 +332,31 @@ public class InterfaceAjoutDeal extends javax.swing.JFrame {
           deal.setNbr_max(Integer.parseInt(jTextFieldNombreMax.getText()));
           System.out.println(deal.getDate());
      DealMetier.AjouterDeal(deal);
+     
     }//GEN-LAST:event_jButtonAjouterActionPerformed
+
+    private void jButtonAnnulerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAnnulerActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+    }//GEN-LAST:event_jButtonAnnulerActionPerformed
+
+    private void jComboBoxCategorieItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBoxCategorieItemStateChanged
+        // TODO add your handling code here:
+        if(jComboBoxCategorie.getSelectedItem().equals("autre"))
+        {
+            int i;
+            InterfaceAjoutCatégorie ajoutCatégorie = new InterfaceAjoutCatégorie();
+            
+            ajoutCatégorie.setVisible(true);
+          
+        }
+        this.setVisible(true);
+    }//GEN-LAST:event_jComboBoxCategorieItemStateChanged
+
+    private void jComboBoxCategorieMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jComboBoxCategorieMouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jComboBoxCategorieMouseClicked
 
     /**
     * @param args the command line arguments
@@ -327,6 +365,7 @@ public class InterfaceAjoutDeal extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new InterfaceAjoutDeal().setVisible(true);
+                
             }
         });
     }

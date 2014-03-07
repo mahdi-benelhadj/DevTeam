@@ -4,6 +4,7 @@
  */
 
 package edu.esprit.dao;
+import edu.esprit.entities.NbrReservation;
 import edu.esprit.entities.Reservation;
 import edu.esprit.util.MyConnection;
 import java.sql.PreparedStatement;
@@ -103,6 +104,33 @@ public class ReservationDAO {
                 listereservations.add(reserv);
             }
             return listereservations;
+        } catch (SQLException ex) {
+           //Logger.getLogger(PersonneDao.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("erreur lors du chargement des depots "+ex.getMessage());
+            return null;
+        }}
+        public List<NbrReservation> DisplayNbrReservations (){
+
+
+        List<NbrReservation> listeNbrreservations = new ArrayList<NbrReservation>();
+
+        String requete = "select id_deal,count(id_deal) from reservation group by id_deal";
+        try {
+           Statement statement = MyConnection.getInstance()
+                   .createStatement();
+            ResultSet resultat = statement.executeQuery(requete);
+            
+            DealDAO dealDAO=new DealDAO();
+            while(resultat.next()){
+                NbrReservation reserv =new NbrReservation();
+                              
+                reserv.setDeal(dealDAO.findDealById(resultat.getInt(1)));
+                reserv.setN(resultat.getInt(2));
+                System.out.println(reserv.getN());
+
+                listeNbrreservations.add(reserv);
+            }
+            return listeNbrreservations;
         } catch (SQLException ex) {
            //Logger.getLogger(PersonneDao.class.getName()).log(Level.SEVERE, null, ex);
             System.out.println("erreur lors du chargement des depots "+ex.getMessage());

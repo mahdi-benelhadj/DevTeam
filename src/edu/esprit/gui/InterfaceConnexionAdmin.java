@@ -19,10 +19,10 @@ import edu.esprit.metier.ConnexionMetier;
  *
  * @author olfa
  */
-public class InterfaceConnexion extends javax.swing.JFrame {
+public class InterfaceConnexionAdmin extends javax.swing.JFrame {
 
     /** Creates new form NewJFrame */
-    public InterfaceConnexion() {
+    public InterfaceConnexionAdmin() {
         initComponents();
     }
 
@@ -82,8 +82,8 @@ public class InterfaceConnexion extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 426, Short.MAX_VALUE)
-            .addComponent(jSeparator2, javax.swing.GroupLayout.DEFAULT_SIZE, 426, Short.MAX_VALUE)
+            .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 458, Short.MAX_VALUE)
+            .addComponent(jSeparator2, javax.swing.GroupLayout.DEFAULT_SIZE, 458, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -96,7 +96,7 @@ public class InterfaceConnexion extends javax.swing.JFrame {
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(25, 25, 25)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextFieldMotDePasse, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
+                            .addComponent(jTextFieldMotDePasse, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE)
                             .addComponent(jTextfieldLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGap(75, 75, 75))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -108,7 +108,7 @@ public class InterfaceConnexion extends javax.swing.JFrame {
                 .addComponent(jToggleButtonRetour, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButtonConnecter, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(39, 39, 39))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -134,7 +134,7 @@ public class InterfaceConnexion extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonConnecter)
                     .addComponent(jToggleButtonRetour))
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -155,6 +155,7 @@ public class InterfaceConnexion extends javax.swing.JFrame {
         // TODO add your handling code here:
         InterfaceChoixDeConnexion choixCon=new InterfaceChoixDeConnexion();
         choixCon.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jToggleButtonRetourActionPerformed
 
     /**
@@ -163,7 +164,7 @@ public class InterfaceConnexion extends javax.swing.JFrame {
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new InterfaceConnexion().setVisible(true);
+                new InterfaceConnexionAdmin().setVisible(true);
             }
         });
     }
