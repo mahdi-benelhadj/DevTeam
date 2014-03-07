@@ -35,7 +35,6 @@ public class InterfaceConnexionClient extends javax.swing.JFrame {
 
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jTextFieldPasswd = new javax.swing.JTextField();
         jTextFieldEmail1 = new javax.swing.JTextField();
         jButtonConnect = new javax.swing.JButton();
         jButtoninscription = new javax.swing.JButton();
@@ -43,6 +42,7 @@ public class InterfaceConnexionClient extends javax.swing.JFrame {
         jToggleButtonRetour = new javax.swing.JToggleButton();
         label1 = new java.awt.Label();
         jSeparator2 = new javax.swing.JSeparator();
+        jTextFieldPasswd = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -51,8 +51,6 @@ public class InterfaceConnexionClient extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setText("Mot de passe:");
-
-        jTextFieldPasswd.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         jTextFieldEmail1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
@@ -94,7 +92,7 @@ public class InterfaceConnexionClient extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(33, 33, 33)
                 .addComponent(jToggleButtonRetour, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
                 .addComponent(jButtonFb)
                 .addGap(36, 36, 36)
                 .addComponent(jButtoninscription)
@@ -110,13 +108,13 @@ public class InterfaceConnexionClient extends javax.swing.JFrame {
                             .addComponent(jLabel1)
                             .addComponent(jLabel3))
                         .addGap(67, 67, 67)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextFieldEmail1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldPasswd, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextFieldEmail1, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                            .addComponent(jTextFieldPasswd)))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(127, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -129,11 +127,11 @@ public class InterfaceConnexionClient extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(jTextFieldEmail1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(58, 58, 58)
+                .addGap(61, 61, 61)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jTextFieldPasswd, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonConnect)
                     .addComponent(jButtoninscription)
@@ -220,7 +218,7 @@ public class InterfaceConnexionClient extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JTextField jTextFieldEmail1;
-    private javax.swing.JTextField jTextFieldPasswd;
+    private javax.swing.JPasswordField jTextFieldPasswd;
     private javax.swing.JToggleButton jToggleButtonRetour;
     private java.awt.Label label1;
     // End of variables declaration//GEN-END:variables

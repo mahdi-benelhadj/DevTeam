@@ -81,7 +81,7 @@ public class InterfaceAccueil extends javax.swing.JFrame {
         });
 
         jButtonAGestionDeals.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButtonAGestionDeals.setText("gestion des deals");
+        jButtonAGestionDeals.setText("Gestion des deals");
         jButtonAGestionDeals.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonAGestionDealsActionPerformed(evt);
@@ -113,7 +113,7 @@ public class InterfaceAccueil extends javax.swing.JFrame {
         );
 
         jButtonGestionClient.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButtonGestionClient.setText("gestion des clients");
+        jButtonGestionClient.setText("Gestion des clients");
         jButtonGestionClient.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonGestionClientActionPerformed(evt);
@@ -121,7 +121,7 @@ public class InterfaceAccueil extends javax.swing.JFrame {
         });
 
         jButtonAjouterVendeur.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButtonAjouterVendeur.setText("gestion des Vendeurs");
+        jButtonAjouterVendeur.setText("Gestion des Vendeurs");
         jButtonAjouterVendeur.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonAjouterVendeurActionPerformed(evt);
@@ -129,7 +129,7 @@ public class InterfaceAccueil extends javax.swing.JFrame {
         });
 
         jButtonAfficherReservation.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButtonAfficherReservation.setText(" reservations");
+        jButtonAfficherReservation.setText("Reservations");
         jButtonAfficherReservation.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButtonAfficherReservation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,7 +137,8 @@ public class InterfaceAccueil extends javax.swing.JFrame {
             }
         });
 
-        jToggleButtonRetour.setText("retour");
+        jToggleButtonRetour.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jToggleButtonRetour.setText("Retour");
         jToggleButtonRetour.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jToggleButtonRetourActionPerformed(evt);

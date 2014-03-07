@@ -19,16 +19,18 @@ import edu.esprit.gui.InterfaceGestionDeal;
 public class ConnexionMetier {
     public static void ConnexionVerif(Admin admin){
         AdminDAO adminDAO=new AdminDAO();
-        InterfaceAccueil acceuilframe =new InterfaceAccueil();
+        
         System.out.println(adminDAO.findAdminByLogin(admin.getLogin()).getPassword());
         if(adminDAO.findAdminByLogin(admin.getLogin()).getPassword().equals(admin.getPassword()))
         {
-            System.out.println("test");
-        acceuilframe.setVisible(true);
-            System.out.println("test2");
+            InterfaceAccueil accueil=new InterfaceAccueil();
+            accueil.setVisible(true);
         }
         else
             System.out.println("erreur");
+    
+
+    
     }
     public static void ConnexionClientMetier(Client c){
         
