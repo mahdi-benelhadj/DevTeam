@@ -153,6 +153,7 @@ public class InterfaceAjouterVendeur extends javax.swing.JFrame {
         // TODO add your handling code here:
          InterfaceGestionVendeurs gestionvendeur=new InterfaceGestionVendeurs();
         gestionvendeur.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jToggleButtonRetourActionPerformed
 
     /**

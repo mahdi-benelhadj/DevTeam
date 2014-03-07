@@ -41,6 +41,7 @@ public class InterfaceDetailDeal extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextAreaDetail = new javax.swing.JTextArea();
+        jToggleRetour = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -68,6 +69,13 @@ public class InterfaceDetailDeal extends javax.swing.JFrame {
         jTextAreaDetail.setRows(5);
         jScrollPane2.setViewportView(jTextAreaDetail);
 
+        jToggleRetour.setText("retour");
+        jToggleRetour.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleRetourActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -76,7 +84,9 @@ public class InterfaceDetailDeal extends javax.swing.JFrame {
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 654, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(65, 65, 65)
+                .addComponent(jToggleRetour)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButtonReserver, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButtonAnnuler, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -128,10 +138,12 @@ public class InterfaceDetailDeal extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButtonAnnuler)
-                    .addComponent(jButtonReserver))
-                .addGap(15, 15, 15))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jButtonReserver)
+                        .addComponent(jToggleRetour)))
+                .addGap(13, 13, 13))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -147,6 +159,13 @@ public class InterfaceDetailDeal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jToggleRetourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleRetourActionPerformed
+        // TODO add your handling code here:
+        InterfaceGestionDeal gestiondeal=new InterfaceGestionDeal();
+        gestiondeal.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jToggleRetourActionPerformed
 
     /**
      * @param args the command line arguments
@@ -197,5 +216,6 @@ public class InterfaceDetailDeal extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextAreaDetail;
     private javax.swing.JTextField jTextFieldPrix;
     private javax.swing.JTextField jTextFieldTitreDeal;
+    private javax.swing.JToggleButton jToggleRetour;
     // End of variables declaration//GEN-END:variables
 }

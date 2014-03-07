@@ -97,6 +97,7 @@ public class InterfaceAjoutDeal extends javax.swing.JFrame {
         jTextFieldNombreMax = new javax.swing.JTextField();
         jSeparator2 = new javax.swing.JSeparator();
         jLabel4 = new javax.swing.JLabel();
+        jToggleRetour = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -166,6 +167,13 @@ public class InterfaceAjoutDeal extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel4.setText("Ajouter Deal");
 
+        jToggleRetour.setText("retour");
+        jToggleRetour.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleRetourActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -192,6 +200,8 @@ public class InterfaceAjoutDeal extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(0, 0, Short.MAX_VALUE)
+                                        .addComponent(jToggleRetour)
+                                        .addGap(51, 51, 51)
                                         .addComponent(jButtonAjouter, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
                                         .addComponent(jButtonAnnuler, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -301,7 +311,8 @@ public class InterfaceAjoutDeal extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButtonAjouter, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButtonAnnuler, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jButtonAnnuler, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jToggleRetour))
                         .addContainerGap())))
         );
 
@@ -358,6 +369,13 @@ public class InterfaceAjoutDeal extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jComboBoxCategorieMouseClicked
 
+    private void jToggleRetourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleRetourActionPerformed
+        // TODO add your handling code here:
+        InterfaceAccueil acceuil=new InterfaceAccueil();
+        acceuil.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jToggleRetourActionPerformed
+
     /**
     * @param args the command line arguments
     */
@@ -390,6 +408,7 @@ public class InterfaceAjoutDeal extends javax.swing.JFrame {
     private java.awt.TextField jTextFieldPrix;
     private java.awt.TextField jTextFieldPrixPromotion;
     private java.awt.TextField jTextFieldTitreDeal;
+    private javax.swing.JToggleButton jToggleRetour;
     private org.jdesktop.swingx.JXDatePicker jXDatePickerDate;
     private java.awt.Label label1;
     private java.awt.Label label2;

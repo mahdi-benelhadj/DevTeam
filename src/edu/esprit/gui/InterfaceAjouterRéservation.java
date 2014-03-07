@@ -72,6 +72,7 @@ public class InterfaceAjouterRéservation extends javax.swing.JFrame {
         txtquantite = new javax.swing.JTextField();
         jComboBoxClient = new javax.swing.JComboBox();
         jComboBoxDeal = new javax.swing.JComboBox();
+        jToggleRetour = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -100,6 +101,13 @@ public class InterfaceAjouterRéservation extends javax.swing.JFrame {
 
         jComboBoxDeal.setModel(new javax.swing.DefaultComboBoxModel(new String[] { }));
 
+        jToggleRetour.setText("retour");
+        jToggleRetour.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleRetourActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -125,7 +133,9 @@ public class InterfaceAjouterRéservation extends javax.swing.JFrame {
                 .addContainerGap(114, Short.MAX_VALUE))
             .addComponent(jSeparator2)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(36, 36, 36)
+                .addComponent(jToggleRetour)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButtonAjouterReservation, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(42, 42, 42))
         );
@@ -151,7 +161,9 @@ public class InterfaceAjouterRéservation extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButtonAjouterReservation, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButtonAjouterReservation, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jToggleRetour))
                 .addContainerGap())
         );
 
@@ -210,6 +222,13 @@ public class InterfaceAjouterRéservation extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButtonAjouterReservationActionPerformed
 
+    private void jToggleRetourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleRetourActionPerformed
+        // TODO add your handling code here:
+        InterfaceDetailDeal detaildeal = new InterfaceDetailDeal();
+        detaildeal.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jToggleRetourActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -258,6 +277,7 @@ public class InterfaceAjouterRéservation extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JToggleButton jToggleRetour;
     private javax.swing.JTextField txtquantite;
     // End of variables declaration//GEN-END:variables
 }
