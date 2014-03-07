@@ -22,6 +22,7 @@ public class InterfaceConnexionClient extends javax.swing.JFrame {
         initComponents();
         
     }
+
    
 
     /**
@@ -156,6 +157,8 @@ public class InterfaceConnexionClient extends javax.swing.JFrame {
         client.setEmail(jTextFieldEmail1.getText());
         client.setPassowrd(jTextFieldPasswd.getText());
         ConnexionMetier.ConnexionClientMetier(client);
+        
+        
     }//GEN-LAST:event_jButtonConnectActionPerformed
 
     private void jButtonFbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFbActionPerformed

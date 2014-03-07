@@ -155,6 +155,7 @@ public class InterfaceConnexionAdmin extends javax.swing.JFrame {
         admin.setLogin(jTextfieldLogin.getText());
         admin.setPassword(jTextFieldMotDePasse.getText());
         ConnexionMetier.ConnexionVerif(admin);
+        
        
          
         
@@ -163,6 +164,7 @@ public class InterfaceConnexionAdmin extends javax.swing.JFrame {
     private void jToggleButtonRetourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButtonRetourActionPerformed
         // TODO add your handling code here:
         InterfaceChoixDeConnexion choixCon=new InterfaceChoixDeConnexion();
+       
         choixCon.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jToggleButtonRetourActionPerformed

@@ -8,6 +8,7 @@ package edu.esprit.gui;
 import edu.esprit.metier.DealMetier;
 import edu.esprit.metier.ListDeal;
 import edu.esprit.dao.DealDAO;
+import edu.esprit.entities.Client;
 import edu.esprit.metier.DealMetier;
 import edu.esprit.metier.ListDeal;
 
@@ -24,8 +25,17 @@ public class InterfaceGestionDeal extends javax.swing.JFrame {
     /**
      * Creates new form InterfaceListeDeal
      */
+    Client client;
     public InterfaceGestionDeal() {
         initComponents();
+        System.out.println("test");
+    }
+
+        public void interClient(Client c){
+        client=c;
+       
+        jLabel2.setText(client.getPrenom());
+       jButtonSupprimer.setVisible(false);
     }
 
     /**
@@ -48,6 +58,7 @@ public class InterfaceGestionDeal extends javax.swing.JFrame {
         jButtonSupprimer = new javax.swing.JButton();
         jButtonAfficherDetail = new javax.swing.JButton();
         jToggleButtonRetour = new javax.swing.JToggleButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -100,16 +111,19 @@ public class InterfaceGestionDeal extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(303, 303, 303)
-                                .addComponent(jButtonRechercherDeal))))
+                                .addComponent(jButtonRechercherDeal))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 195, Short.MAX_VALUE)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(88, 88, 88)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTextFieldRechercherDeal, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 407, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(118, Short.MAX_VALUE))
+                .addGap(28, 28, 28))
             .addComponent(jSeparator2)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(36, 36, 36)
@@ -124,7 +138,9 @@ public class InterfaceGestionDeal extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -213,6 +229,7 @@ public class InterfaceGestionDeal extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new InterfaceGestionDeal().setVisible(true);
+
             }
         });
     }
@@ -222,6 +239,7 @@ public class InterfaceGestionDeal extends javax.swing.JFrame {
     private javax.swing.JButton jButtonRechercherDeal;
     private javax.swing.JButton jButtonSupprimer;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JList jListDeal;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
