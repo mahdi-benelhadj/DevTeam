@@ -56,6 +56,11 @@ public class InterfaceAccueil extends javax.swing.JFrame {
 
         jButtonGenererRapport.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonGenererRapport.setText("Générer Rapport");
+        jButtonGenererRapport.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonGenererRapportActionPerformed(evt);
+            }
+        });
 
         jButtonEnvoyerVoucher.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonEnvoyerVoucher.setText("Envoyer Voucher");
@@ -273,6 +278,13 @@ public class InterfaceAccueil extends javax.swing.JFrame {
         stat.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButtonGenererStatistiqueActionPerformed
+
+    private void jButtonGenererRapportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGenererRapportActionPerformed
+        // TODO add your handling code here:
+        InetrfaceGenererRapport genererrapport = new InetrfaceGenererRapport();
+        genererrapport.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButtonGenererRapportActionPerformed
 
     /**
     * @param args the command line arguments

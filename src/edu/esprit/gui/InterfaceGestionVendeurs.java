@@ -43,6 +43,7 @@ public class InterfaceGestionVendeurs extends javax.swing.JFrame {
         jListVendeur = new javax.swing.JList();
         jButton2 = new javax.swing.JButton();
         starRating1 = new com.googlecode.starrating.StarRating();
+        jToggleButtonRetour = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -79,12 +80,21 @@ public class InterfaceGestionVendeurs extends javax.swing.JFrame {
             }
         });
 
+        jToggleButtonRetour.setText("retour");
+        jToggleButtonRetour.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButtonRetourActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(265, 265, 265)
+                .addGap(45, 45, 45)
+                .addComponent(jToggleButtonRetour)
+                .addGap(115, 115, 115)
                 .addComponent(jButton1)
                 .addGap(36, 36, 36)
                 .addComponent(jButtonSuppVend)
@@ -126,7 +136,8 @@ public class InterfaceGestionVendeurs extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jButtonSuppVend))
+                    .addComponent(jButtonSuppVend)
+                    .addComponent(jToggleButtonRetour))
                 .addGap(22, 22, 22))
         );
 
@@ -180,6 +191,13 @@ public class InterfaceGestionVendeurs extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void jToggleButtonRetourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButtonRetourActionPerformed
+        // TODO add your handling code here:
+         InterfaceAccueil acceuil=new InterfaceAccueil();
+        acceuil.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jToggleButtonRetourActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -224,6 +242,7 @@ public class InterfaceGestionVendeurs extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextField jTextFieldRechVend;
+    private javax.swing.JToggleButton jToggleButtonRetour;
     private com.googlecode.starrating.StarRating starRating1;
     // End of variables declaration//GEN-END:variables
 }

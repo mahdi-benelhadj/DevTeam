@@ -40,7 +40,6 @@ public class InterfaceAjoutCatégorie extends javax.swing.JFrame {
         jTextFieldCategorie = new java.awt.TextField();
         jSeparator1 = new javax.swing.JSeparator();
         jButtonValider = new javax.swing.JButton();
-        jButtonAnnuler = new javax.swing.JButton();
         jSeparator2 = new javax.swing.JSeparator();
         label2 = new java.awt.Label();
         jToggleButtonRetour = new javax.swing.JToggleButton();
@@ -56,15 +55,6 @@ public class InterfaceAjoutCatégorie extends javax.swing.JFrame {
         jButtonValider.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonValiderActionPerformed(evt);
-            }
-        });
-
-        jButtonAnnuler.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButtonAnnuler.setText("Annuler");
-        jButtonAnnuler.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButtonAnnuler.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonAnnulerActionPerformed(evt);
             }
         });
 
@@ -101,9 +91,7 @@ public class InterfaceAjoutCatégorie extends javax.swing.JFrame {
                 .addComponent(jToggleButtonRetour, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButtonValider, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButtonAnnuler, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(23, 23, 23))
+                .addGap(102, 102, 102))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -122,11 +110,9 @@ public class InterfaceAjoutCatégorie extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButtonAnnuler)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButtonValider, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jToggleButtonRetour)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonValider, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jToggleButtonRetour))
                 .addContainerGap())
         );
 
@@ -166,7 +152,6 @@ public class InterfaceAjoutCatégorie extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonAnnuler;
     private javax.swing.JButton jButtonValider;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
