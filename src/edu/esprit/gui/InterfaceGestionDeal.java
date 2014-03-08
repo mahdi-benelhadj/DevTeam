@@ -197,6 +197,7 @@ public class InterfaceGestionDeal extends javax.swing.JFrame {
         // TODO add your handling code here:
          InterfaceAccueil acceuil=new InterfaceAccueil();
         acceuil.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jToggleButtonRetourActionPerformed
 
     /**
