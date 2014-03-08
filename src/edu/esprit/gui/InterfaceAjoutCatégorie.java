@@ -62,6 +62,11 @@ public class InterfaceAjoutCatégorie extends javax.swing.JFrame {
         jButtonAnnuler.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonAnnuler.setText("Annuler");
         jButtonAnnuler.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButtonAnnuler.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAnnulerActionPerformed(evt);
+            }
+        });
 
         label2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         label2.setText("Ajouter Catégorie");
@@ -142,6 +147,12 @@ public class InterfaceAjoutCatégorie extends javax.swing.JFrame {
         acceuil.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jToggleButtonRetourActionPerformed
+
+    private void jButtonAnnulerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAnnulerActionPerformed
+        // TODO add your handling code here:
+        InterfaceAjoutDeal ajoutDeal=new InterfaceAjoutDeal();
+        ajoutDeal.setVisible(true);
+    }//GEN-LAST:event_jButtonAnnulerActionPerformed
 
     /**
     * @param args the command line arguments

@@ -353,15 +353,16 @@ public class InterfaceAjoutDeal extends javax.swing.JFrame {
 
     private void jComboBoxCategorieItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBoxCategorieItemStateChanged
         // TODO add your handling code here:
+        InterfaceAjoutCatégorie ajoutCatégorie = new InterfaceAjoutCatégorie();
         if(jComboBoxCategorie.getSelectedItem().equals("autre"))
         {
             int i;
-            InterfaceAjoutCatégorie ajoutCatégorie = new InterfaceAjoutCatégorie();
+            
             
             ajoutCatégorie.setVisible(true);
           
         }
-        this.setVisible(true);
+        
     }//GEN-LAST:event_jComboBoxCategorieItemStateChanged
 
     private void jComboBoxCategorieMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jComboBoxCategorieMouseClicked

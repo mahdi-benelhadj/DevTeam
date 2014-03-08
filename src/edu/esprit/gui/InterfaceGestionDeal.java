@@ -63,7 +63,7 @@ public class InterfaceGestionDeal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("Liste des Deals");
+        jLabel1.setText("Gestion des Deals");
 
         jButtonRechercherDeal.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonRechercherDeal.setText("Rechercher");
@@ -116,7 +116,7 @@ public class InterfaceGestionDeal extends javax.swing.JFrame {
                                 .addComponent(jButtonRechercherDeal))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 195, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 161, Short.MAX_VALUE)
                                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(88, 88, 88)
@@ -197,6 +197,7 @@ public class InterfaceGestionDeal extends javax.swing.JFrame {
         // TODO add your handling code here:
          InterfaceAccueil acceuil=new InterfaceAccueil();
         acceuil.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jToggleButtonRetourActionPerformed
 
     /**
