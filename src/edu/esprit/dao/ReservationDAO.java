@@ -114,7 +114,7 @@ public class ReservationDAO {
 
         List<NbrReservation> listeNbrreservations = new ArrayList<NbrReservation>();
 
-        String requete = "select id_deal,count(id_deal) from reservation group by id_deal";
+        String requete = "select id_deal d,count(id_deal),(select sum(qte) from reservation where id_deal=d) from reservation group by id_deal";
         try {
            Statement statement = MyConnection.getInstance()
                    .createStatement();
@@ -125,7 +125,7 @@ public class ReservationDAO {
                 NbrReservation reserv =new NbrReservation();
                               
                 reserv.setDeal(dealDAO.findDealById(resultat.getInt(1)));
-                reserv.setN(resultat.getInt(2));
+                reserv.setN(resultat.getInt(3));
                 System.out.println(reserv.getN());
 
                 listeNbrreservations.add(reserv);
