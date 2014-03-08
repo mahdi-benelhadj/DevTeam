@@ -35,6 +35,16 @@ public class ReservationMetier {
             reservationDao.insertReservation(r);
         
     }
+    public static void validerReservation(int i){
+        List<Reservation> reservation= new ArrayList<Reservation>();
+        Reservation r=new Reservation();
+        ReservationDAO reservationDAO = new ReservationDAO();
+        reservation=reservationDAO.DisplayAllReservations();
+        r=reservation.get(i);
+        r.setValide(1);
+        reservationDAO.updateVendeur(r);
+           
+    }
     
     
 }

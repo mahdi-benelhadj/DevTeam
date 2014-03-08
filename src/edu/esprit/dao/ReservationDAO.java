@@ -137,6 +137,26 @@ public class ReservationDAO {
             return null;
         }
     }
+        public void updateVendeur(Reservation r){
+        String requete = "update reservation  set id_client=?,id_deal=?,qte=?,Total=?,valide=? where id_reservation=?";
+        try {
+            PreparedStatement ps = MyConnection.getInstance().prepareStatement(requete);
+           ps.setInt(1, r.getClient().getId_client());
+            ps.setInt(2, r.getDeal().getId_deal());
+             ps.setInt(3, r.getQte());
+            ps.setInt(4, r.getTotal());
+            ps.setInt(5, r.getValide());
+            ps.setInt(6, r.getId_reservation());
+            ps.executeUpdate();
+      
+            System.out.println("Mise à jour effectuée avec succès");
+        } catch (SQLException ex) {
+
+           //Logger.getLogger(PersonneDao.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("erreur lors de la mise à jour "+ex.getMessage());
+        }
+
+    }
 
 
 
