@@ -173,15 +173,18 @@ public class InterfaceConnexionClient extends javax.swing.JFrame {
 
     private void jButtonConnectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConnectActionPerformed
         // TODO add your handling code here:
-        if(!jTextFieldEmail1.getText().equals(""))
-        {Client client=new Client();
-        client.setEmail(jTextFieldEmail1.getText());
-        client.setPassowrd(jTextFieldPasswd.getText());
-        ClientMetier.ConnexionClientMetier(client);
+       // if(!jTextFieldEmail1.getText().equals(""))
+        //{Client client=new Client();
+       // client.setEmail(jTextFieldEmail1.getText());
+       // client.setPassowrd(jTextFieldPasswd.getText());
+       // ClientMetier.ConnexionClientMetier(client);
+       // this.setVisible(false);
+       // }
+        //else
+           // JOptionPane.showMessageDialog(null, "Remplir champs");
+        InterfaceAcceuilClient acceuilclient = new InterfaceAcceuilClient();
+        acceuilclient.setVisible(true);
         this.setVisible(false);
-        }
-        else
-            JOptionPane.showMessageDialog(null, "Remplir champs");
         
     }//GEN-LAST:event_jButtonConnectActionPerformed
 
