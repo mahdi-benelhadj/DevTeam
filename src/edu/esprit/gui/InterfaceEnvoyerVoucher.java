@@ -43,29 +43,25 @@ public class InterfaceEnvoyerVoucher extends javax.swing.JFrame {
     private void initComponents() {
 
         jToggleButton1 = new javax.swing.JToggleButton();
-        client1 = new javax.swing.JLabel();
-        deal1 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         jComboBoxClient = new javax.swing.JComboBox();
+        client1 = new javax.swing.JLabel();
         iComboBoxDeal = new javax.swing.JComboBox();
-        jButtonAnnuler = new javax.swing.JButton();
-        jButtonValider = new javax.swing.JButton();
-        jSeparator1 = new javax.swing.JSeparator();
-        jSeparator2 = new javax.swing.JSeparator();
-        jLabel1 = new javax.swing.JLabel();
+        deal1 = new javax.swing.JLabel();
+        jToggleRetour = new javax.swing.JToggleButton();
         jButton1 = new javax.swing.JButton();
         jLabelPiecteJointe = new javax.swing.JLabel();
-        jToggleRetour = new javax.swing.JToggleButton();
+        jButtonValider = new javax.swing.JButton();
+        jButtonAnnuler = new javax.swing.JButton();
 
         jToggleButton1.setText("jToggleButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        client1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        client1.setText("Client");
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "envoyer voucher", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 3, 18))); // NOI18N
 
-        deal1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        deal1.setText("Deal");
-
+        jComboBoxClient.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
+        jComboBoxClient.setForeground(new java.awt.Color(0, 102, 153));
         jComboBoxClient.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Client 1", "Client 2", "Client 3", "Client 4" }));
         jComboBoxClient.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,18 +69,45 @@ public class InterfaceEnvoyerVoucher extends javax.swing.JFrame {
             }
         });
 
+        client1.setFont(new java.awt.Font("Calibri", 3, 18)); // NOI18N
+        client1.setForeground(new java.awt.Color(0, 102, 153));
+        client1.setText("Client");
+
+        iComboBoxDeal.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
+        iComboBoxDeal.setForeground(new java.awt.Color(0, 102, 153));
         iComboBoxDeal.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Deal1", "Deal 2", "Deal 3", "Deal 4" }));
 
-        jButtonAnnuler.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButtonAnnuler.setText("Annuler");
-        jButtonAnnuler.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButtonAnnuler.addActionListener(new java.awt.event.ActionListener() {
+        deal1.setFont(new java.awt.Font("Calibri", 3, 18)); // NOI18N
+        deal1.setForeground(new java.awt.Color(0, 102, 153));
+        deal1.setText("Deal");
+
+        jToggleRetour.setBackground(new java.awt.Color(0, 102, 153));
+        jToggleRetour.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
+        jToggleRetour.setForeground(new java.awt.Color(0, 102, 153));
+        jToggleRetour.setText("retour");
+        jToggleRetour.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonAnnulerActionPerformed(evt);
+                jToggleRetourActionPerformed(evt);
             }
         });
 
-        jButtonValider.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButton1.setBackground(new java.awt.Color(0, 102, 153));
+        jButton1.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(0, 102, 153));
+        jButton1.setText("Choose File");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jLabelPiecteJointe.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
+        jLabelPiecteJointe.setForeground(new java.awt.Color(0, 102, 153));
+        jLabelPiecteJointe.setText("piece jointe");
+
+        jButtonValider.setBackground(new java.awt.Color(0, 102, 153));
+        jButtonValider.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
+        jButtonValider.setForeground(new java.awt.Color(0, 102, 153));
         jButtonValider.setText("Envoyer");
         jButtonValider.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButtonValider.addActionListener(new java.awt.event.ActionListener() {
@@ -93,90 +116,84 @@ public class InterfaceEnvoyerVoucher extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel1.setText("Envoyer Voucher");
-
-        jButton1.setText("Choose File");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButtonAnnuler.setBackground(new java.awt.Color(0, 102, 153));
+        jButtonAnnuler.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
+        jButtonAnnuler.setForeground(new java.awt.Color(0, 102, 153));
+        jButtonAnnuler.setText("Annuler");
+        jButtonAnnuler.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButtonAnnuler.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButtonAnnulerActionPerformed(evt);
             }
         });
 
-        jLabelPiecteJointe.setText("piece jointe");
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(56, 56, 56)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(client1)
+                    .addComponent(deal1)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jToggleRetour)
+                        .addGap(56, 56, 56)
+                        .addComponent(jButton1)))
+                .addGap(40, 40, 40)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(iComboBoxDeal, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jComboBoxClient, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabelPiecteJointe, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                        .addComponent(jButtonValider, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(52, 52, 52)
+                        .addComponent(jButtonAnnuler, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(19, 19, 19))))
+        );
 
-        jToggleRetour.setText("retour");
-        jToggleRetour.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleRetourActionPerformed(evt);
-            }
-        });
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButtonAnnuler, jButtonValider});
+
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(104, 104, 104)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(client1)
+                    .addComponent(jComboBoxClient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(48, 48, 48)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(iComboBoxDeal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(deal1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jToggleRetour, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelPiecteJointe, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonValider, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButtonAnnuler, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE))
+                        .addGap(28, 28, 28))))
+        );
+
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButtonAnnuler, jButtonValider});
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSeparator1)
-            .addComponent(jSeparator2)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addComponent(jToggleRetour)
-                        .addGap(55, 55, 55)
-                        .addComponent(jButton1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabelPiecteJointe, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButtonValider, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonAnnuler, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(37, 37, 37)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(95, 95, 95)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(deal1)
-                            .addComponent(client1))
-                        .addGap(84, 84, 84)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(iComboBoxDeal, 0, 70, Short.MAX_VALUE)
-                            .addComponent(jComboBoxClient, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButtonAnnuler, jButtonValider});
-
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(71, 71, 71)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(client1)
-                    .addComponent(jComboBoxClient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(41, 41, 41)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(iComboBoxDeal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(deal1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButtonValider, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButtonAnnuler, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabelPiecteJointe, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jToggleRetour)))
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButtonAnnuler, jButtonValider});
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -305,10 +322,8 @@ public class InterfaceEnvoyerVoucher extends javax.swing.JFrame {
     private javax.swing.JButton jButtonAnnuler;
     private javax.swing.JButton jButtonValider;
     private javax.swing.JComboBox jComboBoxClient;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelPiecteJointe;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JToggleButton jToggleRetour;
     // End of variables declaration//GEN-END:variables

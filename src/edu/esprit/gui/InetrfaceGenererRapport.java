@@ -6,6 +6,11 @@
 
 package edu.esprit.gui;
 
+import com.sun.java.swing.plaf.motif.MotifLookAndFeel;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.UIManager;
+
 /**
  *
  * @author nour
@@ -16,6 +21,32 @@ public class InetrfaceGenererRapport extends javax.swing.JFrame {
      * Creates new form NewJFrame
      */
     public InetrfaceGenererRapport() {
+        try {
+          //  SyntheticaLookAndFeel.setWindowsDecorated(false);
+
+        //UIManager.put("Synthetica.dialog.icon.enabled", true);
+      
+        //Application du look SynthLookAndFeel
+      //  UIManager.setLookAndFeel(new SynthLookAndFeel());
+     
+        //Application du look MotifLookAndFeel
+        UIManager.setLookAndFeel(new MotifLookAndFeel());
+     
+        //Application du look SyntheticaBlackEyeLookAndFeel   
+     //  UIManager.setLookAndFeel(new SyntheticaBlackEyeLookAndFeel());
+     
+             //Application du look SyntheticaStandardLookAndFeel
+   // UIManager.setLookAndFeel(new SyntheticaStandardLookAndFeel());
+    
+   
+     //Pour ajouter un nouveau look il faut importer le jar correspondant
+     //Voici des liens utiles :
+     //http://www.jyloo.com/
+        
+            // initComponents();
+        } catch (Exception e) {
+            Logger.getLogger(InetrfaceGenererRapport.class.getName()).log(Level.SEVERE, null, e);
+        }
         initComponents();
     }
 
@@ -39,14 +70,26 @@ public class InetrfaceGenererRapport extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("generer des raports"));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "generer des raports", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 3, 18))); // NOI18N
 
+        jToggleButtonRappDeal.setBackground(new java.awt.Color(0, 102, 153));
+        jToggleButtonRappDeal.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
+        jToggleButtonRappDeal.setForeground(new java.awt.Color(0, 102, 153));
         jToggleButtonRappDeal.setText("rapport des deals");
 
+        jToggleButtonRappClient.setBackground(new java.awt.Color(0, 102, 153));
+        jToggleButtonRappClient.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
+        jToggleButtonRappClient.setForeground(new java.awt.Color(0, 102, 153));
         jToggleButtonRappClient.setText("rapport des clients");
 
+        jToggleButtonRappReserv.setBackground(new java.awt.Color(0, 102, 153));
+        jToggleButtonRappReserv.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
+        jToggleButtonRappReserv.setForeground(new java.awt.Color(0, 102, 153));
         jToggleButtonRappReserv.setText("rapport des reservations");
 
+        jToggleButtonRetour.setBackground(new java.awt.Color(0, 102, 153));
+        jToggleButtonRetour.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
+        jToggleButtonRetour.setForeground(new java.awt.Color(0, 102, 153));
         jToggleButtonRetour.setText("retour");
         jToggleButtonRetour.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -69,7 +112,7 @@ public class InetrfaceGenererRapport extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(36, 36, 36)
                         .addComponent(jToggleButtonRetour)))
-                .addContainerGap(104, Short.MAX_VALUE))
+                .addContainerGap(114, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -80,7 +123,7 @@ public class InetrfaceGenererRapport extends javax.swing.JFrame {
                 .addComponent(jToggleButtonRappClient)
                 .addGap(44, 44, 44)
                 .addComponent(jToggleButtonRappReserv)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                 .addComponent(jToggleButtonRetour)
                 .addContainerGap())
         );
@@ -89,17 +132,11 @@ public class InetrfaceGenererRapport extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();

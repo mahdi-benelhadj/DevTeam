@@ -49,12 +49,9 @@ public class InterfaceGestionDeal extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jTextFieldRechercherDeal = new javax.swing.JTextField();
-        jSeparator1 = new javax.swing.JSeparator();
-        jLabel1 = new javax.swing.JLabel();
         jButtonRechercherDeal = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jListDeal = new javax.swing.JList();
-        jSeparator2 = new javax.swing.JSeparator();
         jButtonSupprimer = new javax.swing.JButton();
         jButtonAfficherDetail = new javax.swing.JButton();
         jToggleButtonRetour = new javax.swing.JToggleButton();
@@ -62,10 +59,11 @@ public class InterfaceGestionDeal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("Gestion des Deals");
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "gestion des deals", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 3, 18))); // NOI18N
 
-        jButtonRechercherDeal.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButtonRechercherDeal.setBackground(new java.awt.Color(0, 102, 153));
+        jButtonRechercherDeal.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
+        jButtonRechercherDeal.setForeground(new java.awt.Color(0, 102, 153));
         jButtonRechercherDeal.setText("Rechercher");
         jButtonRechercherDeal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -76,7 +74,9 @@ public class InterfaceGestionDeal extends javax.swing.JFrame {
         jListDeal.setModel(new ListDeal());
         jScrollPane1.setViewportView(jListDeal);
 
-        jButtonSupprimer.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButtonSupprimer.setBackground(new java.awt.Color(0, 102, 153));
+        jButtonSupprimer.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
+        jButtonSupprimer.setForeground(new java.awt.Color(0, 102, 153));
         jButtonSupprimer.setText("Supprimer");
         jButtonSupprimer.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButtonSupprimer.addActionListener(new java.awt.event.ActionListener() {
@@ -85,7 +85,9 @@ public class InterfaceGestionDeal extends javax.swing.JFrame {
             }
         });
 
-        jButtonAfficherDetail.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButtonAfficherDetail.setBackground(new java.awt.Color(0, 102, 153));
+        jButtonAfficherDetail.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
+        jButtonAfficherDetail.setForeground(new java.awt.Color(0, 102, 153));
         jButtonAfficherDetail.setText("Afficher Détail");
         jButtonAfficherDetail.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButtonAfficherDetail.addActionListener(new java.awt.event.ActionListener() {
@@ -94,6 +96,8 @@ public class InterfaceGestionDeal extends javax.swing.JFrame {
             }
         });
 
+        jToggleButtonRetour.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
+        jToggleButtonRetour.setForeground(new java.awt.Color(0, 102, 153));
         jToggleButtonRetour.setText("retour");
         jToggleButtonRetour.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -105,26 +109,21 @@ public class InterfaceGestionDeal extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(303, 303, 303)
-                                .addComponent(jButtonRechercherDeal))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 161, Short.MAX_VALUE)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGap(313, 313, 313)
+                            .addComponent(jButtonRechercherDeal))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addContainerGap(370, Short.MAX_VALUE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(88, 88, 88)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTextFieldRechercherDeal, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 407, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(28, 28, 28))
-            .addComponent(jSeparator2)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(36, 36, 36)
                 .addComponent(jToggleButtonRetour)
@@ -138,20 +137,14 @@ public class InterfaceGestionDeal extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(39, 39, 39)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextFieldRechercherDeal, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonRechercherDeal, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(66, 66, 66)
-                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(87, 87, 87)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonAfficherDetail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButtonSupprimer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -240,13 +233,10 @@ public class InterfaceGestionDeal extends javax.swing.JFrame {
     private javax.swing.JButton jButtonAfficherDetail;
     private javax.swing.JButton jButtonRechercherDeal;
     private javax.swing.JButton jButtonSupprimer;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JList jListDeal;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JTextField jTextFieldRechercherDeal;
     private javax.swing.JToggleButton jToggleButtonRetour;
     // End of variables declaration//GEN-END:variables

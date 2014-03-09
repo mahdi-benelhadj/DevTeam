@@ -36,18 +36,19 @@ public class InterfaceGestionReservation extends javax.swing.JFrame {
         jTableReservation = new javax.swing.JTable();
         jButtonSupprimer = new javax.swing.JButton();
         jButtonValider = new javax.swing.JButton();
-        jSeparator1 = new javax.swing.JSeparator();
-        jLabel1 = new javax.swing.JLabel();
-        jSeparator2 = new javax.swing.JSeparator();
         jLabel2 = new javax.swing.JLabel();
         jToggleButtonRetour = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "gestion des reservations", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 3, 18))); // NOI18N
+
         jTableReservation.setModel(new MyTableReservation());
         jScrollPane1.setViewportView(jTableReservation);
 
-        jButtonSupprimer.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButtonSupprimer.setBackground(new java.awt.Color(0, 102, 153));
+        jButtonSupprimer.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
+        jButtonSupprimer.setForeground(new java.awt.Color(0, 102, 153));
         jButtonSupprimer.setText("Supprimer");
         jButtonSupprimer.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButtonSupprimer.addActionListener(new java.awt.event.ActionListener() {
@@ -56,7 +57,9 @@ public class InterfaceGestionReservation extends javax.swing.JFrame {
             }
         });
 
-        jButtonValider.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButtonValider.setBackground(new java.awt.Color(0, 102, 153));
+        jButtonValider.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
+        jButtonValider.setForeground(new java.awt.Color(0, 102, 153));
         jButtonValider.setText("Valider");
         jButtonValider.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButtonValider.addActionListener(new java.awt.event.ActionListener() {
@@ -65,12 +68,13 @@ public class InterfaceGestionReservation extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel1.setText("Gestion de Réservation");
-
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Calibri", 3, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 102, 153));
         jLabel2.setText("Liste des Réservations");
 
+        jToggleButtonRetour.setBackground(new java.awt.Color(0, 102, 153));
+        jToggleButtonRetour.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
+        jToggleButtonRetour.setForeground(new java.awt.Color(0, 102, 153));
         jToggleButtonRetour.setText("retour");
         jToggleButtonRetour.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,7 +86,6 @@ public class InterfaceGestionReservation extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(43, 43, 43)
                 .addComponent(jToggleButtonRetour)
@@ -91,12 +94,8 @@ public class InterfaceGestionReservation extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jButtonValider, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(45, 45, 45))
-            .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(65, 65, 65)
-                        .addComponent(jLabel1))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(126, 126, 126)
                         .addComponent(jLabel2))
@@ -111,17 +110,11 @@ public class InterfaceGestionReservation extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
+                .addGap(105, 105, 105)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
-                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jButtonSupprimer)
@@ -209,12 +202,9 @@ public class InterfaceGestionReservation extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonSupprimer;
     private javax.swing.JButton jButtonValider;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JTable jTableReservation;
     private javax.swing.JToggleButton jToggleButtonRetour;
     // End of variables declaration//GEN-END:variables
