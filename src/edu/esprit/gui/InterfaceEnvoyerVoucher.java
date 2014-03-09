@@ -7,7 +7,7 @@
 package edu.esprit.gui;
 
 
-import edu.esprit.metier.Mail;
+import edu.esprit.entities.Mail;
 import edu.esprit.metier.MailConstruction;
 import edu.esprit.dao.ClientDAO;
 import java.io.File;

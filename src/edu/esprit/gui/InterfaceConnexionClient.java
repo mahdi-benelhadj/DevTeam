@@ -7,7 +7,8 @@
 package edu.esprit.gui;
 
 import edu.esprit.entities.Client;
-import edu.esprit.metier.ConnexionMetier;
+import edu.esprit.metier.AdminMetier;
+import edu.esprit.metier.ClientMetier;
 import facebook.*;
 /**
  *
@@ -171,7 +172,7 @@ public class InterfaceConnexionClient extends javax.swing.JFrame {
         Client client=new Client();
         client.setEmail(jTextFieldEmail1.getText());
         client.setPassowrd(jTextFieldPasswd.getText());
-        ConnexionMetier.ConnexionClientMetier(client);
+        ClientMetier.ConnexionClientMetier(client);
         
         
     }//GEN-LAST:event_jButtonConnectActionPerformed

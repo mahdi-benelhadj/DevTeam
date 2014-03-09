@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package edu.esprit.metier;
+package edu.esprit.entities;
 
 /**
  *
