@@ -20,6 +20,7 @@ import javax.swing.Timer;
 import javax.swing.text.html.HTMLEditorKit;
 import javax.swing.text.html.parser.ParserDelegator;
 import org.eclipse.swt.widgets.MessageBox;
+import edu.esprit.gui.InterfaceInscription;
 
 /*
  * To change this template, choose Tools | Templates
@@ -27,7 +28,8 @@ import org.eclipse.swt.widgets.MessageBox;
  */
 
 
-public class Main {
+public class Authentifier {
+    public  static String ac;
 
 public static String API_KEY = "521144984669722";
 public static String SECRET = "2da8435fc6b8b86ec0a87897f52579b3";
@@ -110,6 +112,9 @@ public static String SECRET = "2da8435fc6b8b86ec0a87897f52579b3";
                     public void actionPerformed(ActionEvent e) {
                         System.out.println(" Bouton 3");
                         GraphReaderExample.main(args);
+                        InterfaceInscription inscription=new InterfaceInscription();
+                        inscription.RemplirChamp();
+                        inscription.setVisible(true);
                     }
                  });
                 testClient.setgetAccessTokenListener(new ActionListener() {
@@ -173,6 +178,10 @@ public static String SECRET = "2da8435fc6b8b86ec0a87897f52579b3";
                 String[] temp2 = temp1[0].split("=");
                     System.out.println("access tocken="+temp2);
                 access_token = temp2[1];
+                ac=access_token;
+                GraphReaderExample.main(args);
+                GraphReaderExample gr=new GraphReaderExample();
+                
               }
             };
             try {
@@ -197,6 +206,9 @@ public static String SECRET = "2da8435fc6b8b86ec0a87897f52579b3";
             }
         });
                 }
+    public String getAccess(){
+        return  ac;
+    }
     
     
 }

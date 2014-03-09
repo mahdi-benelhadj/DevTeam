@@ -27,7 +27,17 @@ public class VendeurMetier {
          VendeurDAO vendeurDAO = new VendeurDAO();
          Vendeur vendeur=new Vendeur();
          vendeur=vendeurDAO.findVendeurByNom(v.getNom());
+         if(vendeur.getNote()==0)
+         {
          vendeur.setNote(v.getNote());
+         }
+         else
+         {
+             int vv=(vendeur.getNote()+v.getNote())/2;
+             vendeur.setNote(vv);
+         
+         
+         }
          vendeurDAO.updateVendeur(vendeur);
      }
      

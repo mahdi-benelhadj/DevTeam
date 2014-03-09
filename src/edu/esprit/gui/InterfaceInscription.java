@@ -8,6 +8,7 @@ package edu.esprit.gui;
 
 import edu.esprit.entities.Client;
 import edu.esprit.metier.ClientMetier;
+import facebook.Authentifier;
 import facebook.GraphReaderExample;
 
 /**
@@ -26,7 +27,8 @@ public class InterfaceInscription extends javax.swing.JFrame {
     
     }
     public void RemplirChamp(){
-        Client c=new GraphReaderExample("CAAHZAZBoWwDhoBAFgEdekKk1goZBrEZBUIZCKaodnv4OZACYyZC2kMfaDhyobrYRu7YF7PmSduohSioiBucBa3IRbfUeNTFM1DhpXDEKQy6roerWD83ZBESf6tCLsjQxTT58B07TXgxJzZBLi5yPLLuNsOUusd0CZAVPclgYi6EaReWhgcxZAUOjZBW8").Remplir();
+        Authentifier authentifier=new Authentifier();
+        Client c=new GraphReaderExample(authentifier.getAccess()).Remplir();
         jTextFieldNom.setText(c.getNom());
         jTextFieldEmail.setText(c.getEmail());
         jTextFieldAge.setText(String.valueOf(c.getAge()));

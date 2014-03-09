@@ -29,7 +29,10 @@ public class GraphReaderExample {
 
 
   public static void main(String[] args) {
-    new GraphReaderExample("CAAHZAZBoWwDhoBAFgEdekKk1goZBrEZBUIZCKaodnv4OZACYyZC2kMfaDhyobrYRu7YF7PmSduohSioiBucBa3IRbfUeNTFM1DhpXDEKQy6roerWD83ZBESf6tCLsjQxTT58B07TXgxJzZBLi5yPLLuNsOUusd0CZAVPclgYi6EaReWhgcxZAUOjZBW8").runEverything();
+      Authentifier authentifier=new Authentifier();
+      
+      System.out.println(authentifier.getAccess());
+    new GraphReaderExample(authentifier.getAccess()).runEverything();
   }
 
     public GraphReaderExample() {
