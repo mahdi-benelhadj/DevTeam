@@ -10,6 +10,10 @@ import edu.esprit.entities.Client;
 import edu.esprit.metier.AdminMetier;
 import edu.esprit.metier.ClientMetier;
 import facebook.*;
+import java.awt.Color;
+import javax.swing.JColorChooser;
+import javax.swing.JOptionPane;
+import org.jdesktop.swingx.JXErrorPane;
 /**
  *
  * @author Mahdi
@@ -169,11 +173,15 @@ public class InterfaceConnexionClient extends javax.swing.JFrame {
 
     private void jButtonConnectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConnectActionPerformed
         // TODO add your handling code here:
-        Client client=new Client();
+        if(!jTextFieldEmail1.getText().equals(""))
+        {Client client=new Client();
         client.setEmail(jTextFieldEmail1.getText());
         client.setPassowrd(jTextFieldPasswd.getText());
         ClientMetier.ConnexionClientMetier(client);
-        
+        this.setVisible(false);
+        }
+        else
+            JOptionPane.showMessageDialog(null, "Remplir champs");
         
     }//GEN-LAST:event_jButtonConnectActionPerformed
 
