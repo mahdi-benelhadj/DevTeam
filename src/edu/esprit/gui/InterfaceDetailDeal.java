@@ -39,6 +39,7 @@ public class InterfaceDetailDeal extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextAreaDetail = new javax.swing.JTextArea();
         jToggleRetour = new javax.swing.JToggleButton();
+        jButtonNoter = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -79,6 +80,15 @@ public class InterfaceDetailDeal extends javax.swing.JFrame {
             }
         });
 
+        jButtonNoter.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
+        jButtonNoter.setForeground(new java.awt.Color(0, 102, 153));
+        jButtonNoter.setText("Noter vendeur");
+        jButtonNoter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonNoterActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -86,7 +96,9 @@ public class InterfaceDetailDeal extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(65, 65, 65)
                 .addComponent(jToggleRetour)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 313, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 180, Short.MAX_VALUE)
+                .addComponent(jButtonNoter)
+                .addGap(18, 18, 18)
                 .addComponent(jButtonReserver, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButtonAnnuler, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -129,7 +141,8 @@ public class InterfaceDetailDeal extends javax.swing.JFrame {
                     .addComponent(jButtonAnnuler)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jButtonReserver)
-                        .addComponent(jToggleRetour)))
+                        .addComponent(jToggleRetour)
+                        .addComponent(jButtonNoter)))
                 .addGap(13, 13, 13))
         );
 
@@ -153,6 +166,13 @@ public class InterfaceDetailDeal extends javax.swing.JFrame {
         gestiondeal.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jToggleRetourActionPerformed
+
+    private void jButtonNoterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNoterActionPerformed
+        // TODO add your handling code here:
+        InterfaceNoterVendeur notervend = new InterfaceNoterVendeur();
+        notervend.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButtonNoterActionPerformed
 
     /**
      * @param args the command line arguments
@@ -191,6 +211,7 @@ public class InterfaceDetailDeal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonAnnuler;
+    private javax.swing.JButton jButtonNoter;
     private javax.swing.JButton jButtonReserver;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

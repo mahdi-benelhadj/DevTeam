@@ -168,6 +168,7 @@ public class InterfaceConnexionAdmin extends javax.swing.JFrame {
         admin.setLogin(jTextfieldLogin.getText());
         admin.setPassword(jTextFieldMotDePasse.getText());
         AdminMetier.ConnexionAdmin(admin);
+        this.setVisible(false);
         
        
          

@@ -166,7 +166,7 @@ public class InterfaceConnexionClient extends javax.swing.JFrame {
 
     private void jButtoninscriptionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtoninscriptionActionPerformed
         // TODO add your handling code here:
-        InterfaceInscription inscriptionframe= new InterfaceInscription();
+        interfacenscriptionInternaute inscriptionframe= new interfacenscriptionInternaute();
         inscriptionframe.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButtoninscriptionActionPerformed

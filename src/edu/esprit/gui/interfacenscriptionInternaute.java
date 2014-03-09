@@ -59,7 +59,6 @@ public class interfacenscriptionInternaute extends javax.swing.JFrame {
         txtNum_tel = new javax.swing.JTextField();
         txtPassword = new javax.swing.JTextField();
         comboboxSex = new javax.swing.JComboBox();
-        jSeparator1 = new javax.swing.JSeparator();
         valider_inscription = new javax.swing.JButton();
         annuler_inscription = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
@@ -68,39 +67,55 @@ public class interfacenscriptionInternaute extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setText("NOM   :");
+        jLabel1.setFont(new java.awt.Font("Calibri", 3, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 102, 153));
+        jLabel1.setText("nom :");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
 
+        jLabel2.setFont(new java.awt.Font("Calibri", 3, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 102, 153));
         jLabel2.setText("prenom  :");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, -1, -1));
 
+        jLabel3.setFont(new java.awt.Font("Calibri", 3, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 102, 153));
         jLabel3.setText("email  : ");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 50, -1, -1));
 
-        jLabel4.setText("AGE  :");
+        jLabel4.setFont(new java.awt.Font("Calibri", 3, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 102, 153));
+        jLabel4.setText("age  :");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, -1, -1));
 
+        jLabel5.setFont(new java.awt.Font("Calibri", 3, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 102, 153));
         jLabel5.setText("sexe :");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, -1, -1));
 
-        jLabel6.setText("NUM_TEL  :");
+        jLabel6.setFont(new java.awt.Font("Calibri", 3, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 102, 153));
+        jLabel6.setText("num-tel  :");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 100, -1, -1));
 
-        jLabel7.setText("PASSWORD  :");
+        jLabel7.setFont(new java.awt.Font("Calibri", 3, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 102, 153));
+        jLabel7.setText("password  :");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 140, -1, -1));
-        jPanel1.add(txtnom, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 100, 30));
-        jPanel1.add(txtprenom, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 100, 30));
-        jPanel1.add(txtemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 30, 100, 30));
-        jPanel1.add(txtage, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 70, 30));
+        jPanel1.add(txtnom, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 30, 100, 30));
+        jPanel1.add(txtprenom, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 80, 100, 30));
+        jPanel1.add(txtemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 40, 100, 30));
+        jPanel1.add(txtage, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, 100, 30));
 
         txtNum_tel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNum_telActionPerformed(evt);
             }
         });
-        jPanel1.add(txtNum_tel, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 80, 100, 30));
-        jPanel1.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 130, 110, 30));
+        jPanel1.add(txtNum_tel, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 90, 100, 30));
+        jPanel1.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 140, 100, 30));
 
+        comboboxSex.setFont(new java.awt.Font("Calibri", 3, 18)); // NOI18N
+        comboboxSex.setForeground(new java.awt.Color(0, 102, 153));
         comboboxSex.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Homme", "Femme" }));
         comboboxSex.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -108,8 +123,9 @@ public class interfacenscriptionInternaute extends javax.swing.JFrame {
             }
         });
         jPanel1.add(comboboxSex, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 180, 100, 30));
-        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 252, 550, 10));
 
+        valider_inscription.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
+        valider_inscription.setForeground(new java.awt.Color(0, 102, 153));
         valider_inscription.setText("Valider");
         valider_inscription.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -118,7 +134,9 @@ public class interfacenscriptionInternaute extends javax.swing.JFrame {
         });
         jPanel1.add(valider_inscription, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 263, -1, 40));
 
-        annuler_inscription.setText("ANNULER");
+        annuler_inscription.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
+        annuler_inscription.setForeground(new java.awt.Color(0, 102, 153));
+        annuler_inscription.setText("annuler");
         annuler_inscription.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 annuler_inscriptionActionPerformed(evt);
@@ -126,10 +144,8 @@ public class interfacenscriptionInternaute extends javax.swing.JFrame {
         });
         jPanel1.add(annuler_inscription, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 263, -1, 40));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\mohamed amine\\Documents\\NetBeansProjects\\shhhhhhhih\\DevTeam\\src\\img\\addDeal.png")); // NOI18N
-        jLabel8.setText("jLabel8");
-        jLabel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Inscription_Internaute", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, null, new java.awt.Color(0, 0, 255)));
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 640, 350));
+        jLabel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Inscription Internaute", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 3, 18), new java.awt.Color(0, 102, 153))); // NOI18N
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 630, 350));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -195,6 +211,9 @@ public class interfacenscriptionInternaute extends javax.swing.JFrame {
       
       }
         */
+        InterfaceConnexionClient cnxclient = new InterfaceConnexionClient();
+        cnxclient.setVisible(true);
+        this.setVisible(false);
         
         
       
@@ -249,7 +268,6 @@ public class interfacenscriptionInternaute extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTextField txtNum_tel;
     private javax.swing.JTextField txtPassword;
     private javax.swing.JTextField txtage;
