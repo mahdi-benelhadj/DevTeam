@@ -6,8 +6,6 @@
 
 package edu.esprit.gui;
 
-import de.javasoft.plaf.synthetica.SyntheticaAluOxideLookAndFeel;
-import de.javasoft.plaf.synthetica.SyntheticaBlackEyeLookAndFeel;
 import javax.swing.UIManager;
 
 /**
@@ -20,14 +18,14 @@ public class InterfaceChoixDeConnexion extends javax.swing.JFrame {
      * Creates new form InterfaceChoixDeConnexion
      */
     public InterfaceChoixDeConnexion() {
-        try 
+        /*try 
     {
       UIManager.setLookAndFeel(new SyntheticaAluOxideLookAndFeel());
     } 
     catch (Exception e) 
     {
       e.printStackTrace();
-    }
+    }*/
         initComponents();
         
     }
