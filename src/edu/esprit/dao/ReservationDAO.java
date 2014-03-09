@@ -120,7 +120,7 @@ public class ReservationDAO {
 
         List<NbrReservation> listeNbrreservations = new ArrayList<NbrReservation>();
 
-        String requete = "select id_deal d,count(id_deal),(select sum(qte) from reservation where id_deal=d) from reservation group by id_deal";
+        String requete = "select id_deal d,count(id_deal),(select sum(qte) from reservation where id_deal=d) s from reservation group by id_deal order by s desc ";
         try {
            Statement statement = MyConnection.getInstance()
                    .createStatement();

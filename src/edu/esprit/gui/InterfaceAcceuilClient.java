@@ -8,6 +8,8 @@ package edu.esprit.gui;
 
 import edu.esprit.entities.Client;
 import edu.esprit.metier.ClientMetier;
+import javaapplicationstatistic.BarChartDeal;
+import javaapplicationstatistic.BarChartNoteVendeur;
 import javax.swing.JOptionPane;
 
 /**
@@ -16,11 +18,18 @@ import javax.swing.JOptionPane;
  */
 public class InterfaceAcceuilClient extends javax.swing.JFrame {
 
+    Client client;
     /**
      * Creates new form InterfaceAcceuilClient
      */
     public InterfaceAcceuilClient() {
         initComponents();
+        
+    }
+    public void interClient(Client c){
+        client=c;
+        System.out.println(client.getEmail());
+        
     }
 
     /**
@@ -45,10 +54,20 @@ public class InterfaceAcceuilClient extends javax.swing.JFrame {
         jButtonListeDeal.setFont(new java.awt.Font("Calibri", 3, 18)); // NOI18N
         jButtonListeDeal.setForeground(new java.awt.Color(0, 102, 153));
         jButtonListeDeal.setText("voir les deals");
+        jButtonListeDeal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonListeDealActionPerformed(evt);
+            }
+        });
 
         jButtonStatistiques.setFont(new java.awt.Font("Calibri", 3, 18)); // NOI18N
         jButtonStatistiques.setForeground(new java.awt.Color(0, 102, 153));
         jButtonStatistiques.setText(" voir les statistiques des vendeurs");
+        jButtonStatistiques.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonStatistiquesActionPerformed(evt);
+            }
+        });
 
         jButtonRetour.setFont(new java.awt.Font("Calibri", 3, 18)); // NOI18N
         jButtonRetour.setForeground(new java.awt.Color(0, 102, 153));
@@ -62,6 +81,11 @@ public class InterfaceAcceuilClient extends javax.swing.JFrame {
         jButtonStatDeal.setFont(new java.awt.Font("Calibri", 3, 18)); // NOI18N
         jButtonStatDeal.setForeground(new java.awt.Color(0, 102, 153));
         jButtonStatDeal.setText("voir les statistiques des deals");
+        jButtonStatDeal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonStatDealActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -118,6 +142,29 @@ public class InterfaceAcceuilClient extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jButtonRetourActionPerformed
 
+    private void jButtonStatistiquesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonStatistiquesActionPerformed
+        // TODO add your handling code here:
+        BarChartNoteVendeur barChartNote=new BarChartNoteVendeur();
+        barChartNote.setVisible(true);
+         
+    }//GEN-LAST:event_jButtonStatistiquesActionPerformed
+
+    private void jButtonStatDealActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonStatDealActionPerformed
+        // TODO add your handling code here:
+        BarChartDeal barChartDeal=new BarChartDeal();
+        barChartDeal.setVisible(true);
+    }//GEN-LAST:event_jButtonStatDealActionPerformed
+
+    private void jButtonListeDealActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonListeDealActionPerformed
+        // TODO add your handling code here:
+        InterfaceGestionDeal listerDeal=new InterfaceGestionDeal();
+        System.out.println(client.getEmail());
+        
+        listerDeal.interClient(client);
+        
+        listerDeal.setVisible(true);
+    }//GEN-LAST:event_jButtonListeDealActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -144,11 +191,12 @@ public class InterfaceAcceuilClient extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(InterfaceAcceuilClient.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new InterfaceAcceuilClient().setVisible(true);
+
             }
         });
     }

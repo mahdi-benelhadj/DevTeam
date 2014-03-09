@@ -6,6 +6,7 @@
 
 package edu.esprit.gui;
 
+import edu.esprit.entities.Client;
 import edu.esprit.metier.DealMetier;
 import edu.esprit.metier.ListDeal;
 
@@ -15,6 +16,7 @@ import edu.esprit.metier.ListDeal;
  */
 public class InterfaceListerDeal extends javax.swing.JFrame {
 
+    Client client;
     /**
      * Creates new form InterfaceListerDeal
      */
@@ -22,6 +24,13 @@ public class InterfaceListerDeal extends javax.swing.JFrame {
         initComponents();
     }
 
+    public void interClient(Client c){
+        client=c;
+        jLabel2.setText(client.getPrenom());
+        jButton4.setVisible(false);
+        System.out.println(client.getEmail());
+        
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

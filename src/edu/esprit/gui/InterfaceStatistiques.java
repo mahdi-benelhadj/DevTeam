@@ -6,6 +6,11 @@
 
 package edu.esprit.gui;
 
+
+import javaapplicationstatistic.BarChartDeal;
+
+import javaapplicationstatistic.BarChartNoteVendeur;
+
 /**
  *
  * @author nour
@@ -40,10 +45,20 @@ public class InterfaceStatistiques extends javax.swing.JFrame {
         jToggleButton1.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jToggleButton1.setForeground(new java.awt.Color(0, 102, 153));
         jToggleButton1.setText("statistiques des deals");
+        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton1ActionPerformed(evt);
+            }
+        });
 
         jToggleButton2.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jToggleButton2.setForeground(new java.awt.Color(0, 102, 153));
         jToggleButton2.setText("statistiques des vendeurs");
+        jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton2ActionPerformed(evt);
+            }
+        });
 
         jToggleButtonRetour.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jToggleButtonRetour.setForeground(new java.awt.Color(0, 102, 153));
@@ -104,6 +119,20 @@ public class InterfaceStatistiques extends javax.swing.JFrame {
         acceuil.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jToggleButtonRetourActionPerformed
+
+    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+        // TODO add your handling code here:
+   
+        
+        BarChartDeal barChartDeal=new BarChartDeal();
+        barChartDeal.setVisible(true);
+    }//GEN-LAST:event_jToggleButton1ActionPerformed
+
+    private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
+        // TODO add your handling code here:
+        BarChartNoteVendeur barChartNote=new BarChartNoteVendeur();
+        barChartNote.setVisible(true);
+    }//GEN-LAST:event_jToggleButton2ActionPerformed
 
     /**
      * @param args the command line arguments

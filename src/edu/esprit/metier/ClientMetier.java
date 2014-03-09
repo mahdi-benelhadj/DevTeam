@@ -7,6 +7,7 @@
 package edu.esprit.metier;
 import edu.esprit.dao.ClientDAO;
 import edu.esprit.entities.Client;
+import edu.esprit.gui.InterfaceAcceuilClient;
 import edu.esprit.gui.InterfaceGestionDeal;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,12 +25,13 @@ public class ClientMetier {
     }
     public static void ConnexionClientMetier(Client c){
         
-        InterfaceGestionDeal interfaceListeDeal=new InterfaceGestionDeal();
+        InterfaceAcceuilClient interfaceAcceuilClient=new InterfaceAcceuilClient();
         ClientDAO clientDAO=new ClientDAO();
         if(clientDAO.findClientByEmail(c.getEmail()).getPassowrd().equals(c.getPassowrd())){
+            interfaceAcceuilClient.interClient(clientDAO.findClientByEmail(c.getEmail()));
             
-            interfaceListeDeal.setVisible(true);
-            interfaceListeDeal.interClient(clientDAO.findClientByEmail(c.getEmail()));
+            interfaceAcceuilClient.setVisible(true);
+            
         }
     }
     

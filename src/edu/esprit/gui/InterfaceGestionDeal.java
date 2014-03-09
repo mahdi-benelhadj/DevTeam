@@ -29,13 +29,15 @@ public class InterfaceGestionDeal extends javax.swing.JFrame {
     public InterfaceGestionDeal() {
         initComponents();
         System.out.println("test");
+        
     }
 
-        public void interClient(Client c){
+public void interClient(Client c){
         client=c;
-       
         jLabel2.setText(client.getPrenom());
-       jButtonSupprimer.setVisible(false);
+        jButtonSupprimer.setVisible(false);
+        System.out.println(client.getEmail());
+        
     }
 
     /**
