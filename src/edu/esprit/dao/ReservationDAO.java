@@ -13,6 +13,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -32,9 +33,12 @@ public class ReservationDAO {
             ps.setInt(5, r.getValide());
             ps.executeUpdate();
             System.out.println("Ajout effectué avec succès");
+             JOptionPane.showMessageDialog(null, "Ajout effectué avec succès");
         } catch (SQLException ex) {
            //Logger.getLogger(PersonneDao.class.getName()).log(Level.SEVERE, null, ex);
             System.out.println("erreur lors de l'insertion "+ex.getMessage());
+            JOptionPane.showMessageDialog(null, "erreur lors de l'insertion "+ex.getMessage());
+            
         }
 
 }
@@ -46,9 +50,11 @@ public class ReservationDAO {
             ps.setInt(1, id);
             ps.executeUpdate();
             System.out.println("Reservation supprimée");
+            JOptionPane.showMessageDialog(null, "Reservation supprimée");
         } catch (SQLException ex) {
            //Logger.getLogger(PersonneDao.class.getName()).log(Level.SEVERE, null, ex);
             System.out.println("erreur lors de la suppression "+ex.getMessage());
+            JOptionPane.showMessageDialog(null, "erreur lors de la suppression "+ex.getMessage());
         }
     }
           public Reservation findReservationById(int id){

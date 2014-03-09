@@ -12,6 +12,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JOptionPane;
 import static javax.swing.JOptionPane.showMessageDialog;
 
 
@@ -39,6 +40,7 @@ public class VendeurDAO {
         } catch (SQLException ex) {
            //Logger.getLogger(PersonneDao.class.getName()).log(Level.SEVERE, null, ex);
             System.out.println("erreur lors de l'insertion "+ex.getMessage());
+            JOptionPane.showMessageDialog(null, "erreur lors de l'insertion "+ex.getMessage());
         }
     }
       public void deleteVendeur(int id){
@@ -48,9 +50,11 @@ public class VendeurDAO {
             ps.setInt(1, id);
             ps.executeUpdate();
             System.out.println("vendeur supprimé");
+            JOptionPane.showMessageDialog(null, "vendeur supprimé");
         } catch (SQLException ex) {
            //Logger.getLogger(PersonneDao.class.getName()).log(Level.SEVERE, null, ex);
             System.out.println("erreur lors de la suppression "+ex.getMessage());
+            JOptionPane.showMessageDialog(null, "erreur lors de la suppression "+ex.getMessage());
         }
 
 }
