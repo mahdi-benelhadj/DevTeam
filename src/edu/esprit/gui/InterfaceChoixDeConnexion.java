@@ -69,7 +69,6 @@ public class InterfaceChoixDeConnexion extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(0, 102, 153));
         jLabel1.setText("vous etes:");
 
-        jToggleButton1.setBackground(new java.awt.Color(0, 102, 153));
         jToggleButton1.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jToggleButton1.setForeground(new java.awt.Color(0, 102, 153));
         jToggleButton1.setText("client");

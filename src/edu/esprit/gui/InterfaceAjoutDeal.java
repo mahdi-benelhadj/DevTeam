@@ -328,7 +328,7 @@ public class InterfaceAjoutDeal extends javax.swing.JFrame {
        /* creation objet deal */
      Deal deal = new Deal();
         CategorieDAO categorieDAO=new CategorieDAO();
-        Categorie c=categorieDAO.findCategorieByCategorie(jComboBoxCategorie.getSelectedItem().toString());
+        Categorie c=categorieDAO.findCategorieByNom(jComboBoxCategorie.getSelectedItem().toString());
         VendeurDAO vendeurDAO=new VendeurDAO();
         Vendeur v=vendeurDAO.findVendeurByVendeur(jComboBoxVendeur.getSelectedItem().toString());
      deal.setTitre(jTextFieldTitreDeal.getText() );

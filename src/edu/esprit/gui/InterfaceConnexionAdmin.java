@@ -13,7 +13,7 @@ package edu.esprit.gui;
 
 import edu.esprit.dao.AdminDAO;
 import edu.esprit.entities.Admin;
-import edu.esprit.metier.ConnexionMetier;
+import edu.esprit.metier.AdminMetier;
 
 /**
  *
@@ -169,7 +169,7 @@ public class InterfaceConnexionAdmin extends javax.swing.JFrame {
         InterfaceAccueil acceuilframe =new InterfaceAccueil();
         admin.setLogin(jTextfieldLogin.getText());
         admin.setPassword(jTextFieldMotDePasse.getText());
-        ConnexionMetier.ConnexionVerif(admin);
+        AdminMetier.ConnexionAdmin(admin);
         
        
          

@@ -59,7 +59,7 @@ public class CategorieDAO {
             return null;
         }
     }
-        public Categorie findCategorieByCategorie(String ctg){
+        public Categorie findCategorieByNom(String ctg){
     Categorie categorie = new Categorie();
      String requete = "select * from categorie where categorie = ?";
         try {
