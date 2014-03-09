@@ -330,7 +330,7 @@ public class InterfaceAjoutDeal extends javax.swing.JFrame {
         CategorieDAO categorieDAO=new CategorieDAO();
         Categorie c=categorieDAO.findCategorieByNom(jComboBoxCategorie.getSelectedItem().toString());
         VendeurDAO vendeurDAO=new VendeurDAO();
-        Vendeur v=vendeurDAO.findVendeurByVendeur(jComboBoxVendeur.getSelectedItem().toString());
+        Vendeur v=vendeurDAO.findVendeurByNom(jComboBoxVendeur.getSelectedItem().toString());
      deal.setTitre(jTextFieldTitreDeal.getText() );
      deal.setDetails(jTextAreaDetails.getText());
      deal.setPrix(Integer.parseInt(jTextFieldPrix.getText()));

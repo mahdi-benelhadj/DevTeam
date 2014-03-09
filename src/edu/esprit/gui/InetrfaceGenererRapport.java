@@ -21,32 +21,7 @@ public class InetrfaceGenererRapport extends javax.swing.JFrame {
      * Creates new form NewJFrame
      */
     public InetrfaceGenererRapport() {
-        try {
-          //  SyntheticaLookAndFeel.setWindowsDecorated(false);
-
-        //UIManager.put("Synthetica.dialog.icon.enabled", true);
-      
-        //Application du look SynthLookAndFeel
-      //  UIManager.setLookAndFeel(new SynthLookAndFeel());
-     
-        //Application du look MotifLookAndFeel
-        UIManager.setLookAndFeel(new MotifLookAndFeel());
-     
-        //Application du look SyntheticaBlackEyeLookAndFeel   
-     //  UIManager.setLookAndFeel(new SyntheticaBlackEyeLookAndFeel());
-     
-             //Application du look SyntheticaStandardLookAndFeel
-   // UIManager.setLookAndFeel(new SyntheticaStandardLookAndFeel());
-    
-   
-     //Pour ajouter un nouveau look il faut importer le jar correspondant
-     //Voici des liens utiles :
-     //http://www.jyloo.com/
         
-            // initComponents();
-        } catch (Exception e) {
-            Logger.getLogger(InetrfaceGenererRapport.class.getName()).log(Level.SEVERE, null, e);
-        }
         initComponents();
     }
 

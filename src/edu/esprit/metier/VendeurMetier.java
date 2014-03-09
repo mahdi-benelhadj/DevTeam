@@ -26,7 +26,7 @@ public class VendeurMetier {
      public static void updateNote(Vendeur v){
          VendeurDAO vendeurDAO = new VendeurDAO();
          Vendeur vendeur=new Vendeur();
-         vendeur=vendeurDAO.findVendeurByVendeur(v.getNom());
+         vendeur=vendeurDAO.findVendeurByNom(v.getNom());
          vendeur.setNote(v.getNote());
          vendeurDAO.updateVendeur(vendeur);
      }

@@ -137,7 +137,7 @@ public class ReservationDAO {
             return null;
         }
     }
-        public void updateVendeur(Reservation r){
+        public void updateReservation(Reservation r){
         String requete = "update reservation  set id_client=?,id_deal=?,qte=?,Total=?,valide=? where id_reservation=?";
         try {
             PreparedStatement ps = MyConnection.getInstance().prepareStatement(requete);

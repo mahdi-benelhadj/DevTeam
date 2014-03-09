@@ -42,7 +42,7 @@ public class ReservationMetier {
         reservation=reservationDAO.DisplayAllReservations();
         r=reservation.get(i);
         r.setValide(1);
-        reservationDAO.updateVendeur(r);
+        reservationDAO.updateReservation(r);
            
     }
     

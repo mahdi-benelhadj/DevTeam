@@ -21,7 +21,7 @@ public class ListVendeurRechercher extends AbstractListModel{
     public ListVendeurRechercher(String nom) {
 
     VendeurDAO vendeurDAO=new VendeurDAO();
-    vendeurs.add(vendeurDAO.findVendeurByVendeur(nom));
+    vendeurs.add(vendeurDAO.findVendeurByNom(nom));
     
     }
     

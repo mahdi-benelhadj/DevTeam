@@ -81,7 +81,7 @@ public class VendeurDAO {
         }
     }
       
-      public Vendeur findVendeurByVendeur(String nom){
+      public Vendeur findVendeurByNom(String nom){
     Vendeur vendeur = new Vendeur();
      String requete = "select * from vendeur where nom=?";
         try {
@@ -155,6 +155,7 @@ public class VendeurDAO {
             System.out.println("erreur lors du chargement des vendeurs "+ex.getMessage());
             return null;
         }
+        
 }
 
 
