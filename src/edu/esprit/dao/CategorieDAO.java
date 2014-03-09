@@ -12,6 +12,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -31,9 +32,12 @@ public class CategorieDAO {
 
             ps.executeUpdate();
             System.out.println("Ajout effectuée avec succès");
-        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Ajout effectuée avec succès");        } 
+        catch (SQLException ex) {
            //Logger.getLogger(PersonneDao.class.getName()).log(Level.SEVERE, null, ex);
             System.out.println("erreur lors de l'insertion "+ex.getMessage());
+            JOptionPane.showMessageDialog(null, "erreur lors de l'insertion "+ex.getMessage());
+            
         }
     }
      

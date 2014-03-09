@@ -12,6 +12,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JOptionPane;
 
 
 /**
@@ -38,9 +39,11 @@ public class ClientDAO {
             ps.setInt(7, c.getNumTel());
             ps.executeUpdate();
             System.out.println("Ajout effectuée avec succès");
+             JOptionPane.showMessageDialog(null, "Ajout effectuée avec succès");
         } catch (SQLException ex) {
            //Logger.getLogger(PersonneDao.class.getName()).log(Level.SEVERE, null, ex);
             System.out.println("erreur lors de l'insertion "+ex.getMessage());
+             JOptionPane.showMessageDialog(null, "erreur lors de l'insertion "+ex.getMessage());
         }
     }
 
@@ -54,6 +57,7 @@ public class ClientDAO {
             ps.setInt(1, id);
             ps.executeUpdate();
             System.out.println("Client supprimé");
+            JOptionPane.showMessageDialog(null, "Suppression effectuée avec succès");
         } catch (SQLException ex) {
            //Logger.getLogger(PersonneDao.class.getName()).log(Level.SEVERE, null, ex);
             System.out.println("erreur lors de la suppression "+ex.getMessage());
