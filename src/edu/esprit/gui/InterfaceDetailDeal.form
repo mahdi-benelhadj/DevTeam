@@ -39,6 +39,7 @@
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
             <TitledBorder title="d&#xe9;tails du deal">
               <Font PropertyName="font" name="Calibri" size="18" style="3"/>
+              <Color PropertyName="color" blue="99" green="66" red="0" type="rgb"/>
             </TitledBorder>
           </Border>
         </Property>

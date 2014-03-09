@@ -59,9 +59,8 @@ public class InterfaceGestionDeal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "gestion des deals", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 3, 18))); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "gestion des deals", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 3, 18), new java.awt.Color(0, 102, 153))); // NOI18N
 
-        jButtonRechercherDeal.setBackground(new java.awt.Color(0, 102, 153));
         jButtonRechercherDeal.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jButtonRechercherDeal.setForeground(new java.awt.Color(0, 102, 153));
         jButtonRechercherDeal.setText("Rechercher");
@@ -74,7 +73,6 @@ public class InterfaceGestionDeal extends javax.swing.JFrame {
         jListDeal.setModel(new ListDeal());
         jScrollPane1.setViewportView(jListDeal);
 
-        jButtonSupprimer.setBackground(new java.awt.Color(0, 102, 153));
         jButtonSupprimer.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jButtonSupprimer.setForeground(new java.awt.Color(0, 102, 153));
         jButtonSupprimer.setText("Supprimer");
@@ -85,7 +83,6 @@ public class InterfaceGestionDeal extends javax.swing.JFrame {
             }
         });
 
-        jButtonAfficherDetail.setBackground(new java.awt.Color(0, 102, 153));
         jButtonAfficherDetail.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jButtonAfficherDetail.setForeground(new java.awt.Color(0, 102, 153));
         jButtonAfficherDetail.setText("Afficher Détail");

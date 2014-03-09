@@ -49,7 +49,7 @@ public class InterfaceConnexionAdmin extends javax.swing.JFrame {
         setBackground(new java.awt.Color(51, 102, 255));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Connexion ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 3, 18))); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Connexion ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 3, 18), new java.awt.Color(0, 102, 153))); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Calibri", 3, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 102, 153));
@@ -60,7 +60,6 @@ public class InterfaceConnexionAdmin extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(0, 102, 153));
         jLabel2.setText("mot de passe");
 
-        jButtonConnecter.setBackground(new java.awt.Color(0, 102, 153));
         jButtonConnecter.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jButtonConnecter.setForeground(new java.awt.Color(0, 102, 153));
         jButtonConnecter.setText("Connecter");
@@ -79,7 +78,6 @@ public class InterfaceConnexionAdmin extends javax.swing.JFrame {
             }
         });
 
-        jToggleButtonRetour.setBackground(new java.awt.Color(0, 102, 153));
         jToggleButtonRetour.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jToggleButtonRetour.setForeground(new java.awt.Color(0, 102, 153));
         jToggleButtonRetour.setText("retour");

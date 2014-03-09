@@ -46,7 +46,7 @@ public class InterfaceConnexionClient extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Connexion", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 3, 18))); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Connexion", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 3, 18), new java.awt.Color(0, 102, 153))); // NOI18N
 
         jLabel3.setFont(new java.awt.Font("Calibri", 3, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 102, 153));
@@ -58,7 +58,6 @@ public class InterfaceConnexionClient extends javax.swing.JFrame {
 
         jTextFieldEmail1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
-        jButtonConnect.setBackground(new java.awt.Color(0, 102, 153));
         jButtonConnect.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jButtonConnect.setForeground(new java.awt.Color(0, 102, 153));
         jButtonConnect.setText("Connexion");
@@ -68,7 +67,6 @@ public class InterfaceConnexionClient extends javax.swing.JFrame {
             }
         });
 
-        jButtoninscription.setBackground(new java.awt.Color(0, 102, 153));
         jButtoninscription.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jButtoninscription.setForeground(new java.awt.Color(0, 102, 153));
         jButtoninscription.setText("Inscription");
@@ -78,7 +76,6 @@ public class InterfaceConnexionClient extends javax.swing.JFrame {
             }
         });
 
-        jButtonFb.setBackground(new java.awt.Color(0, 102, 153));
         jButtonFb.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jButtonFb.setForeground(new java.awt.Color(0, 102, 153));
         jButtonFb.setText("Inscription FB");
@@ -88,7 +85,6 @@ public class InterfaceConnexionClient extends javax.swing.JFrame {
             }
         });
 
-        jToggleButtonRetour.setBackground(new java.awt.Color(0, 102, 153));
         jToggleButtonRetour.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jToggleButtonRetour.setForeground(new java.awt.Color(0, 102, 153));
         jToggleButtonRetour.setText("retour");

@@ -41,12 +41,11 @@ public class InterfaceGestionReservation extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "gestion des reservations", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 3, 18))); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "gestion des reservations", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 3, 18), new java.awt.Color(0, 102, 153))); // NOI18N
 
         jTableReservation.setModel(new MyTableReservation());
         jScrollPane1.setViewportView(jTableReservation);
 
-        jButtonSupprimer.setBackground(new java.awt.Color(0, 102, 153));
         jButtonSupprimer.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jButtonSupprimer.setForeground(new java.awt.Color(0, 102, 153));
         jButtonSupprimer.setText("Supprimer");
@@ -57,7 +56,6 @@ public class InterfaceGestionReservation extends javax.swing.JFrame {
             }
         });
 
-        jButtonValider.setBackground(new java.awt.Color(0, 102, 153));
         jButtonValider.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jButtonValider.setForeground(new java.awt.Color(0, 102, 153));
         jButtonValider.setText("Valider");
@@ -72,7 +70,6 @@ public class InterfaceGestionReservation extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(0, 102, 153));
         jLabel2.setText("Liste des Réservations");
 
-        jToggleButtonRetour.setBackground(new java.awt.Color(0, 102, 153));
         jToggleButtonRetour.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jToggleButtonRetour.setForeground(new java.awt.Color(0, 102, 153));
         jToggleButtonRetour.setText("retour");

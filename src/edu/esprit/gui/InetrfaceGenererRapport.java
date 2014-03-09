@@ -70,24 +70,20 @@ public class InetrfaceGenererRapport extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "generer des raports", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 3, 18))); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "generer des raports", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 3, 18), new java.awt.Color(0, 102, 153))); // NOI18N
 
-        jToggleButtonRappDeal.setBackground(new java.awt.Color(0, 102, 153));
         jToggleButtonRappDeal.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jToggleButtonRappDeal.setForeground(new java.awt.Color(0, 102, 153));
         jToggleButtonRappDeal.setText("rapport des deals");
 
-        jToggleButtonRappClient.setBackground(new java.awt.Color(0, 102, 153));
         jToggleButtonRappClient.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jToggleButtonRappClient.setForeground(new java.awt.Color(0, 102, 153));
         jToggleButtonRappClient.setText("rapport des clients");
 
-        jToggleButtonRappReserv.setBackground(new java.awt.Color(0, 102, 153));
         jToggleButtonRappReserv.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jToggleButtonRappReserv.setForeground(new java.awt.Color(0, 102, 153));
         jToggleButtonRappReserv.setText("rapport des reservations");
 
-        jToggleButtonRetour.setBackground(new java.awt.Color(0, 102, 153));
         jToggleButtonRetour.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jToggleButtonRetour.setForeground(new java.awt.Color(0, 102, 153));
         jToggleButtonRetour.setText("retour");

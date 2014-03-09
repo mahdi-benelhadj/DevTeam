@@ -42,7 +42,7 @@ public class InterfaceAjouterVendeur extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Ajouter Vendeur", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 3, 18))); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Ajouter Vendeur", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 3, 18), new java.awt.Color(0, 102, 153))); // NOI18N
 
         jLabel3.setFont(new java.awt.Font("Calibri", 3, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 102, 153));
@@ -52,7 +52,6 @@ public class InterfaceAjouterVendeur extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(0, 102, 153));
         jLabel4.setText("Adresse:");
 
-        jButtonAnnuler.setBackground(new java.awt.Color(0, 102, 153));
         jButtonAnnuler.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jButtonAnnuler.setForeground(new java.awt.Color(0, 102, 153));
         jButtonAnnuler.setText("Annuler");
@@ -62,7 +61,6 @@ public class InterfaceAjouterVendeur extends javax.swing.JFrame {
             }
         });
 
-        jButtonValider.setBackground(new java.awt.Color(0, 102, 153));
         jButtonValider.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jButtonValider.setForeground(new java.awt.Color(0, 102, 153));
         jButtonValider.setText("Ajouter");
@@ -72,7 +70,6 @@ public class InterfaceAjouterVendeur extends javax.swing.JFrame {
             }
         });
 
-        jToggleButtonRetour.setBackground(new java.awt.Color(0, 102, 153));
         jToggleButtonRetour.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jToggleButtonRetour.setForeground(new java.awt.Color(0, 102, 153));
         jToggleButtonRetour.setText("retour");

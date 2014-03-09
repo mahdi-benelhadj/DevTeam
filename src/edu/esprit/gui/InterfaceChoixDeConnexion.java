@@ -63,13 +63,12 @@ public class InterfaceChoixDeConnexion extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Connexion", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 3, 18))); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Connexion", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 3, 18), new java.awt.Color(0, 102, 153))); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Calibri", 3, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 102, 153));
         jLabel1.setText("vous etes:");
 
-        jToggleButton1.setBackground(new java.awt.Color(0, 102, 153));
         jToggleButton1.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jToggleButton1.setForeground(new java.awt.Color(0, 102, 153));
         jToggleButton1.setText("client");
@@ -79,7 +78,6 @@ public class InterfaceChoixDeConnexion extends javax.swing.JFrame {
             }
         });
 
-        jToggleButton2.setBackground(new java.awt.Color(0, 102, 153));
         jToggleButton2.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jToggleButton2.setForeground(new java.awt.Color(0, 102, 153));
         jToggleButton2.setText("administrateur");

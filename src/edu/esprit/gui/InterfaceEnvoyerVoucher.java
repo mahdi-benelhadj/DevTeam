@@ -58,7 +58,7 @@ public class InterfaceEnvoyerVoucher extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "envoyer voucher", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 3, 18))); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "envoyer voucher", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 3, 18), new java.awt.Color(0, 102, 153))); // NOI18N
 
         jComboBoxClient.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jComboBoxClient.setForeground(new java.awt.Color(0, 102, 153));
@@ -81,7 +81,6 @@ public class InterfaceEnvoyerVoucher extends javax.swing.JFrame {
         deal1.setForeground(new java.awt.Color(0, 102, 153));
         deal1.setText("Deal");
 
-        jToggleRetour.setBackground(new java.awt.Color(0, 102, 153));
         jToggleRetour.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jToggleRetour.setForeground(new java.awt.Color(0, 102, 153));
         jToggleRetour.setText("retour");
@@ -91,7 +90,6 @@ public class InterfaceEnvoyerVoucher extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(0, 102, 153));
         jButton1.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(0, 102, 153));
         jButton1.setText("Choose File");
@@ -105,7 +103,6 @@ public class InterfaceEnvoyerVoucher extends javax.swing.JFrame {
         jLabelPiecteJointe.setForeground(new java.awt.Color(0, 102, 153));
         jLabelPiecteJointe.setText("piece jointe");
 
-        jButtonValider.setBackground(new java.awt.Color(0, 102, 153));
         jButtonValider.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jButtonValider.setForeground(new java.awt.Color(0, 102, 153));
         jButtonValider.setText("Envoyer");
@@ -116,7 +113,6 @@ public class InterfaceEnvoyerVoucher extends javax.swing.JFrame {
             }
         });
 
-        jButtonAnnuler.setBackground(new java.awt.Color(0, 102, 153));
         jButtonAnnuler.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jButtonAnnuler.setForeground(new java.awt.Color(0, 102, 153));
         jButtonAnnuler.setText("Annuler");

@@ -39,6 +39,7 @@
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
             <TitledBorder title="Ajouter Vendeur">
               <Font PropertyName="font" name="Calibri" size="18" style="3"/>
+              <Color PropertyName="color" blue="99" green="66" red="0" type="rgb"/>
             </TitledBorder>
           </Border>
         </Property>
@@ -122,9 +123,6 @@
         </Component>
         <Component class="javax.swing.JButton" name="jButtonAnnuler">
           <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="99" green="66" red="0" type="rgb"/>
-            </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Calibri" size="14" style="3"/>
             </Property>
@@ -139,9 +137,6 @@
         </Component>
         <Component class="javax.swing.JButton" name="jButtonValider">
           <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="99" green="66" red="0" type="rgb"/>
-            </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Calibri" size="14" style="3"/>
             </Property>
@@ -160,9 +155,6 @@
         </Component>
         <Component class="javax.swing.JToggleButton" name="jToggleButtonRetour">
           <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="99" green="66" red="0" type="rgb"/>
-            </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Calibri" size="14" style="3"/>
             </Property>

@@ -42,14 +42,12 @@ public class InterfaceAccueil extends javax.swing.JFrame {
         jButtonEnvoyerVoucher = new javax.swing.JButton();
         jButtonAfficherReservation = new javax.swing.JButton();
         jToggleButtonRetour = new javax.swing.JToggleButton();
-        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "acceuil", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 3, 18), new java.awt.Color(0, 102, 153))); // NOI18N
         jPanel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
-        jButtonAjouterDeal.setBackground(new java.awt.Color(0, 102, 153));
         jButtonAjouterDeal.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jButtonAjouterDeal.setForeground(new java.awt.Color(0, 102, 153));
         jButtonAjouterDeal.setText("Ajouter Deal");
@@ -59,7 +57,6 @@ public class InterfaceAccueil extends javax.swing.JFrame {
             }
         });
 
-        jButtonAjouterCategorie.setBackground(new java.awt.Color(0, 102, 153));
         jButtonAjouterCategorie.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jButtonAjouterCategorie.setForeground(new java.awt.Color(0, 102, 153));
         jButtonAjouterCategorie.setText("Ajouter Catégorie");
@@ -69,7 +66,6 @@ public class InterfaceAccueil extends javax.swing.JFrame {
             }
         });
 
-        jButtonAGestionDeals.setBackground(new java.awt.Color(0, 102, 153));
         jButtonAGestionDeals.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jButtonAGestionDeals.setForeground(new java.awt.Color(0, 102, 153));
         jButtonAGestionDeals.setText("Gestion des deals");
@@ -79,7 +75,6 @@ public class InterfaceAccueil extends javax.swing.JFrame {
             }
         });
 
-        jButtonGenererStatistique.setBackground(new java.awt.Color(0, 102, 153));
         jButtonGenererStatistique.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jButtonGenererStatistique.setForeground(new java.awt.Color(0, 102, 153));
         jButtonGenererStatistique.setText("Générer Statistique");
@@ -89,7 +84,6 @@ public class InterfaceAccueil extends javax.swing.JFrame {
             }
         });
 
-        jButtonGenererRapport.setBackground(new java.awt.Color(0, 102, 153));
         jButtonGenererRapport.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jButtonGenererRapport.setForeground(new java.awt.Color(0, 102, 153));
         jButtonGenererRapport.setText("Générer Rapport");
@@ -99,7 +93,6 @@ public class InterfaceAccueil extends javax.swing.JFrame {
             }
         });
 
-        jButtonAjouterVendeur.setBackground(new java.awt.Color(0, 102, 153));
         jButtonAjouterVendeur.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jButtonAjouterVendeur.setForeground(new java.awt.Color(0, 102, 153));
         jButtonAjouterVendeur.setText("Gestion des Vendeurs");
@@ -109,7 +102,6 @@ public class InterfaceAccueil extends javax.swing.JFrame {
             }
         });
 
-        jButtonGestionClient.setBackground(new java.awt.Color(0, 102, 153));
         jButtonGestionClient.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jButtonGestionClient.setForeground(new java.awt.Color(0, 102, 153));
         jButtonGestionClient.setText("Gestion des clients");
@@ -119,7 +111,6 @@ public class InterfaceAccueil extends javax.swing.JFrame {
             }
         });
 
-        jButtonEnvoyerVoucher.setBackground(new java.awt.Color(0, 102, 153));
         jButtonEnvoyerVoucher.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jButtonEnvoyerVoucher.setForeground(new java.awt.Color(0, 102, 153));
         jButtonEnvoyerVoucher.setText("Envoyer Voucher");
@@ -130,8 +121,8 @@ public class InterfaceAccueil extends javax.swing.JFrame {
             }
         });
 
-        jButtonAfficherReservation.setBackground(new java.awt.Color(0, 102, 153));
         jButtonAfficherReservation.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
+        jButtonAfficherReservation.setForeground(new java.awt.Color(0, 102, 153));
         jButtonAfficherReservation.setText("Reservations");
         jButtonAfficherReservation.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButtonAfficherReservation.addActionListener(new java.awt.event.ActionListener() {
@@ -140,18 +131,14 @@ public class InterfaceAccueil extends javax.swing.JFrame {
             }
         });
 
-        jToggleButtonRetour.setBackground(new java.awt.Color(0, 102, 153));
         jToggleButtonRetour.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jToggleButtonRetour.setForeground(new java.awt.Color(0, 102, 153));
-        jToggleButtonRetour.setText("Retour");
+        jToggleButtonRetour.setText("Deconnexion");
         jToggleButtonRetour.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jToggleButtonRetourActionPerformed(evt);
             }
         });
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/edu/esprit/images/téléchargement.jpg"))); // NOI18N
-        jLabel1.setText("jLabel1");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -176,9 +163,7 @@ public class InterfaceAccueil extends javax.swing.JFrame {
                 .addComponent(jButtonAfficherReservation, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(68, 68, 68))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(88, 88, 88)
+                .addGap(370, 370, 370)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButtonAjouterDeal, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonAjouterCategorie, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -188,18 +173,13 @@ public class InterfaceAccueil extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addComponent(jButtonAjouterDeal, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(33, 33, 33)
-                        .addComponent(jButtonAjouterCategorie, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(40, 40, 40)
-                        .addComponent(jButtonAGestionDeals, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(65, 65, 65)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(73, 73, 73)
+                .addGap(33, 33, 33)
+                .addComponent(jButtonAjouterDeal, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
+                .addComponent(jButtonAjouterCategorie, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addComponent(jButtonAGestionDeals, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(121, 121, 121)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonGenererStatistique, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonGestionClient, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -285,8 +265,8 @@ public class InterfaceAccueil extends javax.swing.JFrame {
 
     private void jToggleButtonRetourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButtonRetourActionPerformed
         // TODO add your handling code here:
-         InterfaceAccueil acceuil=new InterfaceAccueil();
-        acceuil.setVisible(true);
+         InterfaceChoixDeConnexion choixConn=new InterfaceChoixDeConnexion();
+        choixConn.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jToggleButtonRetourActionPerformed
 
@@ -325,7 +305,6 @@ public class InterfaceAccueil extends javax.swing.JFrame {
     private javax.swing.JButton jButtonGenererRapport;
     private javax.swing.JButton jButtonGenererStatistique;
     private javax.swing.JButton jButtonGestionClient;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JToggleButton jToggleButtonRetour;
     // End of variables declaration//GEN-END:variables

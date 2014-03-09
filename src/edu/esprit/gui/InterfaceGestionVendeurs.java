@@ -46,9 +46,8 @@ public class InterfaceGestionVendeurs extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Gestion vendeurs", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 3, 18))); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Gestion vendeurs", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 3, 18), new java.awt.Color(0, 102, 153))); // NOI18N
 
-        jButtonCherVend.setBackground(new java.awt.Color(0, 102, 153));
         jButtonCherVend.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jButtonCherVend.setForeground(new java.awt.Color(0, 102, 153));
         jButtonCherVend.setText("recherche");
@@ -58,7 +57,6 @@ public class InterfaceGestionVendeurs extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(0, 102, 153));
         jButton1.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(0, 102, 153));
         jButton1.setText("ajouter");
@@ -68,7 +66,6 @@ public class InterfaceGestionVendeurs extends javax.swing.JFrame {
             }
         });
 
-        jButtonSuppVend.setBackground(new java.awt.Color(0, 102, 153));
         jButtonSuppVend.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jButtonSuppVend.setForeground(new java.awt.Color(0, 102, 153));
         jButtonSuppVend.setText("supprimer");
@@ -81,7 +78,6 @@ public class InterfaceGestionVendeurs extends javax.swing.JFrame {
         jListVendeur.setModel(new ListVendeur());
         jScrollPane2.setViewportView(jListVendeur);
 
-        jButton2.setBackground(new java.awt.Color(0, 102, 153));
         jButton2.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(0, 102, 153));
         jButton2.setText("Noter");
@@ -91,7 +87,6 @@ public class InterfaceGestionVendeurs extends javax.swing.JFrame {
             }
         });
 
-        jToggleButtonRetour.setBackground(new java.awt.Color(0, 102, 153));
         jToggleButtonRetour.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jToggleButtonRetour.setForeground(new java.awt.Color(0, 102, 153));
         jToggleButtonRetour.setText("retour");

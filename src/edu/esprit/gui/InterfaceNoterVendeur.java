@@ -48,13 +48,12 @@ public class InterfaceNoterVendeur extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "noter vendeur", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 3, 18))); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "noter vendeur", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 3, 18), new java.awt.Color(0, 102, 153))); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Calibri", 3, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 102, 153));
         jLabel1.setText("Veuillez noter notre vendeur:");
 
-        jToggleButtonNoter.setBackground(new java.awt.Color(0, 102, 153));
         jToggleButtonNoter.setFont(new java.awt.Font("Calibri", 3, 14)); // NOI18N
         jToggleButtonNoter.setForeground(new java.awt.Color(0, 102, 153));
         jToggleButtonNoter.setText("noter");
