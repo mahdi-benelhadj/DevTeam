@@ -185,9 +185,15 @@ public class InterfaceGestionDeal extends javax.swing.JFrame {
 
     private void jToggleButtonRetourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButtonRetourActionPerformed
         // TODO add your handling code here:
+        if(jLabel2.getText()==""){
          InterfaceAccueil acceuil=new InterfaceAccueil();
         acceuil.setVisible(true);
-        this.setVisible(false);
+        this.setVisible(false);}
+        else{
+            InterfaceConnexionClient connexionClient=new InterfaceConnexionClient();
+            connexionClient.setVisible(true);
+            this.setVisible(false);
+        }
     }//GEN-LAST:event_jToggleButtonRetourActionPerformed
 
     /**
