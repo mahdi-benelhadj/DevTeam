@@ -32,7 +32,7 @@ public class BarChartDeal extends javax.swing.JFrame {
         graphe = ChartFactory.createBarChart3D(
                 " Les deals les plus vendus ", // chart title
                 " ", // domain axis label
-                "  Le nombre de produit ", // range axis label
+                "  Les achats ", // range axis label
                 dataset, // data
                 PlotOrientation.VERTICAL, // orientation
                 true, // include legend

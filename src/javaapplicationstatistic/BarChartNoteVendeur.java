@@ -31,9 +31,9 @@ public class BarChartNoteVendeur extends javax.swing.JFrame {
         dataset.addValue(v.getNote(), v.getNom(), " ");
         
         graphe = ChartFactory.createBarChart3D(
-                " Les deals les plus vendus ", // chart title
+                " Les vendeurs les mieux notés ", // chart title
                 " ", // domain axis label
-                "  Le nombre de produit ", // range axis label
+                "  les notes ", // range axis label
                 dataset, // data
                 PlotOrientation.VERTICAL, // orientation
                 true, // include legend

@@ -171,7 +171,7 @@ public class InterfaceDetailDeal extends javax.swing.JFrame {
         // TODO add your handling code here:
         InterfaceNoterVendeur notervend = new InterfaceNoterVendeur();
         notervend.setVisible(true);
-        this.setVisible(false);
+        
     }//GEN-LAST:event_jButtonNoterActionPerformed
 
     /**
