@@ -228,7 +228,7 @@ public class InterfaceAccueil extends javax.swing.JFrame {
 
     private void jButtonAGestionDealsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAGestionDealsActionPerformed
         // TODO add your handling code here:
-        InterfaceGestionDeal gestionDeal=new InterfaceGestionDeal();
+        InterfaceListerDeal gestionDeal=new InterfaceListerDeal();
         gestionDeal.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButtonAGestionDealsActionPerformed

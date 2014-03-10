@@ -68,6 +68,8 @@ public class InterfaceListerDeal extends javax.swing.JFrame {
         jPanel1.setForeground(new java.awt.Color(0, 102, 153));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jButton1.setFont(new java.awt.Font("Calibri", 3, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(0, 102, 153));
         jButton1.setText("chercher");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -180,9 +182,9 @@ jScrollPane1.setViewportView(jTable1);        // TODO add your handling code her
          InterfaceAccueil acceuil=new InterfaceAccueil();
         acceuil.setVisible(true);
         this.setVisible(false);}
-        else{
-            InterfaceConnexionClient connexionClient=new InterfaceConnexionClient();
-            connexionClient.setVisible(true);
+       else{
+            InterfaceAcceuilClient acceuilionClient=new  InterfaceAcceuilClient();
+            acceuilionClient.setVisible(true);
             this.setVisible(false);
         }
     }//GEN-LAST:event_jButtonRetourActionPerformed
